@@ -1,0 +1,110 @@
+import React, { PureComponent } from 'react'
+import { Link } from 'react-router-dom'
+
+import Grid from '@material-ui/core/Grid'
+import TextField from '@material-ui/core/TextField'
+import Typography from '@material-ui/core/Typography'
+import Button from '@material-ui/core/Button'
+
+import history from 'customHistory'
+
+
+class SignIn extends PureComponent {
+    state = {
+        emailId: 'jstreit@wwnotary.com',
+    }
+
+    render() {
+        const { emailId } = this.state
+        return (
+            <Grid item sm={6} className="verify-form">
+                <Typography className="mrB20 heading-large" gutterBottom variant="h5" component="h2">
+                    Sign in
+                </Typography>
+                {/* <Typography component="p" className="mrB15">
+                    Enter the registered email id and verification PIN that has been send to your email account.
+                </Typography> */}
+                <form>
+                    <Grid container spacing={16}>
+                        <Grid item sm={9}>
+                            <TextField
+                                label="Email Id"
+                                className="bootstrap-text-field"
+                                value={emailId}
+                                //onChange={this.handleChange('name')}
+                                margin="normal"
+                            />
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={16}>
+                        <Grid item sm={9}>
+                            <Grid container spacing={8}>
+                                <Grid item sm={3}>
+                                    <TextField
+                                        id="standard-full-width"
+                                        label="PIN"
+                                        placeholder="0"
+                                        fullWidth
+                                        margin="normal"
+                                        className="bootstrap-text-field"
+                                        InputLabelProps={{
+                                            shrink: true,
+                                        }}
+                                    />
+                                </Grid>
+
+                                <Grid item sm={3}>
+                                    <TextField
+                                        label=""
+                                        className="bootstrap-text-field"
+                                        placeholder="0"
+                                        //onChange={this.handleChange('name')}
+                                        margin="normal"
+                                    />
+                                </Grid>
+
+                                <Grid item sm={3}>
+                                    <TextField
+                                        label=""
+                                        className="bootstrap-text-field"
+                                        placeholder="0"
+                                        //onChange={this.handleChange('name')}
+                                        margin="normal"
+                                    />
+                                </Grid>
+
+                                <Grid item sm={3}>
+                                    <TextField
+                                        label=""
+                                        className="bootstrap-text-field"
+                                        placeholder="0"
+                                        //onChange={this.handleChange('name')}
+                                        margin="normal"
+                                    />
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={16} className="mrB30">
+                        <Grid item sm={9}>
+                            <Typography className="fnt-12" component="p">
+                                <Link style={{ fontWeight: 600,color:"#0073CF" }} to="/resend-pin">Forgot PIN</Link>
+                            </Typography>
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={16} className="mrT10">
+                        <Grid item sm={9}>
+                            <Button  variant="contained" color="primary" className="btn btn-primary">
+                                NEXT
+                            </Button>
+                        </Grid>
+                    </Grid>
+                </form>
+            </Grid>
+        )
+    }
+}
+
+
+
+export default SignIn

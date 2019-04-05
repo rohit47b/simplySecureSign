@@ -1,0 +1,276 @@
+.bootstrap-text-field{
+    width: 100%;
+    label{
+        font-weight: 600 !important;
+        color: #000;
+    }
+    >div{
+        margin-top: 16px;
+        font-size: 14px;
+        &:before{
+            display: none;
+        }
+        &:after{
+            display: none;
+        }
+    }
+    input{
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 6px 12px;
+        min-height: 30px;
+        background-color: #F8F8F8;
+    }
+}
+.text-field-dense{
+    margin-top: 0px !important;
+    width: 100%;
+    label{
+        font-size: 13px;
+        +div{
+            border-radius: 0px !important;
+            background-color: #fff !important;
+            &:before{
+                display: none;
+            }
+            &:after{
+                display: none;
+            }
+            input{
+                border: 1px solid #CECECE !important;
+                padding: 12px 12px !important;
+                font-size: 13px;
+            }
+        }
+    }
+}
+.select-control {
+    width: 100%;
+    label{
+        font-size: 13px;
+        +div{
+            border-radius: 0px !important;
+            background-color: #fff !important;
+            &:before{
+                display: none;
+            }
+            &:after{
+                display: none;
+            }
+            >div>div{
+                border: 1px solid #CECECE !important;
+                padding: 12px 12px !important;
+                font-size: 13px;
+            }
+        }
+    }
+}
+/*button css*/
+.btn{
+    text-transform: capitalize !important;
+    box-shadow: none !important;
+}
+.btn-primary{
+    min-width: 100% !important;
+    background-color: $text_primary !important;
+    min-height: 45px !important;
+}
+.btn-common{
+    padding: 6px 16px !important;
+    min-height: 32px !important;
+    color: #fff !important;
+}
+.btn-gray{
+    background-color: #929292 !important;
+    min-width: 80px !important;
+}
+.btn-blue{
+    background-color: $text_primary !important;
+    min-width: 120px !important;
+}
+
+.btn-icon{
+    color: #fff !important;
+    min-width: 100px !important;
+    min-height: 40px !important;
+    font-size: 0.78rem !important;
+    span{
+        font-size: 13px;
+    }
+}
+.btn-red-bg{
+    background-color: $text_danger !important;
+}
+.btn-blue-bg{
+    background-color: $text_primary  !important;
+}
+
+.btn-chip{
+    padding: 4px 10px !important;
+    border-radius: 20px !important;
+    font-size: 12px !important;
+    min-width: 90px !important;
+    justify-content: flex-start !important;
+    background-color: #fff!important;
+    color: #000 !important;
+    .avatar-count{
+        width: 20px !important;
+        height: 20px !important;
+        font-size: 10px !important;
+        background-color: $text_primary !important;
+    }
+}
+/*button css end*/
+
+.captcha-box {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    .captcha-text{
+        flex-grow: 1;
+    }
+}
+
+/*media  css */
+
+.icon-account{
+    background-color: #fff;
+    border-radius: 50%;
+    color: #8D8D8D;
+    font-size: 14px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em !important;
+    height: 2em !important;
+    cursor: pointer;
+}
+
+.media {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .media-content{
+        padding-left: 10px;
+        line-height: 20px;
+        .text-small{
+            font-size: 12px;
+        }
+        .text-large{
+            font-size: 13px;
+        }
+    }
+}
+.icon-circle {
+    background-color: #F1F1F1;
+    border: 1px solid #CECECE;
+    border-radius: 50%;
+    color: #000000;
+    font-size: 18px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5em !important;
+    height: 1.5em !important;
+}
+/*media  css */
+
+.heading-large{
+    font-size: 16px !important;
+    font-weight: 600 !important;
+}
+.heading-small{
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+hr.line-divider {
+    border-top: 1px solid #eee;
+    margin: 20px -30px;
+}
+
+.border-bottom-red{
+    border-bottom: 3px solid $text_danger;
+}
+.link{
+    cursor: pointer;
+    color: #0934C4;
+}
+.paper-box{
+    border: 1px solid #E8E8E8;
+    border-radius: 0px !important;
+    padding: 10px 15px;
+    box-shadow: none !important;
+    display: flex;
+    align-items: center;
+}
+
+/*confirm dialog css*/
+.confirm-dialog {
+    >div +div >div{
+        text-align: center;
+        border-radius: 0px !important;
+        width: 490px;
+        .dialog-head{
+            padding: 45px 24px 30px !important;
+        }
+        .dialog-content{
+            p{
+                color: #000 !important;
+            }
+        }
+        .dailog-footer{
+            justify-content: center !important;
+            padding-bottom: 40px;
+        }
+    }
+}
+
+/*tabs css*/
+.nav-tab{
+    background-color: #F1F1F1;
+    min-height: 35px !important;
+    >div>div>div + span{display: none;}
+    .nav-tab-btn{
+        min-height: 35px !important;
+        text-transform: capitalize !important;
+        min-width: 100px !important;
+    }
+    .nav-tab-btn[aria-selected="true"]{
+        background-color: $text_primary;
+        color: #fff;
+    }
+}
+
+.tab-container{
+    padding: 20px 0px;
+}
+/*tabs css end*/
+
+.border-box {
+    border: 1px solid #CECECE;
+    min-height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .icon-box{
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        svg{
+            margin-right: 5px;
+        }
+    }
+}
+.icon-box{
+    svg{
+        color: #989898;
+        border: 1px solid #989898;
+        border-radius: 50%;
+        font-size: 14px;
+        padding: 5px;
+    }
+}

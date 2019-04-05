@@ -1,0 +1,18 @@
+.section-verify{
+    .verify-bg{
+        background-image: url('/assets/images/bg-login.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: auto;
+        }
+    }
+    .verify-form{
+        background-color: #fff;
+        padding: 9% 5%;
+    }
+}

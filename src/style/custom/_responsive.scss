@@ -1,0 +1,153 @@
+@media (min-width:1100px) and (max-width:1400px) {
+    .stepper .step-item > div {
+        left: calc(-94% + 7px) !important;
+        right: calc(92% + 9px) !important;
+    }
+}
+
+@media (min-width:1400px){
+    .stepper .step-item > div {
+        left: calc(-96% + 7px) !important;
+        right: calc(92% + 9px) !important;
+    }
+}
+
+@media (max-width:1200px){
+    .section-verify{
+        .verify-bg {
+            padding: 0 40px;
+            img{
+                width: 100%;
+            }
+        }
+    } 
+    .top-gray-bg{
+        padding: 20px;  
+    }
+    .card-container{
+        padding: 0 20px;
+        .card-white{
+            .card-content{
+                .package-details{
+                    .media {
+                        padding-right: 12px;
+                    }
+                }
+                .signer-info{
+                    .signer-details{
+                        span.title {
+                            display: initial;
+                        } 
+                    }
+                }
+            }
+        } 
+    }  
+}
+
+@media (max-width:992px){
+
+}
+
+@media (max-width:768px){
+
+}
+
+@media (max-width:600px){
+    .header .logo img {
+        max-width: 210px;
+    }
+    .section-verify{
+        .verify-bg {
+            height: 200px;
+        }
+    }
+    .card-container{
+        padding: 0 20px;
+        .card-white{
+            .card-content{
+                .package-details{
+                    flex-flow: column;
+                    align-items: flex-start;
+                    .media{
+                        margin-bottom: 15px;
+                    }
+                    .media-content{
+                        .text-large {
+                            font-size: 11px;
+                        }
+                        .text-small {
+                            font-size: 10px;
+                        }
+                    } 
+                }
+                .schedule-section{
+                    flex-flow: row;
+                    align-items: center;
+                    .media{
+                        margin-bottom: 15px;
+                    }
+                }
+                .right-content{
+                    padding-top: 0px;
+                }
+                .signer-info{
+                    .signer-details{
+                        span.title {
+                            min-width: 100px;
+                            display: inline-block;
+                        }
+                        span {
+                            font-size: 11px;
+                        } 
+                    }
+                }
+            }
+        } 
+    } 
+}
+
+@media (max-width:480px){
+    .card-container{
+        padding: 0 20px;
+        .card-white{
+            .card-content{
+                .package-details{
+                    .media{
+                        padding-right: 0px;
+                        .schedule-object{
+                            width: 25px !important;
+                            height: 25px !important;
+                        }
+                    }
+                }
+            }
+        } 
+    } 
+    .heading-large {
+        font-size: 12px !important;
+    }
+    .btn-blue {
+        min-width: 50px !important;
+    }
+    .btn-gray {
+        min-width: 40px !important;
+    }
+    .btn-icon {
+        padding: 2px 5px !important;
+        min-height: 30px !important;
+        min-width: 50px !important;
+    }
+    .btn-common {
+        padding: 2px 5px !important;
+        min-height: 30px !important;
+        span{
+            font-size: 10px !important;
+        }
+    }
+    .nav-tab{
+        .nav-tab-btn{
+            min-width: 70px !important;
+        }
+    } 
+}
