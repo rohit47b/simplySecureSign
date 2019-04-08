@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import Avatar from '@material-ui/core/Avatar'
 import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
@@ -7,12 +8,8 @@ import Step from '@material-ui/core/Step'
 import StepLabel from '@material-ui/core/StepLabel'
 import Stepper from '@material-ui/core/Stepper'
 import Typography from '@material-ui/core/Typography'
-import Checkbox from '@material-ui/core/Checkbox'
-import Chip from '@material-ui/core/Chip';
-import FaceIcon from '@material-ui/icons/Face';
-import DoneIcon from '@material-ui/icons/Done';
-import Avatar from '@material-ui/core/Avatar';
 
+import history from 'customHistory'
 
 class SigningRoomDetails extends PureComponent {
     state = {
@@ -35,7 +32,7 @@ class SigningRoomDetails extends PureComponent {
                                 </Typography>
                             </Grid>
                             <Grid item xs={6} sm={6} className="text-right">
-                                <Button variant="contained" color="primary" className="btn btn-common btn-gray mrR10">
+                                <Button onClick={() => history.push('/app/eSign-wizard/signing-room')} variant="contained" color="primary" className="btn btn-common btn-gray mrR10">
                                     Back
                                 </Button>
                                 <Button variant="contained" color="primary" className="btn btn-common btn-gray">

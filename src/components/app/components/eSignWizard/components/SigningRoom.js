@@ -32,7 +32,7 @@ class SigningRoom extends PureComponent {
                                 </Typography>
                             </Grid>
                             <Grid item xs={6} sm={6} className="text-right">
-                                <Button variant="contained" color="primary" className="btn btn-common btn-gray mrR10">
+                                <Button onClick={() => history.push('/app/eSign-wizard/welcome')} variant="contained" color="primary" className="btn btn-common btn-gray mrR10">
                                     Back
                                 </Button>
                                 <Button onClick={() => history.push('/app/eSign-wizard/signing-room-details')}  variant="contained" color="primary" className="btn btn-common btn-blue">
