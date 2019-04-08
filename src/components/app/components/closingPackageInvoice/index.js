@@ -8,9 +8,26 @@ import Icon from '@material-ui/core/Icon'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 
+import DocumentPdf from "global/DocumentPdf"
+
+import history from 'customHistory'
+
 class ClosingPackageInvoice extends PureComponent {
+    state = {
+      
+        openDialog:false
+      }
+
+      handleDialogPdfOpen = () => {
+        this.setState({ openDialog: true })
+      }
+    
+      handleDialogPdfClose = () => {
+        this.setState({ openDialog: false })
+      }
 
     render() {
+        const{openDialog} = this.state
         return (
             <div>
                 <Grid container justify="center" className="top-gray-bg">
@@ -35,7 +52,7 @@ class ClosingPackageInvoice extends PureComponent {
                                          </Typography>
                                     </Grid>
                                     <Grid item xs={6} sm={6} className="text-right">
-                                        <Button className="btn btn-icon btn-red-bg" ariant="contained">
+                                        <Button onClick={() => history.push('/app/eSign-wizard/welcome')} className="btn btn-icon btn-blue-bg" ariant="contained">
                                             <Icon className="mrR5">create</Icon> signed
                                         </Button>
                                     </Grid>
@@ -134,31 +151,31 @@ class ClosingPackageInvoice extends PureComponent {
                                 <Grid container spacing={16}>
                                     <Grid item sm={12}>
                                         <Paper className="paper-box mrB10" elevation={1}>
-                                            <span className="link fnt-12 flex-grow-1">
+                                            <span  onClick={this.handleDialogPdfOpen} className="link fnt-12 flex-grow-1">
                                                 Borrower's certification and authorization
                                             </span>
                                             <span className="fnt-aws-icon"><i className='fa fa-file-pdf-o'></i></span>
                                         </Paper>
                                         <Paper className="paper-box mrB10" elevation={1}>
-                                            <span className="link fnt-12 flex-grow-1">
+                                            <span  onClick={this.handleDialogPdfOpen} className="link fnt-12 flex-grow-1">
                                                 Home equity line of credit agreement and disclosure statement
                                             </span>
                                             <span className="fnt-aws-icon"><i className='fa fa-file-pdf-o'></i></span>
                                         </Paper>
                                         <Paper className="paper-box mrB10" elevation={1}>
-                                            <span className="link fnt-12 flex-grow-1">
+                                            <span  onClick={this.handleDialogPdfOpen} className="link fnt-12 flex-grow-1">
                                                 Free & Charges
                                             </span>
                                             <span className="fnt-aws-icon"><i className='fa fa-file-pdf-o'></i></span>
                                         </Paper>
                                         <Paper className="paper-box mrB10" elevation={1}>
-                                            <span className="link fnt-12 flex-grow-1">
+                                            <span  onClick={this.handleDialogPdfOpen} className="link fnt-12 flex-grow-1">
                                                 Mortgage
                                             </span>
                                             <span className="fnt-aws-icon"><i className='fa fa-file-pdf-o'></i></span>
                                         </Paper>
                                         <Paper className="paper-box mrB10" elevation={1}>
-                                            <span className="link fnt-12 flex-grow-1">
+                                            <span  onClick={this.handleDialogPdfOpen} className="link fnt-12 flex-grow-1">
                                                 Transfer of rights in the property
                                             </span>
                                             <span className="fnt-aws-icon"><i className='fa fa-file-pdf-o'></i></span>
@@ -169,6 +186,7 @@ class ClosingPackageInvoice extends PureComponent {
                         </Card>
                     </Grid>
                 </Grid>
+                <DocumentPdf isOpen={openDialog} handleDialogPdfClose={this.handleDialogPdfClose}/>
             </div>
         )
     }

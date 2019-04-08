@@ -1,25 +1,27 @@
 import React, { PureComponent } from 'react'
-import Grid from '@material-ui/core/Grid'
-import Typography from '@material-ui/core/Typography'
+import Avatar from '@material-ui/core/Avatar'
 import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card'
-import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
-import Stepper from '@material-ui/core/Stepper'
+import Grid from '@material-ui/core/Grid'
+import Paper from '@material-ui/core/Paper'
 import Step from '@material-ui/core/Step'
 import StepLabel from '@material-ui/core/StepLabel'
-import Icon from '@material-ui/core/Icon'
-import classNames from 'classnames'
-import Avatar from '@material-ui/core/Avatar'
-import Paper from '@material-ui/core/Paper'
+import Stepper from '@material-ui/core/Stepper'
+import Typography from '@material-ui/core/Typography'
+import FolderIcon from '@material-ui/icons/FolderOpen'
+import LocationIcon from '@material-ui/icons/LocationOn'
+import PersonIcon from '@material-ui/icons/PersonOutline'
 
 import ConfirmDialogBox from "hoc/ConfirmDialogBox"
+import DocumentPdf from "global/DocumentPdf"
 
 
 
 class Review extends PureComponent {
     state = {
         open: false,
+        openDialog:false
       }
     
       handleClickOpen = () => {
@@ -30,8 +32,16 @@ class Review extends PureComponent {
         this.setState({ open: false });
       }
 
+      handleDialogPdfOpen = () => {
+        this.setState({ openDialog: true });
+      }
+    
+      handleDialogPdfClose = () => {
+        this.setState({ openDialog: false });
+      }
+
     render() {
-        const{open} = this.state
+        const{open,openDialog} = this.state
         return (
             <div>
                 <Grid container justify="center" className="top-gray-bg">
@@ -73,21 +83,21 @@ class Review extends PureComponent {
                                 </Typography>
                                 <div className="package-details">
                                     <div className="media">
-                                        <Icon className="icon-circle">person_outline</Icon>
+                                        <span className="icon-circle"><PersonIcon /></span>
                                         <div className="media-content">
                                             <div className="text-small">Lender Name</div>
                                             <div className="text-large font-bold">ABC Mortgage</div>
                                         </div>
                                     </div>
                                     <div className="media">
-                                        <Icon className="icon-circle">location_on</Icon>
+                                        <span className="icon-circle"><LocationIcon /></span>
                                         <div className="media-content">
                                             <div className="text-small">Property Address</div>
                                             <div className="text-large font-bold">123 AB Road, Vernon, TX-76384</div>
                                         </div>
                                     </div>
                                     <div className="media">
-                                        <Icon className="icon-circle">folder_open</Icon>
+                                        <span className="icon-circle"><FolderIcon /></span>
                                         <div className="media-content">
                                             <div className="text-small">Package ID</div>
                                             <div className="text-large font-bold">53408 / 7-2019031502</div>
@@ -164,31 +174,31 @@ class Review extends PureComponent {
                                 <Grid container spacing={16}>
                                     <Grid item xs={12} sm={12}>
                                         <Paper className="paper-box mrB10" elevation={1}>
-                                            <span className="link fnt-12 flex-grow-1">
+                                            <span onClick={this.handleDialogPdfOpen} className="link fnt-12 flex-grow-1">
                                                 Borrower's certification and authorization
                                             </span>
                                             <span className="fnt-aws-icon"><i className='fa fa-file-pdf-o'></i></span>
                                         </Paper>
                                         <Paper className="paper-box mrB10" elevation={1}>
-                                            <span className="link fnt-12 flex-grow-1">
+                                            <span onClick={this.handleDialogPdfOpen} className="link fnt-12 flex-grow-1">
                                                 Home equity line of credit agreement and disclosure statement
                                             </span>
                                             <span className="fnt-aws-icon"><i className='fa fa-file-pdf-o'></i></span>
                                         </Paper>
                                         <Paper className="paper-box mrB10" elevation={1}>
-                                            <span className="link fnt-12 flex-grow-1">
+                                            <span onClick={this.handleDialogPdfOpen} className="link fnt-12 flex-grow-1">
                                                 Free & Charges
                                             </span>
                                             <span className="fnt-aws-icon"><i className='fa fa-file-pdf-o'></i></span>
                                         </Paper>
                                         <Paper className="paper-box mrB10" elevation={1}>
-                                            <span className="link fnt-12 flex-grow-1">
+                                            <span onClick={this.handleDialogPdfOpen} className="link fnt-12 flex-grow-1">
                                                 Mortgage
                                             </span>
                                             <span className="fnt-aws-icon"><i className='fa fa-file-pdf-o'></i></span>
                                         </Paper>
                                         <Paper className="paper-box mrB10" elevation={1}>
-                                            <span className="link fnt-12 flex-grow-1">
+                                            <span onClick={this.handleDialogPdfOpen} className="link fnt-12 flex-grow-1">
                                                 Transfer of rights in the property
                                             </span>
                                             <span className="fnt-aws-icon"><i className='fa fa-file-pdf-o'></i></span>
@@ -197,6 +207,7 @@ class Review extends PureComponent {
                                 </Grid>
                             </CardContent>
                         </Card>
+                        <DocumentPdf isOpen={openDialog} handleDialogPdfClose={this.handleDialogPdfClose}/>
                         <ConfirmDialogBox handleDialogClose={this.handleDialogClose} isOpen={open} heading={"Congratulation !"} content={<span>You have completed the electronic signing <br/>  Process successfully</span>}/>
                     </Grid>
                 </Grid>

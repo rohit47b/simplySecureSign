@@ -9,6 +9,7 @@ import Stepper from '@material-ui/core/Stepper'
 import Typography from '@material-ui/core/Typography'
 import Checkbox from '@material-ui/core/Checkbox'
 
+import history from 'customHistory'
 
 class SigningRoom extends PureComponent {
     state = {
@@ -34,7 +35,7 @@ class SigningRoom extends PureComponent {
                                 <Button variant="contained" color="primary" className="btn btn-common btn-gray mrR10">
                                     Back
                                 </Button>
-                                <Button variant="contained" color="primary" className="btn btn-common btn-blue">
+                                <Button onClick={() => history.push('/app/eSign-wizard/signing-room-details')}  variant="contained" color="primary" className="btn btn-common btn-blue">
                                     Save & Continue
                                 </Button>
                             </Grid>

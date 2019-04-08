@@ -28,11 +28,15 @@ class SignIn extends PureComponent {
                     <Grid container spacing={16}>
                         <Grid item sm={9}>
                             <TextField
-                                label="Email Id"
-                                className="bootstrap-text-field"
-                                value={emailId}
-                                //onChange={this.handleChange('name')}
+                                id="standard-full-width"
+                                label="PIN"
+                                placeholder="Enter email id"
+                                fullWidth
                                 margin="normal"
+                                className="bootstrap-text-field"
+                                InputLabelProps={{
+                                    shrink: true,
+                                }}
                             />
                         </Grid>
                     </Grid>
@@ -88,13 +92,13 @@ class SignIn extends PureComponent {
                     <Grid container spacing={16} className="mrB30">
                         <Grid item sm={9}>
                             <Typography className="fnt-12" component="p">
-                                <Link style={{ fontWeight: 600,color:"#0073CF" }} to="/resend-pin">Forgot PIN</Link>
+                                <Link style={{ fontWeight: 600, color: "#0073CF" }} to="/resend-pin">Forgot PIN</Link>
                             </Typography>
                         </Grid>
                     </Grid>
                     <Grid container spacing={16} className="mrT10">
                         <Grid item sm={9}>
-                            <Button  variant="contained" color="primary" className="btn btn-primary">
+                            <Button onClick={() => history.push('/app/closing-package-invoice')} variant="contained" color="primary" className="btn btn-primary">
                                 NEXT
                             </Button>
                         </Grid>

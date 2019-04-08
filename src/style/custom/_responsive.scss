@@ -42,15 +42,22 @@
                 }
             }
         } 
-    }  
+    } 
+    .stepper .step-item > div {
+        left: calc(-96% + 11px) !important;
+    } 
 }
 
 @media (max-width:992px){
-
+    .stepper .step-item > div {
+        left: calc(-96% + 14px) !important;
+    }       
 }
 
 @media (max-width:768px){
-
+    .stepper .step-item > div {
+        left: calc(-96% + 17px) !important;
+    }   
 }
 
 @media (max-width:600px){
@@ -105,6 +112,16 @@
             }
         } 
     } 
+    .stepper{
+        .step-item{
+            > div {
+                left: calc(-96% + 19px) !important;
+            } 
+            .step-label > span + span > span{
+                font-size: 10px;
+            } 
+        }
+    }
 }
 
 @media (max-width:480px){

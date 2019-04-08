@@ -21,7 +21,7 @@ import EditIcon from '@material-ui/icons/Edit'
 import HelpIcon from '@material-ui/icons/Help'
 import PropTypes from 'prop-types'
 
-
+import history from 'customHistory'
 
 const styles = theme => ({
     container: {
@@ -66,7 +66,7 @@ class Welcome extends PureComponent {
                                </Typography>
                             </Grid>
                             <Grid item xs={6} sm={6} className="text-right">
-                                <Button onClick={this.handleClickOpen} variant="contained" color="primary" className="btn btn-common btn-blue">
+                                <Button onClick={() => history.push('/app/eSign-wizard/signing-room')} variant="contained" color="primary" className="btn btn-common btn-blue">
                                     Save & Continue
                             </Button>
                             </Grid>

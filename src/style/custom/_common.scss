@@ -175,6 +175,9 @@
     justify-content: center;
     width: 1.5em !important;
     height: 1.5em !important;
+    svg{
+        font-size: 16px !important;
+    }
 }
 /*media  css */
 
@@ -227,6 +230,24 @@ hr.line-divider {
         }
     }
 }
+.pdf-dialog{
+    >div +div >div{
+        overflow: visible !important;
+        svg{
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background-color: #fff;
+            border-radius: 50%;
+            width: 1.5em !important;
+            height: 1.5em !important;
+            padding: 2px;
+            box-shadow: 0 0 5px 0 #000;
+            font-size: 18px !important;
+            cursor: pointer;
+        }
+    }
+}
 
 /*tabs css*/
 .nav-tab{
@@ -273,4 +294,7 @@ hr.line-divider {
         font-size: 14px;
         padding: 5px;
     }
+}
+.icon-remove{
+
 }
