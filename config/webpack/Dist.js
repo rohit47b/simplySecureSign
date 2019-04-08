@@ -65,9 +65,6 @@ class WebpackDistConfig extends WebpackBaseConfig {
           { from: root('public/vendors'), to: root('dist/vendors') },
           { from: root('src/data'), to: root('dist/data') },
           { from: root('src/assets/images'), to: root('dist/assets/images') },
-          { from: root('src/assets/images-demo'), to: root('dist/assets/images-demo') },
-          { from: root('src/assets/service-icon'), to: root('dist/assets/service-icon') },
-          { from: root('src/assets/aws-diagram-icons'), to: root('dist/assets/aws-diagram-icons') },
         ]),
         new HtmlWebpackPlugin({
           template: path.resolve(root("src"), "index.html"),
