@@ -59,7 +59,7 @@
             }
             >div>div{
                 border: 1px solid #CECECE !important;
-                padding: 12px 12px !important;
+                padding: 18px 12px 6px!important;
                 font-size: 13px;
             }
         }
@@ -283,6 +283,7 @@ hr.line-divider {
         right: 5px;
         svg{
             margin-right: 5px;
+            cursor: pointer;
         }
     }
 }
@@ -294,7 +295,4 @@ hr.line-divider {
         font-size: 14px;
         padding: 5px;
     }
-}
-.icon-remove{
-
 }

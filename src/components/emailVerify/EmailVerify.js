@@ -17,7 +17,7 @@ class EmailVerify extends PureComponent {
     render() {
         const { emailId } = this.state
         return (
-            <Grid item sm={6} className="verify-form">
+            <Grid item xs={12} sm={12} md={6} className="verify-form">
                 <Typography className="mrB20 heading-large" gutterBottom variant="h5" component="h2">
                     Enter Verification PIN
                 </Typography>

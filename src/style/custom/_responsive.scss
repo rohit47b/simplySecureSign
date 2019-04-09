@@ -11,6 +11,13 @@
         right: calc(92% + 9px) !important;
     }
 }
+@media (max-width:1280px){
+    .bootstrap-text-field{
+        label{
+            font-size: 12px !important;
+        }
+    }
+}
 
 @media (max-width:1200px){
     .section-verify{
@@ -46,6 +53,8 @@
     .stepper .step-item > div {
         left: calc(-96% + 11px) !important;
     } 
+    
+
 }
 
 @media (max-width:992px){
@@ -57,18 +66,19 @@
 @media (max-width:768px){
     .stepper .step-item > div {
         left: calc(-96% + 17px) !important;
-    }   
+    }  
+    .section-verify{
+        .verify-bg {
+            height: 200px;
+        }
+    } 
 }
 
 @media (max-width:600px){
     .header .logo img {
         max-width: 210px;
     }
-    .section-verify{
-        .verify-bg {
-            height: 200px;
-        }
-    }
+    
     .card-container{
         padding: 0 20px;
         .card-white{
@@ -151,12 +161,12 @@
         min-width: 40px !important;
     }
     .btn-icon {
-        padding: 2px 5px !important;
+        padding: 2px 4px !important;
         min-height: 30px !important;
         min-width: 50px !important;
     }
     .btn-common {
-        padding: 2px 5px !important;
+        padding: 2px 3px !important;
         min-height: 30px !important;
         span{
             font-size: 10px !important;
@@ -167,4 +177,16 @@
             min-width: 70px !important;
         }
     } 
+    .stepper{
+        .step-item{
+            > div {
+                left: calc(-96% + 21px) !important;
+            } 
+        }
+    }
+    .bootstrap-text-field{
+        label{
+            font-size: 11px !important;
+        }
+    }
 }

@@ -61,7 +61,7 @@ class WebpackDistConfig extends WebpackBaseConfig {
         }),
         new CopyWebpackPlugin([
           { from: root('public/index.html'), to: root('dist/') },
-          { from: root('public/favicon2.ico'), to: root('dist/') },
+          { from: root('public/favicon.ico'), to: root('dist/') },
           { from: root('public/vendors'), to: root('dist/vendors') },
           { from: root('src/data'), to: root('dist/data') },
           { from: root('src/assets/images'), to: root('dist/assets/images') },
