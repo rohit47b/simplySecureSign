@@ -6,6 +6,8 @@ import NotFound from 'components/404'
 import InternalServerError from 'components/500'
 import EmailVerify from 'components/emailVerify'
 import SignIn from 'components/signIn'
+import Download from 'components/download'
+
 import CreateNewPIN from 'components/createNewPIN'
 import { ESignWizardRoute } from 'components/app/components/eSignWizard/ESignWizardRoute'
 import ForgotPassword from 'components/forgotPassword'
@@ -25,6 +27,7 @@ const Main = ({ }) => {
         />
           
         <Route path='/sign-in' component={SignIn} />
+        <Route path='/download' component={Download} />
         <Route path='/create-new-pin' component={CreateNewPIN} />
         <Route path='/forgot-password' component={ForgotPassword} />
         <Route path='/resend-pin' exact component={ResendPIN} />
