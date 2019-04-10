@@ -109,7 +109,7 @@ class WebpackBaseConfig {
             ]
           },
           {
-            test: /\.(png|jpg|gif|mp4|ogg|svg|woff|woff2|ttf|eot|ico)$/,
+            test: /\.(png|jpg|gif|mp4|ogg|svg|woff|woff2|ttf|eot|ico|zip)$/,
             loader: 'file-loader'
           },
           {
