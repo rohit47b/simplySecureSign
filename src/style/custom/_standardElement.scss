@@ -2,27 +2,28 @@ $text_primary: #0073CF;
 $text_danger: #E31837; 
 $color_white: #fff; 
 
-$color_gray1: #999; 
-$color_gray2: #E1E6EE; 
-$color_gray3: #6E6E6E;
+$light_gary: #F5F5F5; 
+
+$color_gray: #929292;
+$color_gray1: #535353;
+$color_gray2: #949494;
+$color_gray3: #D3D3D3;
 $color_gray4: #4D4D4D;
-$color_gray5: #ddd;
-$color_gray6: #777;
-$color_gray7:#032B2F;
-$color_gray8:#292929;
-$color_gray9: #ECECEC;  
+$color_gray5: #9E9E9E;
+$color_gray6: #F2F2F2;
+$color_gray7: #CECECE;
+$color_gray8: #585858;
+$color_gray9: #F8F8F8;
+
+
 $border-color: #e2e2e2; 
-
-$card_box_shadow:0 0 5px 0 $color_gray5 !important;
-
-
 
 body.modal-open{margin-right:0 !important; padding-right:0 !important}
 *{outline: 0;}
 .row{display: -webkit-flex; flex: 1;
     -webkit-flex: 0 1 100%;}
 
-label{font-weight:400 !important}
+label{display: block;}
 .form-control{font-size:13px !important; box-shadow:none !important}
 
 
@@ -58,6 +59,7 @@ a:hover{color: #0289ea !important; text-decoration: none !important;}
 .mrB32{margin-bottom:32px !important;}
 .mrB40{margin-bottom:40px !important;}
 .mrB50{margin-bottom:50px !important;}
+.mrB15p{margin-bottom:15% !important;}
 
 .mrL0{margin-left:0 !important}
 .mrL5{margin-left:5px !important;}
@@ -81,6 +83,7 @@ a:hover{color: #0289ea !important; text-decoration: none !important;}
 
 .mrL0{margin-left: 0;margin-right: 0;}
 .mtAuto{margin-top: auto !important;}
+.mrT15P{margin-top: 15% !important;}
 
 .pdT0{padding-top:0 !important}
 .pdT5{padding-top:5px !important;}
@@ -229,13 +232,13 @@ color: #CCC;
 .mw-35{min-width: 35px;}
 
 .font-bold{
-    font-weight: bold;
+    font-weight: bold !important;
 }
 .font-normal{
-    font-weight: normal;
+    font-weight: normal !important;
 }
 .font-600{
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 .display-block{
     display: block;
@@ -251,7 +254,7 @@ color: #CCC;
 
 .validation-error {
     color: red !important;
-    font-size: 12px !important;
+    font-size: 11px !important;
 }
 table{
     border-collapse: collapse;
@@ -304,19 +307,19 @@ table{
 .text-wrap{
     flex-wrap: wrap;
 }
-
-.nivo-container{
-    width: 100%;
-    height: 150px;
+.text-transform-none{
+    text-transform: none !important;
 }
-
+.min-width-100{
+    min-width: 100px !important;
+}
 .bg-light{
     background-color: #E7F1F2;
     width: 100%;
     border: 1px solid #ddd;
 }
 .bg-gray{
-    background-color: #F8F8F8;
+    background-color: $color_gray9;
 }
 .table-layout-fix{
     table-layout: fixed;

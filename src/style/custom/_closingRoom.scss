@@ -1,0 +1,31 @@
+.card-room{
+    .card-header{
+        .btn-gray {
+            min-height: 32px !important;
+            padding: 2px 16px !important;
+        }
+    }
+    .card-body{
+        .heading-small{
+            font-weight: 600 !important;
+            opacity: 0.8;
+            color: #000;
+        }
+        .card-info{
+            font-size: 13px;
+        }
+    }
+}
+
+.dialog-closing{
+    >div +div >div{
+        max-width: 800px !important;
+        .dialog-content{
+            padding: 40px 40px 40px;
+            .package-details {
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.sidebar{
+    .sidebar-drawer{
+        .sidebar-menu{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            .menu-item{
+                padding-top: 14px;
+                padding-bottom: 14px;
+                .menu-icon{
+                    margin-right: 0px !important;
+                    svg,span{
+                        font-size: 18px;
+                    }
+                }
+                .menu-title{
+                    span{
+                        font-size: 13px;
+                        color: $color_gray1;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .menu-item.active{
+                background-color: $color_gray2;
+                .menu-icon{
+                    svg,span{
+                        color:$color_white;
+                    }
+                }
+                .menu-title{
+                    span{
+                        color:$color_white;
+                    }
+                }
+            }
+        }
+    }
+}

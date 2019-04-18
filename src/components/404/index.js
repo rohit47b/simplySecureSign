@@ -6,7 +6,7 @@ import history from 'customHistory'
 const Error404 = () => (
   <div className="err-container text-center">
     <div className="err">
-        <img src="/assets/images/404.png" />
+        <img src="/assets/images/404.png" alt="404" />
     </div>
     <div className="err-body">
     <h1>Page Not Found !</h1>

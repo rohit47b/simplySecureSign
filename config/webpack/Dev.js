@@ -13,13 +13,6 @@ class WebpackDevConfig extends WebpackBaseConfig {
   constructor() {
     super();
 
-    let envKeys = Object.keys(env).reduce((prev, next) => {
-      prev[`process.env.${next}`] = JSON.stringify(env[next]);
-      return prev;
-    }, {});
-    
-    envKeys[`process.env.NODE_ENV`]=JSON.stringify('develoment') 
-
     this.config = {
       devtool: 'cheap-module-source-map',
       entry: [
@@ -29,7 +22,9 @@ class WebpackDevConfig extends WebpackBaseConfig {
         './client.js'
       ],
       plugins: [
-        new webpack.DefinePlugin(envKeys),
+        new webpack.DefinePlugin({
+          'process.env.NODE_ENV': '"develoment"'
+        }),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         // new webpack.ProvidePlugin({

@@ -72,6 +72,38 @@
             height: 200px;
         }
     } 
+    .pdf-box{
+        .pdf-sec{
+            .left-panel{
+                height: auto;
+                overflow: auto;
+                white-space: nowrap;
+            }
+            .pdf-doc{
+                ul{
+                    li {
+                        display: inline-block;
+                        overflow: auto;
+                        white-space: nowrap;
+                        a{
+                            display: inline-block;
+                            min-height: 80px;
+                            width: 80px;
+                            margin: 10px;
+                            img{
+                                width: auto;
+                                height: 70px;
+                            }
+                        }
+                    }
+                }
+            }
+            .right-panel{
+                text-align: center;
+            }
+        }
+    } 
+    
 }
 
 @media (max-width:600px){

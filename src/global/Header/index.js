@@ -13,9 +13,12 @@ import Icon from '@material-ui/core/Icon';
 
 import APPCONFIG from 'constants/Config'
 
-const styles = {
+const styles = theme => ({
   root: {
     flexGrow: 1,
+  },
+  appBar: {
+    zIndex: theme.zIndex.drawer + 1,
   },
   grow: {
     flexGrow: 1,
@@ -24,7 +27,10 @@ const styles = {
     marginLeft: -12,
     marginRight: 20,
   },
-};
+  minHeight:{
+    minHeight:"55px"
+  }
+})
 
 class Header extends React.Component {
   state = {
@@ -51,10 +57,10 @@ class Header extends React.Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static" className="header">
-          <Toolbar>
+        <AppBar position="fixed" className={classes.appBar + " header"}>
+          <Toolbar className={classes.minHeight}>
             <Typography component="div" className={classes.grow + " logo"}>
-                <img src={APPCONFIG.company_logo_path}/>
+                <img alt="logo" src={APPCONFIG.company_logo_path}/>
             </Typography>
             {auth && (
               <div>

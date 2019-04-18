@@ -8,6 +8,9 @@ import Step from '@material-ui/core/Step'
 import StepLabel from '@material-ui/core/StepLabel'
 import Stepper from '@material-ui/core/Stepper'
 import Typography from '@material-ui/core/Typography'
+import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
+import CheckCircle from '@material-ui/icons/CheckCircle'
+import Paper from '@material-ui/core/Paper'
 
 import history from 'customHistory'
 
@@ -57,27 +60,78 @@ class SigningRoomDetails extends PureComponent {
                                         <StepLabel className="step-label">Review & Submit</StepLabel>
                                     </Step>
                                 </Stepper>
-                                <Grid container className="mrB10 bg-gray align-items-center">
-                                    <Grid item sm={3}>
-                                        <Typography className="mr0 heading-small" variant="h5" component="h4">
-                                            Kendall Sample
+                                <Paper className="pdf-box" elevation={1}>
+                                    <Grid container className="mrB10 bg-gray align-items-center">
+                                        <Grid item xs={12} sm={3}>
+                                            <Typography className="mr0 heading-small" variant="h5" component="h4">
+                                                Kendall Sample
                                         </Typography>
+                                        </Grid>
+                                        <Grid item xs={12} sm={9} className="text-right">
+                                            <span className="fnt-12 mrR5">Documents to submits with :</span>
+                                            <Button className="btn btn-chip mrR5" variant="outlined" color="default">
+                                                <span className="flex-grow-1 text-left ">Sign</span>  <Avatar className="avatar-count mrL5">00</Avatar>
+                                            </Button>
+                                            <Button className="btn btn-chip" variant="outlined" color="default">
+                                                <span className="flex-grow-1 text-left">Interaction</span>  <Avatar className="avatar-count mrL5">01</Avatar>
+                                            </Button>
+                                        </Grid>
                                     </Grid>
-                                    <Grid item sm={9} className="text-right">
-                                        <span className="fnt-12 mrR5">Documents to submits with :</span>
-                                        <Button className="btn btn-chip mrR5" variant="outlined" color="default">
-                                            <span className="flex-grow-1 text-left ">Sign</span>  <Avatar className="avatar-count mrL5">00</Avatar>
-                                        </Button>
-                                        <Button className="btn btn-chip" variant="outlined" color="default">
-                                            <span className="flex-grow-1 text-left">Interaction</span>  <Avatar className="avatar-count mrL5">01</Avatar>
-                                        </Button>
+                                    <Grid container className="pdf-sec">
+                                        <Grid item xs={12} sm={3}>
+                                            <div className="left-panel">
+                                                <div className="mrB15">
+                                                    <Button className="btn btn-rounded btn-rounded-gray mrR5" variant="outlined" color="default">
+                                                        Prev
+                                                </Button>
+                                                    <Button className="btn btn-rounded btn-rounded-blue mrR5" variant="outlined" color="default">
+                                                        Next <KeyboardArrowRight />
+                                                    </Button>
+                                                </div>
+                                                <div className="pdf-doc">
+                                                    <ul>
+                                                        <li>
+                                                            <a className="active" href="javascript:void(0)">
+                                                                <span className="num-count active">01</span>
+                                                                <img alt="thumbnail" src="/assets/images/th1.png" />
+                                                                <CheckCircle className="check-icon"/>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">
+                                                                <span className="num-count">02</span>
+                                                                <img alt="thumbnail" src="/assets/images/th2.png" />
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">
+                                                                <span className="num-count">03</span>
+                                                                <img alt="thumbnail" src="/assets/images/th3.png" />
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">
+                                                                <span className="num-count">04</span>
+                                                                <img  alt="thumbnail" src="/assets/images/th1.png" />
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:void(0)">
+                                                                <span className="num-count">05</span>
+                                                                <img alt="thumbnail" src="/assets/images/th3.png" />
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </Grid>
+                                        <Grid item xs={12} sm={9} className="right-panel">
+                                            <div className="pdf-img">
+                                                <img alt="Pdf" src="/assets/images/pdf.png" />
+                                            </div>
+                                        </Grid>
                                     </Grid>
-                                </Grid>
-                                <Grid container>
-                                    <Grid item sm={12}>
-                                        <img style={{width:"100%"}} src="/assets/images/pdf.png"/>
-                                    </Grid>
-                                </Grid>
+                                </Paper>
                             </CardContent>
                         </Card>
                     </Grid>

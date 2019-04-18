@@ -27,7 +27,7 @@ class ErrorBoundary extends PureComponent {
           <Card className="side-login-panel">
             <CardContent className="quad-content">
               <div className="error-icon">
-                <img src="/assets/images/error.png" />
+                <img alt="Error" src="/assets/images/error.png" />
                 <Typography className="mrB15 mrT20" gutterBottom variant="headline" component="h2">
                   Something went wrong.
                 </Typography>

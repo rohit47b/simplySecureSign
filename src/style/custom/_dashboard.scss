@@ -37,7 +37,7 @@
             right: calc(92% + 9px) !important;
             span{
                 border-top-width: 3px !important;
-                border-color: #CECECE !important;
+                border-color: $color_gray7 !important;
             }
         }
         .step-label{
@@ -73,13 +73,13 @@
     }
     .step-item.step-next{
         svg{
-            color: #CECECE !important;
+            color: $color_gray7 !important;
         }
         .step-label{
             >span{
                 + span{
                     >span{
-                        color: #CECECE !important;
+                        color: $color_gray7 !important;
                     }
                 }
             }
@@ -87,16 +87,18 @@
     }
 }
 
+.package-details {
+    display: flex;
+    align-items: center;
+    .media{
+        padding-right: 50px;
+    }
+}
+
 .card-container{
     .card-white {
             .card-content{
-            .package-details {
-                display: flex;
-                align-items: center;
-                .media{
-                    padding-right: 50px;
-                }
-            }
+           
             .signer-info{
                 .signer-details{
                     padding-bottom: 10px;

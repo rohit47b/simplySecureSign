@@ -14,3 +14,10 @@ body{
 #app-container ,.section-verify{
     height: 100%;
 }
+
+.section-app,.app-page-container,.app-content-wrapper,.main-content,.page-content{
+    height: 100%;
+}
+.main-content{
+    padding: 0px !important;
+}

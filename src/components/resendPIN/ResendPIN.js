@@ -61,13 +61,13 @@ class ResendPIN extends PureComponent {
                                     color="primary"
                                 />
                                 <span className="captcha-text">I'm not a robot</span>
-                                <span><img width="50" src="/assets/images/recaptchaLogo.png"/></span>
+                                <span><img alt="recaptchaLogo" width="50" src="/assets/images/recaptchaLogo.png"/></span>
                             </div>
                         </Grid>
                     </Grid>
                     <Grid container spacing={16} className="mrT10">
                         <Grid item sm={9}>
-                            <Button  variant="contained" color="primary" className="btn btn-primary">
+                            <Button  variant="contained" color="primary" className="btn btn-primary btn-block">
                                 Submit
                             </Button>
                         </Grid>

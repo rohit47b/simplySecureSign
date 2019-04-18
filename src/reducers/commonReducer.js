@@ -16,7 +16,6 @@ export default function commonReducer(state = commonReducerInitialState, action)
             return Object.assign([], state, action.countryList)
         case types.SET_CONSTANT:
             localStorage.setItem('account_id', action.accountId)
-            mixpanel.register({ "account_id": String(action.accountId) });
             return {
                 ...state,
                 constants: { accountId: action.accountId }
