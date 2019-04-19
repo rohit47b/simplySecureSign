@@ -98,19 +98,6 @@
 .card-container{
     .card-white {
             .card-content{
-           
-            .signer-info{
-                .signer-details{
-                    padding-bottom: 10px;
-                    span{
-                        font-size: 13px;
-                    }
-                    span.title {
-                        min-width: 150px;
-                        display: inline-block;
-                    }
-                }
-            }
             .right-content{
                 position: relative;
                 &:before{
@@ -127,10 +114,19 @@
             .fnt-aws-icon{
                 color: #535353;
             }
-            .bg-gray{
-                padding: 10px;
-            }
         }
     }
 }
 
+.signer-info{
+    .signer-details{
+        padding-bottom: 10px;
+        span{
+            font-size: 13px;
+        }
+        span.title {
+            min-width: 150px;
+            display: inline-block;
+        }
+    }
+}

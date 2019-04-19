@@ -12,7 +12,7 @@ import Typography from '@material-ui/core/Typography'
 import history from 'customHistory'
 
 const ConfirmDialogBox = (props) => {
-    const { isOpen, handleDialogClose, heading, content } = props
+    const { isOpen, handleDialogClose, heading, content,url } = props
     return (<Dialog
         open={isOpen}
         onClose={handleDialogClose}
@@ -31,7 +31,7 @@ const ConfirmDialogBox = (props) => {
             </DialogContentText>
         </DialogContent>
         <DialogActions className="dailog-footer">
-            <Button onClick={() => history.push('/app/closing-package-invoice')} className="btn btn-common btn-blue">
+            <Button onClick={() => history.push(url)} className="btn btn-common btn-blue">
                 Continue
             </Button>
         </DialogActions>

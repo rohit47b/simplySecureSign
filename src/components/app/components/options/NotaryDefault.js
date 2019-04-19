@@ -66,6 +66,7 @@ class NotaryDefault extends PureComponent {
                                 onChange={this.handleSwitchChange('checkedB')}
                                 value="checkedB"
                                 color="primary"
+                                className="checkbox-primary"
                             />
                             <span>Require Signer Signature in Journal</span>
                             <Checkbox
@@ -73,6 +74,7 @@ class NotaryDefault extends PureComponent {
                                 onChange={this.handleSwitchChange('checkedB')}
                                 value="checkedB"
                                 color="primary"
+                                className="checkbox-primary"
                             />
                             <span>Capture Electronic Journal</span>
                         </div>

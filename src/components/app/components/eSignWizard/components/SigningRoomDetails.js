@@ -94,7 +94,7 @@ class SigningRoomDetails extends PureComponent {
                                                             <a className="active" href="javascript:void(0)">
                                                                 <span className="num-count active">01</span>
                                                                 <img alt="thumbnail" src="/assets/images/th1.png" />
-                                                                <CheckCircle className="check-icon"/>
+                                                                <CheckCircle className="check-icon" />
                                                             </a>
                                                         </li>
                                                         <li>
@@ -112,7 +112,7 @@ class SigningRoomDetails extends PureComponent {
                                                         <li>
                                                             <a href="javascript:void(0)">
                                                                 <span className="num-count">04</span>
-                                                                <img  alt="thumbnail" src="/assets/images/th1.png" />
+                                                                <img alt="thumbnail" src="/assets/images/th1.png" />
                                                             </a>
                                                         </li>
                                                         <li>
@@ -126,9 +126,13 @@ class SigningRoomDetails extends PureComponent {
                                             </div>
                                         </Grid>
                                         <Grid item xs={12} sm={9} className="right-panel">
-                                            <div className="pdf-img">
-                                                <img alt="Pdf" src="/assets/images/pdf.png" />
-                                            </div>
+                                            <Grid container justify="center">
+                                                <Grid item xs={12} sm={8}>
+                                                    <div className="pdf-img">
+                                                        <img alt="Pdf" src="/assets/images/pdf.png" />
+                                                    </div>
+                                                </Grid>
+                                            </Grid>
                                         </Grid>
                                     </Grid>
                                 </Paper>

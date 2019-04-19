@@ -14,6 +14,9 @@
         .card-info{
             font-size: 13px;
         }
+        .stepper{
+            padding-top: 0px !important;
+        }
     }
 }
 
@@ -25,6 +28,170 @@
             .package-details {
                 border-bottom: 1px solid #ddd;
                 padding-bottom: 20px;
+            }
+        }
+    }
+}
+
+.card-pdf{
+    .card-body{
+        padding: 0px !important;
+        .stepper{
+            padding: 30px 35px !important;
+        }
+        .pdf-box{
+            .pdf-top-title{
+                padding-right: 35px;
+                padding-left: 35px;
+            }
+        }
+    }
+}
+           
+.card-review{
+    .card-body{
+        
+    }
+}
+
+/*chatBox css*/
+.chat-box{
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.2) !important;
+    position: fixed;
+    right: 3%;
+    bottom: 0px;
+    z-index: 100;
+    .chat-box-header{
+        background-color: $text_danger;
+        color: $color_white;
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        .chat-box-title{
+            flex-grow: 1;
+            svg{
+                font-size: 20px;
+            }
+        }
+        .icon-action{
+            svg{
+                cursor: pointer;
+            }
+        }
+    }
+    .group-chat{
+        background-color: $light_gary;
+        color:#000 ;
+        display: flex;
+        align-items: center;
+        padding: 5px 15px;
+        font-size: 11px;
+        .group-chat-dropdown{
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            svg{
+                font-size: 15px;
+            }
+        }
+        .group-chat-user{
+            display: flex;
+            align-items: center;
+            svg{
+                font-size: 15px;
+            }
+        }
+    }
+    .chat-body{
+        .chat-comment:last-child{
+            margin-bottom: 0px;
+            &:after{
+                display: none;
+            }
+            .chat-info{
+                padding-bottom: 0px;
+            }
+        }
+        .chat-comment{
+            margin-bottom: 15px;
+            &:after{
+                content:'';
+                background-color: rgba(0,0,0,0.1);
+                height: 1px;
+                width: 100%;
+                display: block;
+                position: relative;
+                right: -16px;
+            }
+            .chat-info{
+                display: flex;
+                align-items: center;
+                padding-bottom: 15px;
+                .chat-media{
+                    display: flex;
+                    align-items: center;
+                    flex-grow: 1;
+                    .user-icon{
+                        background-color: #ddd;
+                        width: 1.7em !important;
+                        height: 1.7em !important;
+                        border-radius: 50%;
+                        padding: 10px;
+                        color: rgba(0,0,0,0.5)
+                    }
+                    .chat-content{
+                        padding-left: 10px;
+                        .chat-user{
+                            color: rgba(0, 0, 0, 0.4);
+                            font-weight: 600;
+                            font-size: 12px;
+                        }
+                        .chat-desc{
+                            font-size: 13px;
+                            opacity: 1;
+                        }
+                    }
+                }
+                .chat-time{
+                    color: rgba(0, 0, 0, 0.4);
+                    font-weight: 600;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+    .chat-footer{
+        width: 100%;
+        display: flex !important;
+        align-items: center;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        padding: 5px 15px;
+        .chat-field{
+            flex-grow: 1;
+            .icon-emoji{
+                svg{
+                    font-size: 16px;
+                }
+            }
+            >div{
+                &:before{
+                    display: none;
+                }
+                &:after{
+                    display: none;
+                }
+                input{
+                    font-size: 13px;
+                }
+            }
+        }
+        .forward-icon{
+            svg{
+                font-size: 16px;
             }
         }
     }

@@ -3,12 +3,41 @@
         left: calc(-94% + 7px) !important;
         right: calc(92% + 9px) !important;
     }
+
+    .card-room{
+        .card-body{
+            .stepper .step-item > div {
+                left: calc(-96% + 15px) !important;
+                right: calc(96% + 8px) !important;
+            }
+        }
+    }
 }
 
 @media (min-width:1400px){
     .stepper .step-item > div {
         left: calc(-96% + 7px) !important;
         right: calc(92% + 9px) !important;
+    }
+    .card-room{
+        .card-body{
+            .stepper .step-item > div {
+                left: calc(-96% + 10px) !important;
+                right: calc(96% + 10px) !important;
+            }
+        }
+    }
+    .pdf-box{
+        .pdf-sec{
+            .col-left{
+                max-width: 15% !important;
+                flex-basis: 15% !important;
+            }
+            .col-right{
+                max-width: 85% !important;
+                flex-basis: 85% !important;
+            }
+        }
     }
 }
 @media (max-width:1280px){

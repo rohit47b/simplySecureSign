@@ -14,6 +14,7 @@ $color_gray6: #F2F2F2;
 $color_gray7: #CECECE;
 $color_gray8: #585858;
 $color_gray9: #F8F8F8;
+$color_gray10: #989898;
 
 
 $border-color: #e2e2e2; 
@@ -48,6 +49,7 @@ a:hover{color: #0289ea !important; text-decoration: none !important;}
 
 .mrB0{margin-bottom:0 !important}
 .mrB5{margin-bottom:5px !important;}
+.mrB7{margin-bottom:7px !important;}
 .mrB8{margin-bottom:8px !important;}
 .mrB10{margin-bottom:10px !important;}
 .mrB12{margin-bottom:12px !important;}
@@ -205,8 +207,8 @@ color: #CCC;
 
 /*********************************/
 
-.fnt-10{font-size:10px;}
-.fnt-11{font-size:11px;}
+.fnt-10{font-size:10px !important;}
+.fnt-11{font-size:11px !important;}
 .fnt-12{font-size:12px !important;}
 .fnt-13{font-size:13px !important;}
 .fnt-14{font-size:14px !important;}
@@ -296,8 +298,12 @@ table{
     height: 100%;
 }
 .min-width-250{
-    min-width: 250px;
+    min-width: 250px !important;
 }
+.min-width-130{
+    min-width: 130px !important;
+}
+
 .width-auto{
     width: auto !important;
 }

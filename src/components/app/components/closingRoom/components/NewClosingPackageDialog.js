@@ -12,6 +12,8 @@ import Avatar from '@material-ui/core/Avatar'
 import Paper from '@material-ui/core/Paper'
 import Button from '@material-ui/core/Button'
 
+import history from 'customHistory'
+
 class NewClosingPackageDialog extends PureComponent {
 
     render() {
@@ -150,7 +152,7 @@ class NewClosingPackageDialog extends PureComponent {
                             </Button>
                         </Grid>
                         <Grid item xs={12} sm={6} className="text-right">
-                            <Button variant="contained" className="btn btn-primary btn-sm text-transform-none min-width-100">
+                            <Button onClick={() => history.push('/app/notary/closing-room/welcome')} variant="contained" className="btn btn-primary btn-sm text-transform-none min-width-100">
                                 eSign
                             </Button>
                         </Grid>

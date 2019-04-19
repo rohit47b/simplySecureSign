@@ -7,6 +7,7 @@ import HelpIcon from '@material-ui/icons/Help'
 
 import Calendar from "./Calendar"
 import NewClosingPackageDialog from './NewClosingPackageDialog'
+import ChatBox from './ChatBox'
 
 class ClosingRoom extends PureComponent {
     state={
@@ -35,7 +36,9 @@ class ClosingRoom extends PureComponent {
                         Add closing Package
                      </Button>
                 </Typography>
+               
                 <CardContent className="card-body">
+                <ChatBox/>
                     <Typography className="heading-small mrB15" gutterBottom>
                         Welcome to Closing Room
                     </Typography>

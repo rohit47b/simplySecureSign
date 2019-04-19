@@ -79,7 +79,7 @@ class SigningRoom extends PureComponent {
                                         onChange={this.handleChange('checked')}
                                         value="checked"
                                         color="Secondary"
-                                        className="pdL0 pdT0"
+                                        className="pdL0 pdT0 checkbox-primary"
                                     />  
                                     I have read and agree to the eSign disclosure and consent above in its entirely. By checking this box I agree to revive electronic documents.
                                 </Typography>

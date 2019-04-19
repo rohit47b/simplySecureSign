@@ -208,7 +208,7 @@ class Review extends PureComponent {
                             </CardContent>
                         </Card>
                         <DocumentPdf isOpen={openDialog} handleDialogPdfClose={this.handleDialogPdfClose}/>
-                        <ConfirmDialogBox handleDialogClose={this.handleDialogClose} isOpen={open} heading={"Congratulation !"} content={<span>You have completed the electronic signing <br/>  Process successfully</span>}/>
+                        <ConfirmDialogBox url={'/app/closing-package-invoice'} handleDialogClose={this.handleDialogClose} isOpen={open} heading={"Congratulation !"} content={<span>You have completed the electronic signing <br/>  Process successfully</span>}/>
                     </Grid>
                 </Grid>
             </div>

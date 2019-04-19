@@ -367,12 +367,26 @@ hr.line-divider {
 /*tabs css end*/
 .icon-box{
     svg{
-        color: #989898;
-        border: 1px solid #989898;
+        color: $color_gray10;
+        border: 1px solid $color_gray10;
         border-radius: 50%;
-        font-size: 14px;
         padding: 5px;
         cursor: pointer;
+        
+    }
+}
+.add-circle-icon{
+    &:hover{
+        border: 1px solid $text_primary;
+        background-color: $text_primary;
+        color: $color_white;
+    }
+}
+.edit-circle-icon{
+    &:hover{
+        border: 1px solid $color_gray4;
+        background-color: $color_gray4;
+        color: $color_white;
     }
 }
 .add-icon{
@@ -450,7 +464,6 @@ hr.line-divider {
             }
         }
         .btn-primary {
-           min-width: auto !important;
             background-color: #0073CF !important;
             min-height: 32px !important;
             padding: 2px 16px !important;
@@ -481,6 +494,15 @@ hr.line-divider {
         >span>span>span{
             color: $text_primary !important;
         }
+    }
+}
+.tab-box{
+    border: 1px solid $color_gray7;
+    .nav-tab{
+        box-shadow: 0 0 5px 0 rgba(0,0,0,0.2);
+    }
+    .tab-container{
+        padding: 20px;
     }
 }
 
@@ -578,4 +600,12 @@ hr.line-divider {
 .grid-20{
     max-width: 20%;
     flex-basis: 20%;
+}
+
+/*checkbox css */
+.checkbox-primary{
+    svg{
+        font-size: 18px;
+        color: $text_primary;
+    }
 }
