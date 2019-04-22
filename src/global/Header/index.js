@@ -9,6 +9,7 @@ import Typography from '@material-ui/core/Typography'
 import AccountCircle from '@material-ui/icons/AccountCircle'
 import PropTypes from 'prop-types'
 import Icon from '@material-ui/core/Icon';
+import MenuIcon from '@material-ui/icons/Menu';
 
 
 import APPCONFIG from 'constants/Config'
@@ -36,6 +37,7 @@ class Header extends React.Component {
   state = {
     auth: true,
     anchorEl: null,
+    left:false
   };
 
   handleChange = event => {
@@ -49,9 +51,15 @@ class Header extends React.Component {
   handleClose = () => {
     this.setState({ anchorEl: null });
   };
+  
+  toggleDrawer = (side, open) => () => {
+    this.setState({
+      [side]: open,
+    });
+  };
 
   render() {
-    const { classes } = this.props;
+    const { classes,toggleDrawerOpen} = this.props;
     const { auth, anchorEl } = this.state;
     const open = Boolean(anchorEl);
 
@@ -59,6 +67,16 @@ class Header extends React.Component {
       <div className={classes.root}>
         <AppBar position="fixed" className={classes.appBar + " header"}>
           <Toolbar className={classes.minHeight}>
+          <IconButton
+              color="inherit"
+              aria-label="Open drawer"
+              onClick={toggleDrawerOpen}
+              className="navbar-collapse"
+              style={{cursor:"pointer"}}
+            >
+              <MenuIcon />
+            </IconButton>
+         
             <Typography component="div" className={classes.grow + " logo"}>
                 <img alt="logo" src={APPCONFIG.company_logo_path}/>
             </Typography>

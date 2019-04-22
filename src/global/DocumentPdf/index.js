@@ -22,7 +22,7 @@ class DocumentPdf extends PureComponent {
         >
           <DialogContent>
                 <div className="pdf">
-                    <img style={{width:'100%'}} src="/assets/images/popuppdf.png"/>
+                    <img alt="pdf" style={{width:'100%'}} src="/assets/images/popuppdf.png"/>
                 </div>
           </DialogContent>
          <RemoveIcon onClick={handleDialogPdfClose}/>

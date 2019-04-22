@@ -49,7 +49,7 @@ class ClosingRoomInfo extends PureComponent {
                 </Typography>
                 <CardContent className="card-body">
                     <Grid container spacing={16}>
-                        <Grid item lg={8}>
+                        <Grid item xs={12} sm={12} md={8}>
                             <Stepper className="stepper mrB20" alternativeLabel>
                                 <Step className="step-item completed">
                                     <StepLabel className="step-label">Signers & Notary Info</StepLabel>

@@ -20,7 +20,7 @@ class ResetPassword extends PureComponent {
                     Reset Password
                 </Typography>
                 <Typography component="p" className="mrB15">
-                    Enter the verification PIN that has been sent to your<br/> email account.
+                    Enter the verification PIN that has been sent to your email account.
                 </Typography>
                 <form>
                    
@@ -82,7 +82,7 @@ class ResetPassword extends PureComponent {
                     
                   
                     <Grid container spacing={16} className="mrT10">
-                        <Grid item sm={9}>
+                        <Grid item xs={12} sm={9}>
                             <Button  variant="contained" color="primary" className="btn btn-primary btn-block">
                                 Submit
                             </Button>

@@ -46,8 +46,8 @@ class Profile extends PureComponent {
         return (
             <Typography className="tab-container" component="div">
                 <div style={{ minHeight: "60vh" }}>
-                    <Grid container spacing={32} className="mrB15">
-                        <Grid item xs={12} sm={4} className="profile-info">
+                    <Grid container className="mrB15">
+                        <Grid item xs={12} md={6} lg={5} className="profile-info">
                             <Typography className="heading-small mrB15" component="div">
                                 General Information
                                 <div className="icon-box">
@@ -61,8 +61,8 @@ class Profile extends PureComponent {
                                             <span className="list-charges-title">
                                                 {data.label}
                                             </span>
-                                            <span>:</span>
-                                            <span className="mrL10 font-600">
+                                            <span className="separate-dot">:</span>
+                                            <span className="mrL10 font-600 info-text">
                                                 {data.labelInfo}
                                             </span>
                                         </div>
@@ -75,8 +75,8 @@ class Profile extends PureComponent {
                                                 <span className="list-charges-title">
                                                     {data.label}
                                                 </span>
-                                                <span>:</span>
-                                                <span className="mrL10 font-600">
+                                                <span className="separate-dot">:</span>
+                                                <span className="mrL10 font-600 info-text">
                                                     {data.labelInfo}
                                                 </span>
                                             </div>
@@ -88,8 +88,8 @@ class Profile extends PureComponent {
                                         <span className="list-charges-title">
                                             Work Phone
                                             </span>
-                                        <span>:</span>
-                                        <span className="mrL10 font-600">
+                                        <span className="separate-dot">:</span>
+                                        <span className="mrL10 font-600 info-text">
                                             +1 2541 2154
                                         </span>
                                     </div>
@@ -98,14 +98,14 @@ class Profile extends PureComponent {
                                             Home Phone
                                             </span>
                                         <span>:</span>
-                                        <span className="mrL10 font-600">
+                                        <span className="mrL10 font-600 info-text">
                                             +1 2541 1452
                                         </span>
                                     </div>
                                 </div>
                             </div>
                         </Grid>
-                        <Grid item xs={12} sm={4} className="profile-info">
+                        <Grid item xs={12} md={6} lg={5} className="profile-info">
                             <Typography className="heading-small mrB15" component="div">
                                 Password Info
                                 <div className="icon-box">

@@ -19,26 +19,28 @@ class ProductCodeTable extends PureComponent {
         const { tabelData } = this.state
         console.log('')
         return (
-            <Table className="table-bordered">
-                <TableHead>
-                    <TableRow>
-                        <TableCell align="left">Product Code</TableCell>
-                        <TableCell align="left">Title Number</TableCell>
-                        <TableCell align="left">Address</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {tabelData.map(data => {
-                        return (
-                            <TableRow key={data.id}>
-                                <TableCell align="left">{data.productCode}</TableCell>
-                                <TableCell align="left">{data.titleNo}</TableCell>
-                                <TableCell align="left">{data.address}</TableCell>
-                            </TableRow>
-                        )
-                    })}
-                </TableBody>
-            </Table>
+           
+                <Table className="table-bordered">
+                    <TableHead>
+                        <TableRow>
+                            <TableCell align="left">Product Code</TableCell>
+                            <TableCell align="left">Title Number</TableCell>
+                            <TableCell align="left">Address</TableCell>
+                        </TableRow>
+                    </TableHead>
+                    <TableBody>
+                        {tabelData.map(data => {
+                            return (
+                                <TableRow key={data.id}>
+                                    <TableCell align="left">{data.productCode}</TableCell>
+                                    <TableCell align="left">{data.titleNo}</TableCell>
+                                    <TableCell align="left">{data.address}</TableCell>
+                                </TableRow>
+                            )
+                        })}
+                    </TableBody>
+                </Table>
+            
         )
     }
 }

@@ -1,4 +1,4 @@
-import React ,{PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -33,54 +33,55 @@ const styles = theme => ({
   },
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor:"#F5F5F5",
-    borderRight:"none"
+    backgroundColor: "#F5F5F5",
+    borderRight: "none"
   },
   content: {
     flexGrow: 1,
     padding: theme.spacing.unit * 3,
   },
   toolbar: {
-    minHeight:"55px"
+    minHeight: "55px"
   }
 });
 
-class Sidebar extends PureComponent{
-    render(){
-        const { classes } = this.props;
-        return(
-            <div className={classes.root + " sidebar"}>
-            <CssBaseline />
-            <Drawer
-              className={classes.drawer + " sidebar-drawer"}
-              variant="permanent"
-              classes={{
-                paper: classes.drawerPaper,
-              }}
-            >
-              <div className={classes.toolbar} />
-              <List className="sidebar-menu">
-                  <ListItem onClick={() => history.push('/app/notary/closing-room')}  button className="menu-item active">
-                    <ListItemIcon className="menu-icon"><InsertDriveFile/></ListItemIcon>
-                    <ListItemText className="menu-title" primary={"Closing Room"} />
-                  </ListItem>
-                  <ListItem onClick={() => history.push('/app/notary/options')} button className="menu-item">
-                    <ListItemIcon className="menu-icon"> <Icon>settings</Icon></ListItemIcon>
-                    <ListItemText className="menu-title" primary={"Options"} />
-                  </ListItem>
-                  <ListItem onClick={() => history.push('/app/notary/profile-settings')} button className="menu-item">
-                    <ListItemIcon className="menu-icon"><PermIdentity/></ListItemIcon>
-                    <ListItemText className="menu-title" primary={"Profile Settings"} />
-                  </ListItem>
-                  <ListItem button className="menu-item">
-                    <ListItemIcon className="menu-icon"><HelpOutline/></ListItemIcon>
-                    <ListItemText className="menu-title" primary={"Help"} />
-                  </ListItem>
-              </List>
-            </Drawer>
-          </div>
-        )
-    }
+class Sidebar extends PureComponent {
+  render() {
+    const { classes, isOpen, onCloseToggleDrawer } = this.props;
+    return (
+      <div className={isOpen === true ? classes.root + " sidebar open" : classes.root + " sidebar"}>
+        <CssBaseline />
+        <Drawer 
+          className={classes.drawer + " sidebar-drawer"}
+          variant="permanent"
+          classes={{
+            paper: classes.drawerPaper,
+          }}
+          open={isOpen} onClose={onCloseToggleDrawer}
+        >
+          <div className={classes.toolbar} />
+          <List className="sidebar-menu">
+            <ListItem onClick={() => history.push('/app/notary/closing-room')} button className="menu-item active">
+              <ListItemIcon className="menu-icon"><InsertDriveFile /></ListItemIcon>
+              <ListItemText className="menu-title" primary={"Closing Room"} />
+            </ListItem>
+            <ListItem onClick={() => history.push('/app/notary/options')} button className="menu-item">
+              <ListItemIcon className="menu-icon"> <Icon>settings</Icon></ListItemIcon>
+              <ListItemText className="menu-title" primary={"Options"} />
+            </ListItem>
+            <ListItem onClick={() => history.push('/app/notary/profile-settings')} button className="menu-item">
+              <ListItemIcon className="menu-icon"><PermIdentity /></ListItemIcon>
+              <ListItemText className="menu-title" primary={"Profile Settings"} />
+            </ListItem>
+            <ListItem button className="menu-item">
+              <ListItemIcon className="menu-icon"><HelpOutline /></ListItemIcon>
+              <ListItemText className="menu-title" primary={"Help"} />
+            </ListItem>
+          </List>
+        </Drawer>
+      </div>
+    )
+  }
 }
 
 

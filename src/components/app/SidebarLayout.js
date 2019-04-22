@@ -25,15 +25,28 @@ const styles = theme => ({
 class SidebarLayout extends React.Component {
    // ----------------------- Custom logic method END -----------------------------*
 
+   state = {
+    left: false
+  };
+
+   toggleDrawer = () => () => {
+    this.setState(prevState => ({
+      left: !prevState.left
+    }));
+
+  }
+
   render() {
     const {children,classes}=this.props
+    const{left} =this.state
+    console.log(' left 00000000000000000000000 ',left)
     return (
       <div className="section-app">
-        <Header />
+        <Header toggleDrawerOpen={this.toggleDrawer()} />
         <section id="page-container" className="app-page-container">
           <div className="app-content-wrapper">
           <div className={classes.root + " page-content"}>
-                <Sidebar />
+                <Sidebar isOpen={left} onCloseToggleDrawer={this.toggleDrawer()} />
                 <main className={classes.content + " main-content"}>
                     <div className={classes.toolbar} />
                     {children}

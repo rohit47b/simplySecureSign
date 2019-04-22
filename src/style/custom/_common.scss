@@ -392,6 +392,7 @@ hr.line-divider {
 .add-icon{
     font-size: 30px !important;
     color: $text_primary;
+    cursor: pointer;
 }
 .border-box {
     border: 1px solid $color_gray7;
@@ -471,7 +472,8 @@ hr.line-divider {
     }
     .card-body{
         padding: 30px 35px;
-        overflow: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
         height: calc(100% - 55px);
     }
 }

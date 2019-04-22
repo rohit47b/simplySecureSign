@@ -11,7 +11,7 @@ class Products extends PureComponent {
         return (
             <Typography className="tab-container" component="div">
                 <div style={{ minHeight: "60vh" }}>
-                    <Grid container spacing={32} className="mrB15">
+                    <Grid container className="mrB15">
                         <Grid item xs={12} sm={6}>
                             <Typography className="heading-small mrB15" component="div">
                                 Add Product Code
@@ -69,9 +69,11 @@ class Products extends PureComponent {
                             </div>
                         </Grid>
                     </Grid>
-                    <Grid container spacing={16}>
+                    <Grid container>
                         <Grid item xs={12} sm={12}>
+                            <div className="table-scroll-x">
                             <ProductCodeTable/>
+                            </div>
                         </Grid>
                     </Grid>
                 </div>

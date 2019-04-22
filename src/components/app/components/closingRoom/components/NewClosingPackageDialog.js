@@ -143,7 +143,7 @@ class NewClosingPackageDialog extends PureComponent {
                         </Grid>
                     </Grid>
                     <Grid container spacing={16}>
-                        <Grid item xs={12} sm={6}>
+                        <Grid item xs={8} sm={6}>
                             <Button variant="contained" className="btn btn-dark-gray btn-sm mrR10">
                                 View Document
                             </Button>
@@ -151,7 +151,7 @@ class NewClosingPackageDialog extends PureComponent {
                                 Edit
                             </Button>
                         </Grid>
-                        <Grid item xs={12} sm={6} className="text-right">
+                        <Grid item xs={4} sm={6} className="text-right">
                             <Button onClick={() => history.push('/app/notary/closing-room/welcome')} variant="contained" className="btn btn-primary btn-sm text-transform-none min-width-100">
                                 eSign
                             </Button>

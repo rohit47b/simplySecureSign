@@ -39,7 +39,7 @@ class NotaryDefault extends PureComponent {
         return (
             <Typography className="tab-container" component="div">
                 <Grid container spacing={16} className="mrB20">
-                    <Grid item sm={3}>
+                    <Grid item xs={12} sm={3}>
                         <FormControl className="select-form-control">
                             <InputLabel shrink htmlFor="label-placeholder">
                                 Country
@@ -59,7 +59,7 @@ class NotaryDefault extends PureComponent {
                             </Select>
                         </FormControl>
                     </Grid>
-                    <Grid item sm={9} >
+                    <Grid item xs={12} sm={9} >
                         <div className="checkbox-info d-flex align-items-center">
                             <Checkbox
                                 checked={checkedB}
@@ -80,8 +80,8 @@ class NotaryDefault extends PureComponent {
                         </div>
                     </Grid>
                 </Grid>
-                <Grid container spacing={16}>
-                    <Grid item sm={12}>
+                <Grid container>
+                    <Grid item xs={12} sm={12}>
                         <Tabs className="tab-nav-2" value={value} onChange={this.handleTabChange}>
                             <Tab className="tab-nav-item-2" label={<span><EditIcon /> Documents</span>} />
                             <Tab className="tab-nav-item-2" label={<span><PersonIcon /> Signers</span>} />

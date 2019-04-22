@@ -49,7 +49,7 @@ class ClosingRoomReview extends PureComponent {
                 </Typography>
                 <CardContent className="card-body">
                     <Grid container spacing={16}>
-                        <Grid item lg={8}>
+                        <Grid item item xs={12} sm={12} md={10}>
                             <Stepper className="stepper mrB20" alternativeLabel>
                                 <Step className="step-item completed">
                                     <StepLabel className="step-label">Signers & Notary Info</StepLabel>
@@ -64,8 +64,7 @@ class ClosingRoomReview extends PureComponent {
                         </Grid>
                     </Grid>
                     <Grid container spacing={16}>
-                        <Grid item lg={8}>
-
+                        <Grid item md={10}>
                             <Typography className="mrB20 heading-small" variant="h5" component="h4">
                                 Package Details
                                 </Typography>

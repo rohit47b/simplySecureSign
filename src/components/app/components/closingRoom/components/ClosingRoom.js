@@ -38,7 +38,7 @@ class ClosingRoom extends PureComponent {
                 </Typography>
                
                 <CardContent className="card-body">
-                <ChatBox/>
+                {/* <ChatBox/> */}
                     <Typography className="heading-small mrB15" gutterBottom>
                         Welcome to Closing Room
                     </Typography>

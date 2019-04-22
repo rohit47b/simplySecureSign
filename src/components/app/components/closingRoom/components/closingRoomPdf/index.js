@@ -34,7 +34,7 @@ class ClosingRoomPdf extends PureComponent {
                 </Typography>
                 <CardContent className="card-body">
                     <Grid container>
-                        <Grid item lg={8}>
+                        <Grid item xs={12} sm={12} md={8}>
                             <Stepper className="stepper mrB20" alternativeLabel>
                                 <Step className="step-item completed">
                                     <StepLabel className="step-label">Signers & Notary Info</StepLabel>
@@ -49,7 +49,7 @@ class ClosingRoomPdf extends PureComponent {
                         </Grid>
                     </Grid>
                     <Grid container>
-                        <Grid item sm={12}>
+                        <Grid item xs={12} sm={12}>
                             <Paper className="pdf-box" elevation={1}>
                                 <Grid container className="mrB10 pdf-top-title bg-gray align-items-center">
                                     <Grid item xs={12} sm={3}>
@@ -58,7 +58,7 @@ class ClosingRoomPdf extends PureComponent {
                                         </Typography>
                                     </Grid>
                                     <Grid item xs={12} sm={9} className="text-right">
-                                        <span className="fnt-12 mrR5">Documents to submits with :</span>
+                                        <span className="fnt-12 mrR5 note-title">Documents to submits with :</span>
                                         <Button className="btn btn-chip mrR5" variant="outlined" color="default">
                                             <span className="flex-grow-1 text-left ">Sign</span>  <Avatar className="avatar-count mrL5">00</Avatar>
                                         </Button>

@@ -35,15 +35,15 @@ class NotaryCharge extends PureComponent {
                     </Grid>
                     <Grid container spacing={16} className="mrB15">
                         <Grid item xs={12} sm={12}>
-                            <div className="list-charges">
+                            <div className="list-charges list-notary-charge">
                             {NotaryChargesData.map(data => {
                                 return (
                                     <div className="list-charges-items">
                                         <span className="list-charges-title">
                                             {data.label}
                                         </span>
-                                        <span>:</span>
-                                        <span className="mrL15 mrR5">$ </span>
+                                        <span className="separate-dot">:</span>
+                                        <span className="mrL15 mrR5 currency">$ </span>
                                         <span>
                                             <TextField
                                                 className="bootstrap-text-field no-label form-control-custom mrR10"
