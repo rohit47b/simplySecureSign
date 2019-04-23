@@ -62,7 +62,7 @@ class Welcome extends PureComponent {
                         <Grid container>
                             <Grid item xs={6} sm={6} className="d-flex align-item-end">
                                 <Typography className="heading-large" gutterBottom variant="h5" component="h3">
-                                    eSign wizard / <span className="font-normal">Welcome</span>  <span><HelpIcon style={{ fontSize: 16,color:"#0073CF" }}/></span>
+                                    eSign wizard / <span className="font-normal">Welcome</span>  <span><HelpIcon style={{ fontSize: 16,color:"#0073CF",cursor:"pointer" }}/></span>
                                </Typography>
                             </Grid>
                             <Grid item xs={6} sm={6} className="text-right">
