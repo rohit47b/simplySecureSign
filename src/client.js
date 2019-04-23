@@ -1,3 +1,5 @@
+import 'core-js/es/map';
+import 'core-js/es/set';
 import React from 'react'
 import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider"
 import { createMuiTheme } from "@material-ui/core/styles"
@@ -11,6 +13,7 @@ import { } from 'babel-polyfill'
 import { Router } from 'react-router-dom'
 import history from 'customHistory'
 import Main from './routes'
+
 
 import { AppContainer } from 'react-hot-loader'
 

@@ -13,7 +13,7 @@ class EmailVerifyPage extends PureComponent {
     render() {
         return (
             <div className="section-verify">
-                <Grid container className="height-100">
+                <Grid container className="height-100 flex-container">
                     <ErrorBoundary error="bg-error">
                         <VerificationBackground></VerificationBackground>
                     </ErrorBoundary>

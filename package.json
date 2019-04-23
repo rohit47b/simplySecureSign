@@ -26,6 +26,7 @@
     "chart.js": "^2.7.3",
     "chroma-js": "^1.4.0",
     "connected-react-router": "^4.5.0",
+    "core-js": "^3.0.1",
     "date-fns": "^2.0.0-alpha.21",
     "lodash": "^4.17.10",
     "material-ui-chip-input": "^1.0.0-beta.6",

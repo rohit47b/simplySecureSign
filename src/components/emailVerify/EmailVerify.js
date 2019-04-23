@@ -26,7 +26,7 @@ class EmailVerify extends PureComponent {
                     email account.
                 </Typography>
                 <form>
-                    <Grid container spacing={16}>
+                    <Grid container spacing={16} className="flex-container">
                         <Grid item xs={12} sm={9}>
                             <TextField
                                 label="Email Id"
@@ -39,7 +39,7 @@ class EmailVerify extends PureComponent {
                             />
                         </Grid>
                     </Grid>
-                    <Grid container spacing={16}>
+                    <Grid container spacing={16} className="flex-container">
                         <Grid item sm={9}>
                             <Grid container spacing={8}>
                             <Grid item  xs={12} sm={12}>
@@ -95,14 +95,14 @@ class EmailVerify extends PureComponent {
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid container spacing={16} className="mrB30">
+                    <Grid container spacing={16} className="mrB30 flex-container">
                         <Grid item sm={9}>
                             <Typography className="fnt-12" component="p">
                                 Did't receive the PIN? <Link style={{ fontWeight: 600,color:"#0073CF" }} to="/resend-pin">Resend PIN</Link>
                             </Typography>
                         </Grid>
                     </Grid>
-                    <Grid container spacing={16} className="mrT10">
+                    <Grid container spacing={16} className="mrT10 flex-container" >
                         <Grid item xs={12} sm={9}>
                             <Button title="Next" onClick={() => history.push('/create-new-pin')} variant="contained" color="primary" className="btn btn-primary btn-block">
                                 NEXT
