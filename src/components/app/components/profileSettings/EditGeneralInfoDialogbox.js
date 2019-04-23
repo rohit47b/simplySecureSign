@@ -70,6 +70,7 @@ class EditGeneralInfoDialogbox extends PureComponent {
                                     variant="filled"
                                     className="text-field-dense"
                                     type="text"
+                                    name="fname"
                                 />
                             </Grid>
                             <Grid item xs={12} sm={4}>
@@ -79,6 +80,7 @@ class EditGeneralInfoDialogbox extends PureComponent {
                                     variant="filled"
                                     className="text-field-dense"
                                     type="text"
+                                    name="mname"
                                 />
                             </Grid>
                             <Grid item xs={12} sm={4}>
@@ -88,6 +90,7 @@ class EditGeneralInfoDialogbox extends PureComponent {
                                     variant="filled"
                                     className="text-field-dense"
                                     type="text"
+                                    name="lname"
                                 />
                             </Grid>
                         </Grid>
@@ -99,6 +102,7 @@ class EditGeneralInfoDialogbox extends PureComponent {
                                     variant="filled"
                                     className="text-field-dense"
                                     type="text"
+                                    name="cname"
                                 />
                             </Grid>
                             <Grid item xs={12} sm={8}>
@@ -108,6 +112,7 @@ class EditGeneralInfoDialogbox extends PureComponent {
                                     variant="filled"
                                     className="text-field-dense"
                                     type="email"
+                                    name="email"
                                 />
                             </Grid>
                         </Grid>
@@ -119,6 +124,7 @@ class EditGeneralInfoDialogbox extends PureComponent {
                                     variant="filled"
                                     className="text-field-dense"
                                     type="text"
+                                    name="address"
                                 />
                             </Grid>
                             <Grid item xs={12} sm={4}>
@@ -129,6 +135,7 @@ class EditGeneralInfoDialogbox extends PureComponent {
                                         onChange={this.handleChange}
                                         input={<FilledInput name="city" id="filled-city-simple" />}
                                         className="select-box"
+                                        name="city"
                                     >
                                         <MenuItem value="">
                                             <em>None</em>
@@ -148,6 +155,7 @@ class EditGeneralInfoDialogbox extends PureComponent {
                                         onChange={this.handleChange}
                                         input={<FilledInput name="state" id="filled-state-simple" />}
                                         className="select-box"
+                                        name="state"
                                     >
                                         <MenuItem value="">
                                             <em>None</em>
@@ -164,6 +172,7 @@ class EditGeneralInfoDialogbox extends PureComponent {
                                     variant="filled"
                                     className="text-field-dense"
                                     type="text"
+                                    name="zipcode"
                                 />
                             </Grid>
                             <Grid item xs={12} sm={4}>
@@ -174,6 +183,7 @@ class EditGeneralInfoDialogbox extends PureComponent {
                                         onChange={this.handleChange}
                                         input={<FilledInput name="country" id="filled-country-simple" />}
                                         className="select-box"
+                                        name="country"
                                     >
                                         <MenuItem value="">
                                             <em>None</em>
@@ -195,6 +205,7 @@ class EditGeneralInfoDialogbox extends PureComponent {
                                     variant="filled"
                                     className="text-field-dense"
                                     type="text"
+                                    name="workPhone"
                                 />
                             </Grid>
                             <Grid item xs={12} sm={4}>
@@ -204,15 +215,16 @@ class EditGeneralInfoDialogbox extends PureComponent {
                                     variant="filled"
                                     className="text-field-dense"
                                     type="text"
+                                    name="homePhone"
                                 />
                             </Grid>
                         </Grid>
                         <Grid container spacing={16}>
                             <Grid item xs={12} sm={12}>
-                                <Button variant="contained" className="btn btn-primary btn-sm mrR10">
+                                <Button title="Save" variant="contained" className="btn btn-primary btn-sm mrR10">
                                     Save
                                 </Button>
-                                <Button onClick={handleCloseDialog} variant="contained" className="btn btn-dark-gray btn-sm ">
+                                <Button title="Cancel" onClick={handleCloseDialog} variant="contained" className="btn btn-dark-gray btn-sm ">
                                     Cancel
                                 </Button>
                             </Grid>

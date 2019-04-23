@@ -34,6 +34,8 @@ class EmailVerify extends PureComponent {
                                 value={emailId}
                                 //onChange={this.handleChange('name')}
                                 margin="normal"
+                                name="email"
+                                type="email"
                             />
                         </Grid>
                     </Grid>
@@ -41,11 +43,11 @@ class EmailVerify extends PureComponent {
                         <Grid item sm={9}>
                             <Grid container spacing={8}>
                             <Grid item  xs={12} sm={12}>
-                                    <label className="custom-label">PIN</label>
+                                    <label htmlFor="pin-label" className="custom-label">PIN</label>
                                 </Grid>
                                 <Grid item xs={3} sm={3}>
                                     <TextField
-                                        id="standard-full-width"
+                                        id="pin-label"
                                         placeholder="0"
                                         fullWidth
                                         margin="normal"
@@ -53,6 +55,8 @@ class EmailVerify extends PureComponent {
                                         InputLabelProps={{
                                             shrink: true,
                                         }}
+                                        name="pin1"
+                                        type="text"
                                     />
                                 </Grid>
 
@@ -62,6 +66,8 @@ class EmailVerify extends PureComponent {
                                         placeholder="0"
                                         //onChange={this.handleChange('name')}
                                         margin="normal"
+                                        name="pin2"
+                                        type="text"
                                     />
                                 </Grid>
 
@@ -71,6 +77,8 @@ class EmailVerify extends PureComponent {
                                         placeholder="0"
                                         //onChange={this.handleChange('name')}
                                         margin="normal"
+                                        name="pin3"
+                                        type="text"
                                     />
                                 </Grid>
 
@@ -80,6 +88,8 @@ class EmailVerify extends PureComponent {
                                         placeholder="0"
                                         //onChange={this.handleChange('name')}
                                         margin="normal"
+                                        name="pin4"
+                                        type="text"
                                     />
                                 </Grid>
                             </Grid>
@@ -94,7 +104,7 @@ class EmailVerify extends PureComponent {
                     </Grid>
                     <Grid container spacing={16} className="mrT10">
                         <Grid item xs={12} sm={9}>
-                            <Button onClick={() => history.push('/create-new-pin')} variant="contained" color="primary" className="btn btn-primary btn-block">
+                            <Button title="Next" onClick={() => history.push('/create-new-pin')} variant="contained" color="primary" className="btn btn-primary btn-block">
                                 NEXT
                             </Button>
                         </Grid>

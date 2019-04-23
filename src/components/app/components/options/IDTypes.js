@@ -21,7 +21,7 @@ class IDTypes extends PureComponent {
             { key: 10, label: 'Credible Witness' },
             { key: 11, label: 'Credible Witness' },
             { key: 12, label: 'Bank Photo ID' },
-            { key: 13, label: 'Bank Photo ID' },
+         
 
         ],
         open: false
@@ -75,11 +75,19 @@ class IDTypes extends PureComponent {
                                     </span>
                                 );
                             })}
+                            <span>
+                                <Chip
+                                    //icon={icon}
+                                    label={"Bank Photo ID"}
+                                    onDelete={this.handleDelete}
+                                    className="chip-gray mrB10 mrR10 active"
+                                />
+                            </span>
                         </Grid>
                     </Grid>
                     <Grid container spacing={16}>
                         <Grid item xs={12} sm={6}>
-                            <Button onClick={this.handleDialogOpen} variant="outlined" className="btn btn-outline btn-sm mrR10">
+                            <Button title="Add new ID" onClick={this.handleDialogOpen} variant="outlined" className="btn btn-outline btn-sm mrR10">
                                 Add new ID
                             </Button>
                         </Grid>
@@ -88,10 +96,10 @@ class IDTypes extends PureComponent {
                 <hr className="divider mrB30" />
                 <Grid container spacing={16}>
                     <Grid item xs={12} sm={12}>
-                        <Button variant="contained" className="btn btn-primary btn-sm mrR10">
+                        <Button title="Save" variant="contained" className="btn btn-primary btn-sm mrR10">
                             Save
                         </Button>
-                        <Button variant="contained" className="btn btn-dark-gray btn-sm ">
+                        <Button title="Cancel" variant="contained" className="btn btn-dark-gray btn-sm ">
                             Cancel
                         </Button>
                     </Grid>

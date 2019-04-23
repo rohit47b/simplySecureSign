@@ -372,7 +372,6 @@ hr.line-divider {
         border-radius: 50%;
         padding: 5px;
         cursor: pointer;
-        
     }
 }
 .add-circle-icon{
@@ -386,7 +385,7 @@ hr.line-divider {
     &:hover{
         border: 1px solid $color_gray4;
         background-color: $color_gray4;
-        color: $color_white;
+        color: $color_white !important;
     }
 }
 .add-icon{
@@ -462,6 +461,7 @@ hr.line-divider {
                 margin-left: 5px;
                 font-size: 16px;
                 color: $color_gray5;
+                cursor: pointer;
             }
         }
         .btn-primary {

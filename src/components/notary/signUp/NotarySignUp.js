@@ -34,6 +34,9 @@ class NotarySignUp extends PureComponent {
                                 InputLabelProps={{
                                     shrink: true,
                                 }}
+                                name="name"
+                                type="text"
+
                             />
                         </Grid>
                         <Grid item xs={12} sm={9}>
@@ -47,6 +50,8 @@ class NotarySignUp extends PureComponent {
                                 InputLabelProps={{
                                     shrink: true,
                                 }}
+                                name="email"
+                                type="email"
                             />
                         </Grid>
                         <Grid item xs={12} sm={9}>
@@ -60,6 +65,8 @@ class NotarySignUp extends PureComponent {
                                 InputLabelProps={{
                                     shrink: true,
                                 }}
+                                name="password"
+                                type="password"
                             />
                         </Grid>
                     </Grid>
@@ -67,7 +74,7 @@ class NotarySignUp extends PureComponent {
                   
                     <Grid container spacing={16} className="mrT10">
                         <Grid item xs={12} sm={9}>
-                            <Button onClick={() => history.push('/notary/verify')} variant="contained" color="primary" className="btn btn-primary btn-block">
+                            <Button title="Sign Up" onClick={() => history.push('/notary/verify')} variant="contained" color="primary" className="btn btn-primary btn-block">
                                 Sign Up
                             </Button>
                         </Grid>

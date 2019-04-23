@@ -34,6 +34,8 @@ class CreateNewPassword extends PureComponent {
                                 InputLabelProps={{
                                     shrink: true,
                                 }}
+                                type="password"
+                                name="newPassword"
                             />
                         </Grid>
                         <Grid item xs={12} sm={9}>
@@ -47,13 +49,15 @@ class CreateNewPassword extends PureComponent {
                                 InputLabelProps={{
                                     shrink: true,
                                 }}
+                                type="password"
+                                name="confirmPassword"
                             />
                         </Grid>
                     </Grid>
                     
                     <Grid container spacing={16} className="mrT20">
                         <Grid item xs={12} sm={9}>
-                            <Button onClick={() => history.push('/notary/new-password-message')}   variant="contained" color="primary" className="btn btn-primary btn-block">
+                            <Button title="Save" onClick={() => history.push('/notary/new-password-message')}   variant="contained" color="primary" className="btn btn-primary btn-block">
                                 Save
                             </Button>
                         </Grid>

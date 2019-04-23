@@ -38,6 +38,7 @@ class NotaryInfoTab extends PureComponent {
                                                 variant="filled"
                                                 className="text-field-dense"
                                                 type="text"
+                                                name="name"
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={4}>
@@ -47,6 +48,7 @@ class NotaryInfoTab extends PureComponent {
                                                 variant="filled"
                                                 className="text-field-dense"
                                                 type="text"
+                                                name="commission"
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={4}>
@@ -56,6 +58,7 @@ class NotaryInfoTab extends PureComponent {
                                                 variant="filled"
                                                 className="text-field-dense"
                                                 type="text"
+                                                name="country"
                                             />
                                         </Grid>
                                     </Grid>
@@ -67,6 +70,7 @@ class NotaryInfoTab extends PureComponent {
                                                 variant="filled"
                                                 className="text-field-dense"
                                                 type="text"
+                                                name="state"
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={4}>
@@ -75,7 +79,8 @@ class NotaryInfoTab extends PureComponent {
                                                 margin="dense"
                                                 variant="filled"
                                                 className="text-field-dense"
-                                                type="email"
+                                                type="text"
+                                                name="startDate"
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={4}>
@@ -84,7 +89,8 @@ class NotaryInfoTab extends PureComponent {
                                                 margin="dense"
                                                 variant="filled"
                                                 className="text-field-dense"
-                                                type="email"
+                                                type="text"
+                                                name="endDate"
                                             />
                                         </Grid>
                                     </Grid>

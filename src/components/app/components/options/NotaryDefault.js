@@ -49,6 +49,7 @@ class NotaryDefault extends PureComponent {
                                 onChange={this.handleChange}
                                 input={<Input name="country" id="label-placeholder" />}
                                 className="select-box-bootstrap"
+                                name="country"
                             >
                                 <MenuItem value={10}>
                                     Select Country

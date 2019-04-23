@@ -40,10 +40,10 @@ class ClosingRoomReview extends PureComponent {
                         Closing Room
                         <HelpIcon />
                     </span>
-                    <Button onClick={() => history.push('/app/notary/closing-room/pdf')} variant="contained" className="btn btn-gray mrR10">
+                    <Button title="Back" onClick={() => history.push('/app/notary/closing-room/pdf')} variant="contained" className="btn btn-gray mrR10">
                         Back
                      </Button>
-                    <Button onClick={this.handleClickOpen} variant="contained" className="btn btn-primary min-width-130">
+                    <Button title="Submit" onClick={this.handleClickOpen} variant="contained" className="btn btn-primary min-width-130">
                         Submit
                      </Button>
                 </Typography>

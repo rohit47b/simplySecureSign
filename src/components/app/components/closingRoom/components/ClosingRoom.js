@@ -32,7 +32,7 @@ class ClosingRoom extends PureComponent {
                         Closing Room
                         <HelpIcon />
                     </span>
-                    <Button onClick={this.handleDialogOpen} variant="contained" className="btn btn-primary">
+                    <Button title="Add closing Package" onClick={this.handleDialogOpen} variant="contained" className="btn btn-primary">
                         Add closing Package
                      </Button>
                 </Typography>

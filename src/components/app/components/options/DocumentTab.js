@@ -35,15 +35,20 @@ class DocumentTab extends PureComponent {
                     <div className="content-box">
                         <Grid container spacing={16}>
                             <Grid item xs={12} sm={4}>
-                                <label className="custom-label">Add Documents</label>
+                                <label htmlFor="add-doc-name" className="custom-label">Add Documents</label>
                                 <div className="d-flex align-items-center">
                                     <TextField
                                         className="bootstrap-text-field no-label form-control-custom mrR10"
                                         //onChange={this.handleChange('name')}
                                         margin="normal"
                                         placeholder="Add document name"
+                                        name="docName"
+                                        type="text"
+                                        id="add-doc-name"
                                     />
-                                    <AddCircleIcon className="add-icon" />
+                                    <a title="Add Documents" href="javascript:void(0)">
+                                        <AddCircleIcon className="add-icon" />
+                                    </a>
                                 </div>
                             </Grid>
                         </Grid>
@@ -67,10 +72,10 @@ class DocumentTab extends PureComponent {
                     </div>
                     <Grid container spacing={16}>
                         <Grid item xs={12} sm={12} className="text-right">
-                            <Button variant="contained" className="btn btn-dark-gray btn-sm mrR10">
+                            <Button title="Cancel" variant="contained" className="btn btn-dark-gray btn-sm mrR10">
                                 Cancel
                             </Button>
-                            <Button variant="contained" className="btn btn-primary btn-sm">
+                            <Button title="Save" variant="contained" className="btn btn-primary btn-sm">
                                 Save
                             </Button>
                         </Grid>

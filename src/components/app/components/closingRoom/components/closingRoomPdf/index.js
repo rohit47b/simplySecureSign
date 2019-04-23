@@ -81,32 +81,32 @@ class ClosingRoomPdf extends PureComponent {
                                             <div className="pdf-doc">
                                                 <ul>
                                                     <li>
-                                                        <a className="active" href="javascript:void(0)">
+                                                        <a title="thumbnail1" className="active" href="javascript:void(0)">
                                                             <span className="num-count active">01</span>
                                                             <img alt="thumbnail" src="/assets/images/th1.png" />
                                                             <CheckCircle className="check-icon" />
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="javascript:void(0)">
+                                                        <a title="thumbnail2" href="javascript:void(0)">
                                                             <span className="num-count">02</span>
                                                             <img alt="thumbnail" src="/assets/images/th2.png" />
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="javascript:void(0)">
+                                                        <a title="thumbnail3" href="javascript:void(0)">
                                                             <span className="num-count">03</span>
                                                             <img alt="thumbnail" src="/assets/images/th3.png" />
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="javascript:void(0)">
+                                                        <a title="thumbnail4" href="javascript:void(0)">
                                                             <span className="num-count">04</span>
                                                             <img alt="thumbnail" src="/assets/images/th1.png" />
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="javascript:void(0)">
+                                                        <a title="thumbnail5" href="javascript:void(0)">
                                                             <span className="num-count">05</span>
                                                             <img alt="thumbnail" src="/assets/images/th3.png" />
                                                         </a>

@@ -73,6 +73,7 @@ class EditPasswordDialogbox extends PureComponent {
                                         onChange={this.handleChange}
                                         input={<FilledInput name="questions" id="filled-questions-simple" />}
                                         className="select-box"
+                                        name="questions"
                                     >
                                         <MenuItem value="">
                                             <em>Password Questions</em>
@@ -86,6 +87,7 @@ class EditPasswordDialogbox extends PureComponent {
                                 <FormControl className="password-text-field">
                                     <InputLabel htmlFor="adornment-password">Password</InputLabel>
                                     <Input
+                                        name="password"
                                         id="adornment-password"
                                         type={this.state.showPassword ? 'text' : 'password'}
                                         value={this.state.password}
@@ -113,6 +115,7 @@ class EditPasswordDialogbox extends PureComponent {
                                     variant="filled"
                                     className="text-field-dense"
                                     type="password"
+                                    name="password"
                                 />
                             </Grid>
                         </Grid>
@@ -124,6 +127,7 @@ class EditPasswordDialogbox extends PureComponent {
                                     variant="filled"
                                     className="text-field-dense"
                                     type="password"
+                                    name="newPassword"
                                 />
                             </Grid>
                             <Grid item xs={12} sm={4} className="pdT0">
@@ -133,6 +137,7 @@ class EditPasswordDialogbox extends PureComponent {
                                     variant="filled"
                                     className="text-field-dense"
                                     type="password"
+                                    name="confirmPassword"
                                 />
                             </Grid>
                         </Grid>

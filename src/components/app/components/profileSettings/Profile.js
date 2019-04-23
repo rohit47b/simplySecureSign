@@ -51,7 +51,7 @@ class Profile extends PureComponent {
                             <Typography className="heading-small mrB15" component="div">
                                 General Information
                                 <div className="icon-box">
-                                    <EditIcon onClick={this.handleDialogOpen} />
+                                    <a title="Edit" href="javascript:void(0)"><EditIcon className="edit-circle-icon"  onClick={this.handleDialogOpen} /></a>
                                 </div>
                             </Typography>
                             <div className="list-charges">
@@ -109,7 +109,7 @@ class Profile extends PureComponent {
                             <Typography className="heading-small mrB15" component="div">
                                 Password Info
                                 <div className="icon-box">
-                                    <EditIcon onClick={this.handleDialogEditInfoOpen} />
+                                    <a title="Edit" href="javascript:void(0)"><EditIcon className="edit-circle-icon"  onClick={this.handleDialogOpen} /></a>
                                 </div>
                             </Typography>
                             <div className="password-info">
@@ -138,10 +138,10 @@ class Profile extends PureComponent {
                 <hr className="divider mrB30" />
                 <Grid container spacing={16}>
                     <Grid item xs={12} sm={12}>
-                        <Button variant="contained" className="btn btn-primary btn-sm mrR10">
+                        <Button title="Save" variant="contained" className="btn btn-primary btn-sm mrR10">
                             Save
                         </Button>
-                        <Button variant="contained" className="btn btn-dark-gray btn-sm ">
+                        <Button title="Cancel" variant="contained" className="btn btn-dark-gray btn-sm ">
                             Cancel
                         </Button>
                     </Grid>

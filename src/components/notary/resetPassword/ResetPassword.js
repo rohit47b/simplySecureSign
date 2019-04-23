@@ -28,10 +28,11 @@ class ResetPassword extends PureComponent {
                         <Grid item sm={9}>
                             <Grid container spacing={8}>
                                 <Grid item  xs={12} sm={12}>
-                                    <label className="custom-label">Product Code</label>
+                                    <label htmlFor="product-code-label" className="custom-label">Product Code</label>
                                 </Grid>
                                 <Grid item  xs={3} sm={3}>
                                     <TextField
+                                       id="product-code-label"
                                         placeholder="0"
                                         fullWidth
                                         margin="normal"
@@ -39,6 +40,8 @@ class ResetPassword extends PureComponent {
                                         InputLabelProps={{
                                             shrink: true,
                                         }}
+                                        name="code1"
+                                        type="text"
                                     />
                                 </Grid>
 
@@ -49,6 +52,8 @@ class ResetPassword extends PureComponent {
                                         placeholder="0"
                                         //onChange={this.handleChange('name')}
                                         margin="normal"
+                                        name="code2"
+                                        type="text"
                                     />
                                 </Grid>
 
@@ -59,6 +64,8 @@ class ResetPassword extends PureComponent {
                                         placeholder="0"
                                         //onChange={this.handleChange('name')}
                                         margin="normal"
+                                        name="code3"
+                                        type="text"
                                     />
                                 </Grid>
 
@@ -69,6 +76,8 @@ class ResetPassword extends PureComponent {
                                         placeholder="0"
                                         //onChange={this.handleChange('name')}
                                         margin="normal"
+                                        name="code4"
+                                        type="text"
                                     />
                                 </Grid>
                             </Grid>
@@ -83,7 +92,7 @@ class ResetPassword extends PureComponent {
                   
                     <Grid container spacing={16} className="mrT10">
                         <Grid item xs={12} sm={9}>
-                            <Button  variant="contained" color="primary" className="btn btn-primary btn-block">
+                            <Button title="Submit"  variant="contained" color="primary" className="btn btn-primary btn-block">
                                 Submit
                             </Button>
                         </Grid>

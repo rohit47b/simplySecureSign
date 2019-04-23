@@ -40,10 +40,10 @@ class ClosingRoomInfo extends PureComponent {
                         Closing Room
                         <HelpIcon />
                     </span>
-                    <Button onClick={() => history.push('/app/notary/closing-room/welcome')} variant="contained" className="btn btn-gray mrR10">
+                    <Button title="Back" onClick={() => history.push('/app/notary/closing-room/welcome')} variant="contained" className="btn btn-gray mrR10">
                         Back
                      </Button>
-                    <Button onClick={() => history.push('/app/notary/closing-room/pdf')} variant="contained" className="btn btn-primary">
+                    <Button title="Save & Continue" onClick={() => history.push('/app/notary/closing-room/pdf')} variant="contained" className="btn btn-primary">
                         Save & Continue
                      </Button>
                 </Typography>
@@ -94,7 +94,7 @@ class ClosingRoomInfo extends PureComponent {
                                 I have read and agree to the eSign disclosure and consent above in its entirely. By checking this box I agree to revive electronic documents.
                                 </Typography>
                             <Typography component="div">
-                                <Button onClick={this.handleDialogOpen} variant="contained" className="btn btn-dark-gray btn-sm ">
+                                <Button title="Cancel by decline consent" onClick={this.handleDialogOpen} variant="contained" className="btn btn-dark-gray btn-sm ">
                                     Cancel by decline consent
                                 </Button>
                             </Typography>

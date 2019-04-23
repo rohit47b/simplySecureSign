@@ -10,6 +10,8 @@ import Tabs from '@material-ui/core/Tabs';
 import Typography from '@material-ui/core/Typography';
 import HelpIcon from '@material-ui/icons/Help';
 import PersonIcon from '@material-ui/icons/Person';
+import BookIcon from '@material-ui/icons/Book';
+
 import history from 'customHistory';
 import React, { PureComponent } from 'react';
 import NotaryInfoTab from "./NotaryInfoTab";
@@ -38,10 +40,10 @@ class Welcome extends PureComponent {
                         Closing Room
                         <HelpIcon />
                     </span>
-                    <Button variant="contained" className="btn btn-gray mrR10">
+                    <Button title="Cancel" variant="contained" className="btn btn-gray mrR10">
                         Cancel
                      </Button>
-                    <Button onClick={() => history.push('/app/notary/closing-room/info')} variant="contained" className="btn btn-primary">
+                    <Button title="Save & Continue" onClick={() => history.push('/app/notary/closing-room/info')} variant="contained" className="btn btn-primary">
                         Save & Continue
                      </Button>
                 </Typography>
@@ -71,7 +73,7 @@ class Welcome extends PureComponent {
                         <Grid item sm={12}>
                             <Tabs className="tab-nav-2" value={value} onChange={this.handleTabChange}>
                                 <Tab className="tab-nav-item-2" label={<span><PersonIcon /> Kendall Sample</span>} />
-                                <Tab className="tab-nav-item-2" label={<span><PersonIcon /> John Hancock</span>} />
+                                <Tab className="tab-nav-item-2" label={<span><BookIcon /> John Hancock</span>} />
                             </Tabs>
                             {value === 0 && <SignerInfoTab />}
                             {value === 1 && <NotaryInfoTab />}

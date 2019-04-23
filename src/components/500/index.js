@@ -8,7 +8,7 @@ const Error500 = () => (
     </div>
 
     <div className="err-body">
-      <a href="#/" className="btn btn-raised btn-lg btn-default">
+      <a title="Go Back to Home Page" href="#/" className="btn btn-raised btn-lg btn-default">
         Go Back to Home Page
       </a>
     </div>

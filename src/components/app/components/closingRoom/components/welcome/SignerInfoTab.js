@@ -43,6 +43,7 @@ class DocumentTab extends PureComponent {
                                         </Grid>
                                         <Grid item xs={12} sm={4}>
                                             <TextField
+                                                name="fname"
                                                 label="First Name"
                                                 margin="dense"
                                                 variant="filled"
@@ -52,6 +53,7 @@ class DocumentTab extends PureComponent {
                                         </Grid>
                                         <Grid item xs={12} sm={4}>
                                             <TextField
+                                                name="mname"
                                                 label="Middle Name"
                                                 margin="dense"
                                                 variant="filled"
@@ -61,6 +63,7 @@ class DocumentTab extends PureComponent {
                                         </Grid>
                                         <Grid item xs={12} sm={4}>
                                             <TextField
+                                                name="lname"
                                                 label="Last Name"
                                                 margin="dense"
                                                 variant="filled"
@@ -72,6 +75,7 @@ class DocumentTab extends PureComponent {
                                     <Grid container spacing={16} className="mrB10">
                                         <Grid item xs={12} sm={4}>
                                             <TextField
+                                                name="cname"
                                                 label="Company Name"
                                                 margin="dense"
                                                 variant="filled"
@@ -81,6 +85,7 @@ class DocumentTab extends PureComponent {
                                         </Grid>
                                         <Grid item xs={12} sm={8}>
                                             <TextField
+                                                 name="email"
                                                 label="Email Id"
                                                 margin="dense"
                                                 variant="filled"
@@ -92,6 +97,7 @@ class DocumentTab extends PureComponent {
                                     <Grid container spacing={16} className="mrB10">
                                         <Grid item xs={12} sm={8}>
                                             <TextField
+                                                name="address"
                                                 label="Address"
                                                 margin="dense"
                                                 variant="filled"
@@ -107,6 +113,7 @@ class DocumentTab extends PureComponent {
                                                     onChange={this.handleChange}
                                                     input={<FilledInput name="city" id="filled-city-simple" />}
                                                     className="select-box"
+                                                    name="city"
                                                 >
                                                     <MenuItem value="">
                                                         <em>None</em>
@@ -126,6 +133,7 @@ class DocumentTab extends PureComponent {
                                                     onChange={this.handleChange}
                                                     input={<FilledInput name="state" id="filled-state-simple" />}
                                                     className="select-box"
+                                                    name="state"
                                                 >
                                                     <MenuItem value="">
                                                         <em>None</em>
@@ -142,6 +150,7 @@ class DocumentTab extends PureComponent {
                                                 variant="filled"
                                                 className="text-field-dense"
                                                 type="text"
+                                                name="zipcode"
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={4}>
@@ -152,6 +161,7 @@ class DocumentTab extends PureComponent {
                                                     onChange={this.handleChange}
                                                     input={<FilledInput name="country" id="filled-country-simple" />}
                                                     className="select-box"
+                                                    name="country"
                                                 >
                                                     <MenuItem value="">
                                                         <em>None</em>
@@ -170,6 +180,7 @@ class DocumentTab extends PureComponent {
                                                 variant="filled"
                                                 className="text-field-dense"
                                                 type="text"
+                                                name="workPhone"
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={4}>
@@ -179,6 +190,7 @@ class DocumentTab extends PureComponent {
                                                 variant="filled"
                                                 className="text-field-dense"
                                                 type="text"
+                                                name="homePhone"
                                             />
                                         </Grid>
 
@@ -197,6 +209,7 @@ class DocumentTab extends PureComponent {
                                                     onChange={this.handleChange}
                                                     input={<FilledInput name="idType" id="filled-idType-simple" />}
                                                     className="select-box"
+                                                    name="idType"
                                                 >
                                                     <MenuItem value="">
                                                         <em>None</em>

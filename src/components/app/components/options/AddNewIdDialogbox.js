@@ -32,23 +32,26 @@ class AddNewIdDialogbox extends PureComponent {
                     <form>
                         <Grid container spacing={16} className="mrB15p">
                             <Grid item xs={12} sm={8}>
-                                <label className="custom-label">Add New ID Types</label>
+                                <label htmlFor="add-doc-name-simple" className="custom-label">Add New ID Types</label>
                                 <div className="d-flex align-items-center mrT15">
                                     <TextField
                                         className="bootstrap-text-field no-label form-control-custom mrR10"
                                         //onChange={this.handleChange('name')}
                                         margin="normal"
                                         placeholder="Add document name"
+                                        name="docName"
+                                        type="text"
+                                        id="add-doc-name-simple"
                                     />
                                 </div>
                             </Grid>
                         </Grid>
                         <Grid container spacing={16}>
                             <Grid item xs={12} sm={12}>
-                                <Button variant="contained" className="btn btn-primary btn-sm mrR10">
+                                <Button title="Save" variant="contained" className="btn btn-primary btn-sm mrR10">
                                     Save
                                 </Button>
-                                <Button onClick={handleCloseDialog} variant="contained" className="btn btn-dark-gray btn-sm ">
+                                <Button title="Cancel" onClick={handleCloseDialog} variant="contained" className="btn btn-dark-gray btn-sm ">
                                     Cancel
                                 </Button>
                             </Grid>

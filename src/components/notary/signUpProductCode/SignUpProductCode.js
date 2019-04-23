@@ -37,6 +37,8 @@ class SignUpProductCode extends PureComponent {
                                 InputLabelProps={{
                                     shrink: true,
                                 }}
+                                type="text"
+                                name="code"
                             />
                         </Grid>
                     </Grid>
@@ -48,7 +50,7 @@ class SignUpProductCode extends PureComponent {
                     </Grid>
                     <Grid container spacing={16} className="mrT10">
                         <Grid item xs={12} sm={9}>
-                            <Button variant="contained" color="primary" className="btn btn-primary btn-block">
+                            <Button title="Submit" variant="contained" color="primary" className="btn btn-primary btn-block">
                                 Submit
                             </Button>
                         </Grid>

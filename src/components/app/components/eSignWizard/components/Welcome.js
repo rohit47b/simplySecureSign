@@ -66,7 +66,7 @@ class Welcome extends PureComponent {
                                </Typography>
                             </Grid>
                             <Grid item xs={6} sm={6} className="text-right">
-                                <Button onClick={() => history.push('/app/eSign-wizard/signing-room')} variant="contained" color="primary" className="btn btn-common btn-blue">
+                                <Button title="Save & Continue" onClick={() => history.push('/app/eSign-wizard/signing-room')} variant="contained" color="primary" className="btn btn-common btn-blue">
                                     Save & Continue
                             </Button>
                             </Grid>
@@ -106,26 +106,34 @@ class Welcome extends PureComponent {
                                             <Grid container spacing={16} className="mrB15">
                                                 <Grid item xs={12} sm={4}>
                                                     <TextField
+                                                        name="fname"
                                                         label="First Name"
                                                         margin="dense"
                                                         variant="filled"
                                                         className="text-field-dense"
+                                                        type="text"
                                                     />
+                                                    
                                                 </Grid>
                                                 <Grid item xs={12} sm={4}>
                                                     <TextField
+                                                         name="mname"
                                                         label="Middle Name"
                                                         margin="dense"
                                                         variant="filled"
                                                         className="text-field-dense"
+                                                        type="text"
                                                     />
+                                                     <div className="validation-error text-right">Middle enter a valid middle name</div>
                                                 </Grid>
                                                 <Grid item xs={12} sm={4}>
                                                     <TextField
+                                                         name="lname"
                                                         label="Last Name"
                                                         margin="dense"
                                                         variant="filled"
                                                         className="text-field-dense"
+                                                        type="text"
                                                     />
                                                 </Grid>
                                             </Grid>
@@ -133,18 +141,22 @@ class Welcome extends PureComponent {
                                             <Grid container spacing={16} className="mrB15">
                                                 <Grid item xs={12} sm={4}>
                                                     <TextField
+                                                        name="cname"
                                                         label="Company Name"
                                                         margin="dense"
                                                         variant="filled"
                                                         className="text-field-dense"
+                                                        type="text"
                                                     />
                                                 </Grid>
                                                 <Grid item xs={12} sm={4}>
                                                     <TextField
+                                                        name="mobile"
                                                         label="Mobile"
                                                         margin="dense"
                                                         variant="filled"
                                                         className="text-field-dense"
+                                                        type="text"
                                                     />
                                                 </Grid>
                                                 <Grid item xs={12} sm={4}>
@@ -153,6 +165,8 @@ class Welcome extends PureComponent {
                                                         margin="dense"
                                                         variant="filled"
                                                         className="text-field-dense"
+                                                        type="email"
+                                                        name="email"
                                                     />
                                                 </Grid>
                                             </Grid>
@@ -163,6 +177,8 @@ class Welcome extends PureComponent {
                                                         margin="dense"
                                                         variant="filled"
                                                         className="text-field-dense"
+                                                        name="address"
+                                                        type="text"
                                                     />
                                                 </Grid>
                                                 <Grid item xs={12} sm={4}>
@@ -171,6 +187,8 @@ class Welcome extends PureComponent {
                                                         margin="dense"
                                                         variant="filled"
                                                         className="text-field-dense"
+                                                        name="phone"
+                                                        type="text"
                                                     />
                                                 </Grid>
                                             </Grid>
@@ -183,6 +201,7 @@ class Welcome extends PureComponent {
                                                             onChange={this.handleChange}
                                                             input={<FilledInput name="city" id="filled-city-simple" />}
                                                             className="select-box"
+                                                            name="city"
                                                         >
                                                             <MenuItem value="">
                                                                 <em>None</em>
@@ -200,6 +219,7 @@ class Welcome extends PureComponent {
                                                             onChange={this.handleChange}
                                                             input={<FilledInput name="city" id="filled-city-simple" />}
                                                             className="select-box"
+                                                            name="state"
                                                         >
                                                             <MenuItem value="">
                                                                 <em>None</em>
@@ -215,6 +235,8 @@ class Welcome extends PureComponent {
                                                         margin="dense"
                                                         variant="filled"
                                                         className="text-field-dense"
+                                                        name="pincode"
+                                                        type="text"
                                                     />
                                                 </Grid>
                                             </Grid>
@@ -262,8 +284,8 @@ class Welcome extends PureComponent {
                                                         </Typography>
                                                         <div className="border-box">
                                                             <div className="icon-box">
-                                                                <DoneIcon/>
-                                                                <EditIcon/>
+                                                                <DoneIcon className="fnt-16 add-circle-icon"/>
+                                                                <EditIcon className="fnt-16 edit-circle-icon"/>
                                                             </div>
                                                         </div>
                                                     </Grid>
@@ -273,8 +295,8 @@ class Welcome extends PureComponent {
                                                         </Typography>
                                                         <div className="border-box">
                                                             <div className="icon-box">
-                                                                <DoneIcon/>
-                                                                <EditIcon/>
+                                                                <DoneIcon className="fnt-16 add-circle-icon"/>
+                                                                <EditIcon className="fnt-16 edit-circle-icon"/>
                                                             </div>
                                                         </div>
                                                     </Grid>

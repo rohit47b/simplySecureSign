@@ -29,10 +29,11 @@ class CreateNewPIN extends PureComponent {
                         <Grid item sm={9}>
                             <Grid container spacing={8}>
                                 <Grid item  xs={12} sm={12}>
-                                    <label className="custom-label">PIN</label>
+                                    <label htmlFor="pin-label" className="custom-label">PIN</label>
                                 </Grid>
                                 <Grid item  xs={3} sm={3}>
                                     <TextField
+                                        id="pin-label"
                                         placeholder="0"
                                         fullWidth
                                         margin="normal"
@@ -40,6 +41,8 @@ class CreateNewPIN extends PureComponent {
                                         InputLabelProps={{
                                             shrink: true,
                                         }}
+                                        type="text"
+                                        name="code1"
                                     />
                                 </Grid>
 
@@ -49,6 +52,8 @@ class CreateNewPIN extends PureComponent {
                                         placeholder="0"
                                         //onChange={this.handleChange('name')}
                                         margin="normal"
+                                        type="text"
+                                        name="code2"
                                     />
                                 </Grid>
 
@@ -58,6 +63,8 @@ class CreateNewPIN extends PureComponent {
                                         placeholder="0"
                                         //onChange={this.handleChange('name')}
                                         margin="normal"
+                                        type="text"
+                                        name="code3"
                                     />
                                 </Grid>
 
@@ -67,6 +74,8 @@ class CreateNewPIN extends PureComponent {
                                         placeholder="0"
                                         //onChange={this.handleChange('name')}
                                         margin="normal"
+                                        type="text"
+                                        name="code4"
                                     />
                                 </Grid>
                             </Grid>
@@ -77,10 +86,11 @@ class CreateNewPIN extends PureComponent {
                         <Grid item sm={9}>
                             <Grid container spacing={8}>
                                 <Grid item  xs={12} sm={12}>
-                                    <label className="custom-label">Confirm PIN</label>
+                                    <label  htmlFor="pin-label-2" className="custom-label">Confirm PIN</label>
                                 </Grid>
                                 <Grid item  xs={3} sm={3}>
                                     <TextField
+                                       id="pin-label-2"
                                         placeholder="0"
                                         fullWidth
                                         margin="normal"
@@ -88,6 +98,8 @@ class CreateNewPIN extends PureComponent {
                                         InputLabelProps={{
                                             shrink: true,
                                         }}
+                                        type="text"
+                                        name="code1"
                                     />
                                 </Grid>
 
@@ -97,6 +109,8 @@ class CreateNewPIN extends PureComponent {
                                         placeholder="0"
                                         //onChange={this.handleChange('name')}
                                         margin="normal"
+                                        type="text"
+                                        name="code2"
                                     />
                                 </Grid>
 
@@ -106,6 +120,8 @@ class CreateNewPIN extends PureComponent {
                                         placeholder="0"
                                         //onChange={this.handleChange('name')}
                                         margin="normal"
+                                        type="text"
+                                        name="code3"
                                     />
                                 </Grid>
 
@@ -115,6 +131,8 @@ class CreateNewPIN extends PureComponent {
                                         placeholder="0"
                                         //onChange={this.handleChange('name')}
                                         margin="normal"
+                                        type="text"
+                                        name="code4"
                                     />
                                 </Grid>
                             </Grid>
@@ -122,7 +140,7 @@ class CreateNewPIN extends PureComponent {
                     </Grid>
                     <Grid container spacing={16} className="mrT10">
                         <Grid item xs={12} sm={9}>
-                            <Button  onClick={() => history.push('/app/eSign-wizard/review')} variant="contained" color="primary" className="btn btn-primary btn-block">
+                            <Button title="Save" onClick={() => history.push('/app/eSign-wizard/review')} variant="contained" color="primary" className="btn btn-primary btn-block">
                                 Save 
                             </Button>
                         </Grid>

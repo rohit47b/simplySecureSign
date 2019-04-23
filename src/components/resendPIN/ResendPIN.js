@@ -36,6 +36,8 @@ class ResendPIN extends PureComponent {
                                     shrink: true,
                                 }}
                                 margin="normal"
+                                type="email"
+                                name="email"
                             />
                         </Grid>
                     </Grid>
@@ -49,6 +51,8 @@ class ResendPIN extends PureComponent {
                                     shrink: true,
                                 }}
                                 margin="normal"
+                                name="address"
+                                type="text"
                             />
                         </Grid>
                     </Grid>
@@ -67,7 +71,7 @@ class ResendPIN extends PureComponent {
                     </Grid>
                     <Grid container spacing={16} className="mrT10">
                         <Grid item sm={9}>
-                            <Button  variant="contained" color="primary" className="btn btn-primary btn-block">
+                            <Button title="Submit"  variant="contained" color="primary" className="btn btn-primary btn-block">
                                 Submit
                             </Button>
                         </Grid>

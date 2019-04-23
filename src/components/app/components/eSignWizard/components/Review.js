@@ -53,10 +53,10 @@ class Review extends PureComponent {
                                </Typography>
                             </Grid>
                             <Grid item xs={6}  sm={6} className="text-right">
-                                <Button variant="contained" className="btn btn-common btn-gray mrR10">
+                                <Button title="Back" variant="contained" className="btn btn-common btn-gray mrR10">
                                     Back
                             </Button>
-                                <Button onClick={this.handleClickOpen} variant="contained" color="primary" className="btn btn-common btn-blue">
+                                <Button title="Save" onClick={this.handleClickOpen} variant="contained" color="primary" className="btn btn-common btn-blue">
                                     Save
                             </Button>
                             </Grid>

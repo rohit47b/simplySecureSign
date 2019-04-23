@@ -70,7 +70,7 @@ class ChatBox extends PureComponent {
                         className="chat-field"
                         placeholder="Type your message"
                     />
-                    <a className="forward-icon" href="javascript:void(0)">
+                    <a title="Forward Message" className="forward-icon" href="javascript:void(0)">
                         <ArrowForward/>
                     </a>
                 </CardActions>

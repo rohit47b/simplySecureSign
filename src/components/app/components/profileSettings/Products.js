@@ -22,50 +22,69 @@ class Products extends PureComponent {
                                     //onChange={this.handleChange('name')}
                                     margin="normal"
                                     placeholder="****"
+                                    name="code1"
+                                    type="text"
                                 />
                                 <TextField
                                     className="bootstrap-text-field no-label form-control-custom mrR10"
                                     //onChange={this.handleChange('name')}
                                     margin="normal"
                                     placeholder="****"
+                                    name="code2"
+                                    type="text"
                                 />
                                 <TextField
                                     className="bootstrap-text-field no-label form-control-custom mrR10"
                                     //onChange={this.handleChange('name')}
                                     margin="normal"
                                     placeholder="****"
+                                    name="code3"
+                                    type="text"
                                 />
                                 <TextField
                                     className="bootstrap-text-field no-label form-control-custom mrR10"
                                     //onChange={this.handleChange('name')}
                                     margin="normal"
                                     placeholder="****"
+                                    name="code4"
+                                    type="text"
                                 />
                                 <TextField
                                     className="bootstrap-text-field no-label form-control-custom mrR10"
                                     //onChange={this.handleChange('name')}
                                     margin="normal"
                                     placeholder="****"
+                                    name="code5"
+                                    type="text"
                                 />
                                 <TextField
                                     className="bootstrap-text-field no-label form-control-custom mrR10"
                                     //onChange={this.handleChange('name')}
                                     margin="normal"
                                     placeholder="****"
+                                    name="code6"
+                                    type="text"
                                 />
                                 <TextField
                                     className="bootstrap-text-field no-label form-control-custom mrR10"
                                     //onChange={this.handleChange('name')}
                                     margin="normal"
                                     placeholder="****"
+                                    name="code7"
+                                    type="text"
                                 />
                                 <TextField
                                     className="bootstrap-text-field no-label form-control-custom mrR10"
                                     //onChange={this.handleChange('name')}
                                     margin="normal"
                                     placeholder="****"
+                                    name="code8"
+                                    type="text"
                                 />
-                                <AddCircleIcon className="add-icon" />
+                                <a title="Add Product Code" href="javascript:void(0)">
+                                 <AddCircleIcon  className="add-icon" />
+                                </a>
+                               
                             </div>
                         </Grid>
                     </Grid>
@@ -80,10 +99,10 @@ class Products extends PureComponent {
                 <hr className="divider mrB30" />
                 <Grid container spacing={16}>
                     <Grid item xs={12} sm={12}>
-                        <Button variant="contained" className="btn btn-primary btn-sm mrR10">
+                        <Button title="Save" variant="contained" className="btn btn-primary btn-sm mrR10">
                             Save
                         </Button>
-                        <Button variant="contained" className="btn btn-dark-gray btn-sm ">
+                        <Button title="Cancel" variant="contained" className="btn btn-dark-gray btn-sm ">
                             Cancel
                         </Button>
                     </Grid>

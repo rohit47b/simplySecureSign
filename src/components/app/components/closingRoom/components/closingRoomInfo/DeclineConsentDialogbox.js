@@ -44,10 +44,10 @@ class DeclineConsentDialogbox extends PureComponent {
                         </Grid>
                         <Grid container spacing={16}>
                             <Grid item xs={12} sm={12}>
-                                <Button variant="contained" className="btn btn-dark-gray btn-sm btn-sm mrR10">
+                                <Button title="Yes" variant="contained" className="btn btn-dark-gray btn-sm btn-sm mrR10">
                                     Yes
                                 </Button>
-                                <Button onClick={handleCloseDialog} variant="contained" className="btn btn-dark-gray btn-sm ">
+                                <Button title="No" onClick={handleCloseDialog} variant="contained" className="btn btn-dark-gray btn-sm ">
                                     No
                                 </Button>
                             </Grid>
