@@ -57,7 +57,7 @@ class CreateNewPassword extends PureComponent {
                     
                     <Grid container spacing={16} className="mrT20">
                         <Grid item xs={12} sm={9}>
-                            <Button title="Save" onClick={() => history.push('/notary/new-password-message')}   variant="contained" color="primary" className="btn btn-primary btn-block">
+                            <Button title="Save" onClick={() => history.push('/notary/sign-in')}   variant="contained" color="primary" className="btn btn-primary btn-block">
                                 Save
                             </Button>
                         </Grid>

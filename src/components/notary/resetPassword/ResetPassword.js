@@ -92,7 +92,7 @@ class ResetPassword extends PureComponent {
                   
                     <Grid container spacing={16} className="mrT10">
                         <Grid item xs={12} sm={9}>
-                            <Button title="Submit"  variant="contained" color="primary" className="btn btn-primary btn-block">
+                            <Button title="Submit"  onClick={() => history.push('/notary/new-password')}  variant="contained" color="primary" className="btn btn-primary btn-block">
                                 Submit
                             </Button>
                         </Grid>
