@@ -16,6 +16,7 @@ import ClosingRoomInfo from './components/closingRoomInfo'
 import ClosingRoomPdf from './components/closingRoomPdf'
 import ClosingRoomReview from './components/closingRoomReview'
 
+
  export function ClosingRoomWizardRoute(url){
     return (
         <Switch>
@@ -24,7 +25,7 @@ import ClosingRoomReview from './components/closingRoomReview'
             <SidebarMainRoute exact path={`${url}/closing-room/info`} component={ClosingRoomInfo} />
             <SidebarMainRoute exact path={`${url}/closing-room/pdf`} component={ClosingRoomPdf} />
             <SidebarMainRoute exact path={`${url}/closing-room/review`} component={ClosingRoomReview} />
-            <Route component={NotFound} />
+          <Route component={NotFound} />
         </Switch>
     )
 };

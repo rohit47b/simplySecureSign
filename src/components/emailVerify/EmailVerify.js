@@ -41,7 +41,7 @@ class EmailVerify extends PureComponent {
                     </Grid>
                     <Grid container spacing={16} className="flex-container">
                         <Grid item sm={9}>
-                            <Grid container spacing={8}>
+                            <Grid container spacing={8} className="flex-container">
                             <Grid item  xs={12} sm={12}>
                                     <label htmlFor="pin-label" className="custom-label">PIN</label>
                                 </Grid>
@@ -102,7 +102,7 @@ class EmailVerify extends PureComponent {
                             </Typography>
                         </Grid>
                     </Grid>
-                    <Grid container spacing={16} className="mrT10 flex-container" >
+                    <Grid container spacing={16} className="mrT10 flex-container">
                         <Grid item xs={12} sm={9}>
                             <Button title="Next" onClick={() => history.push('/create-new-pin')} variant="contained" color="primary" className="btn btn-primary btn-block">
                                 NEXT

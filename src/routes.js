@@ -27,11 +27,13 @@ import Options from 'components/app/components/options'
 import ProfileSettings from 'components/app/components/profileSettings'
 import { ESignWizardRoute } from 'components/app/components/eSignWizard/ESignWizardRoute'
 import ResendPIN from 'components/resendPIN'
+import { RemoteSignRoute } from 'components/remoteSign/RemoteSignRoute';
 
 import { ClosingRoomWizardRoute } from 'components/app/components/closingRoom/ClosingRoomWizardRoute'
 
 
 import 'style/app.scss'
+
 
 const Main = ({ }) => {
     return <Switch>
@@ -69,6 +71,11 @@ const Main = ({ }) => {
          <Route
             path="/app/notary/"
             render={({ match: { url } }) => (ClosingRoomWizardRoute(url)
+            )}
+        />
+          <Route
+            path="/app/remote-sign/"
+            render={({ match: { url } }) => (RemoteSignRoute(url)
             )}
         />
          
