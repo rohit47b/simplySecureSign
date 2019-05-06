@@ -230,8 +230,8 @@
 // remote-sign - welcome page
 .sign-closing-wizard {
     height: 100%;
-    display: -ms-grid;
-    display: grid;
+    // display: -ms-grid;
+    // display: grid;
     padding: 0;   
     background: #f5f5f5;
     h1 {
@@ -243,7 +243,7 @@
 }
 .sign-closing-inner-container {
     padding: 85px 40px 0 40px;
-  
+    height: 90%;
     >div:nth-child(1) {
         -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -435,8 +435,6 @@
 }
 .action-btn {
     position: absolute;
-    display: -ms-grid;
-    display: grid;
     right: 0;
     .vid-cam {
         width: 32px;
@@ -716,7 +714,7 @@ $breakpoint-tablet: 768px;
 }
 @media (min-width: 430px) {
     .pdf-box-padding {
-        padding: 35px 20px !important;
+        padding: 35px 20px 0 20px !important;
     }
 }
 
