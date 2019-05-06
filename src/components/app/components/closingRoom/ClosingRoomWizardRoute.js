@@ -12,15 +12,18 @@ import SidebarMainRoute from 'components/app/SidebarMainRoute'
 import NotFound from 'components/404'
 import ClosingRoom from './components/ClosingRoom'
 import Welcome from './components/welcome'
+import Chat from './components/chat'
 import ClosingRoomInfo from './components/closingRoomInfo'
 import ClosingRoomPdf from './components/closingRoomPdf'
 import ClosingRoomReview from './components/closingRoomReview'
+import ChatBox from './components/ChatBox';
 
 
  export function ClosingRoomWizardRoute(url){
     return (
         <Switch>
             <SidebarMainRoute exact path={`${url}/closing-room`} component={ClosingRoom} />
+            <SidebarMainRoute exact path={`${url}/closing-room/chat`} component={Chat} />
             <SidebarMainRoute exact path={`${url}/closing-room/welcome`} component={Welcome} />
             <SidebarMainRoute exact path={`${url}/closing-room/info`} component={ClosingRoomInfo} />
             <SidebarMainRoute exact path={`${url}/closing-room/pdf`} component={ClosingRoomPdf} />
