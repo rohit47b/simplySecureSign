@@ -20,7 +20,7 @@ const styles = theme => ({
   },
   toolbar: {
     minHeight:"55px"
-  }
+  },
 });
 class SidebarLayout extends React.Component {
    // ----------------------- Custom logic method END -----------------------------*
@@ -47,7 +47,7 @@ class SidebarLayout extends React.Component {
           <div className="app-content-wrapper">
           <div className={classes.root + " page-content"}>
                 <Sidebar isOpen={left} onCloseToggleDrawer={this.toggleDrawer()} />
-                <main className={classes.content + " main-content"}>
+                <main className={classes.content + " main-content main-content-shadow"}>
                     <div className={classes.toolbar} />
                     {children}
                 </main>

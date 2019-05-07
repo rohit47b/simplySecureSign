@@ -15,6 +15,7 @@ import InsertDriveFile from '@material-ui/icons/InsertDriveFile';
 import HelpOutline from '@material-ui/icons/HelpOutline';
 import PermIdentity from '@material-ui/icons/PermIdentity';
 import Icon from '@material-ui/core/Icon';
+import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 
 import history from 'customHistory'
 
@@ -51,7 +52,7 @@ class Sidebar extends PureComponent {
     return (
       <div className={isOpen === true ? classes.root + " sidebar open" : classes.root + " sidebar"}>
         <CssBaseline />
-        <Drawer 
+        <Drawer
           className={classes.drawer + " sidebar-drawer"}
           variant="permanent"
           classes={{
@@ -69,9 +70,17 @@ class Sidebar extends PureComponent {
               <ListItemIcon className="menu-icon"> <Icon>settings</Icon></ListItemIcon>
               <ListItemText className="menu-title" primary={"Options"} />
             </ListItem>
+            <hr className="mr0" />
             <ListItem onClick={() => history.push('/app/notary/profile-settings')} button className="menu-item">
               <ListItemIcon className="menu-icon"><PermIdentity /></ListItemIcon>
               <ListItemText className="menu-title" primary={"Profile Settings"} />
+            </ListItem>
+            <ListItem onClick={() => history.push('/app/notary/closing-room/chat')} button className="menu-item">
+              <ListItemIcon className="menu-icon"><i class="fa fa-comment-o" aria-hidden="true"></i></ListItemIcon>
+              <ListItemText className="menu-title" primary={"Chat"} />
+              <ListItemSecondaryAction className="chat-count">
+                <div className="circle">2</div>
+              </ListItemSecondaryAction>
             </ListItem>
             <ListItem button className="menu-item">
               <ListItemIcon className="menu-icon"><HelpOutline /></ListItemIcon>
