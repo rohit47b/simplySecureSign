@@ -46,9 +46,7 @@ class DocumentTab extends PureComponent {
                                         type="text"
                                         id="add-doc-name"
                                     />
-                                    <a title="Add Documents" href="javascript:void(0)">
                                         <AddCircleIcon className="add-icon" />
-                                    </a>
                                 </div>
                             </Grid>
                         </Grid>

@@ -1,12 +1,9 @@
 import React, { PureComponent } from 'react'
 import { Link } from 'react-router-dom'
-
-import Checkbox from '@material-ui/core/Checkbox'
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-
 import history from 'customHistory'
 
 
