@@ -59,6 +59,9 @@
     right: 3%;
     bottom: 0px;
     z-index: 100;
+    margin-right: 40px;
+    margin-bottom: 99px;
+    border-bottom: 2px solid $text_primary;
     .chat-box-header{
         background-color: $text_danger;
         color: $color_white;
@@ -120,7 +123,9 @@
             }
         }
     }
-    .chat-body{
+    .chat-body{        
+        min-width: 312px;
+        cursor: pointer;
         .chat-comment:last-child{
             margin-bottom: 0px;
             &:after{
@@ -177,6 +182,7 @@
                         .chat-desc{
                             font-size: 13px;
                             opacity: 1;
+                            color: #000;
                         }
                     }
                 }
@@ -186,7 +192,26 @@
                     font-size: 10px;
                 }
             }
+        }        
+        .chat-user-icon {
+            height: 40px;
+            width: 40px;
+            background: #ebebeb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            i {
+                color: $color_gray;
+            }
         }
+    }
+    .close-chat {
+        position: absolute;
+        color: #b9b5b5;
+        cursor: pointer;
+        right: 8px;
+        top: 5px;
     }
     .chat-footer{
         width: 100%;
@@ -230,8 +255,6 @@
 // remote-sign - welcome page
 .sign-closing-wizard {
     height: 100%;
-    // display: -ms-grid;
-    // display: grid;
     padding: 0;   
     background: #f5f5f5;
     h1 {
@@ -690,7 +713,6 @@
     min-width: 80px !important;
     color: #fff !important;
 }
-$breakpoint-tablet: 768px;
 @media (max-width: 768px) {
     .viewer-dialog-input {
         width: 100% !important;
