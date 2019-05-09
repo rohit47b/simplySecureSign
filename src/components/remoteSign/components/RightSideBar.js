@@ -21,7 +21,6 @@ import history from 'customHistory';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import AddIcon from '@material-ui/icons/AddCircle';
-import CancelIcon from '@material-ui/icons/Cancel';
 
 const styles = theme => ({
     media: {

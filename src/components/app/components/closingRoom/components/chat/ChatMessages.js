@@ -9,7 +9,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import React, { PureComponent } from 'react';
-import ChatRoomSideBar from '../../../../../../hoc/ChatRoomSideBar';
 import history from 'customHistory'
 
 const styles = {
@@ -52,7 +51,6 @@ class ChatMessages extends PureComponent {
 
 
     render() {
-        const { classes } = this.props;
         return (
             <Card className="card">
                 <Grid container className="chat-room">
