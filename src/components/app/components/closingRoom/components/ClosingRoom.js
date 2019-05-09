@@ -35,10 +35,9 @@ class ClosingRoom extends PureComponent {
                     <Button title="Add closing Package" onClick={this.handleDialogOpen} variant="contained" className="btn btn-primary">
                         Add closing Package
                      </Button>
-                </Typography>
-               
+                </Typography>               
                 <CardContent className="card-body">
-                {/* <ChatBox/> */}
+                <ChatBox/>
                     <Typography className="heading-small mrB15" gutterBottom>
                         Welcome to Closing Room
                     </Typography>
