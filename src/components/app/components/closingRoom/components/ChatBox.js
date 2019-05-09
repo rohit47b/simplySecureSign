@@ -15,16 +15,20 @@ import InputLabel from '@material-ui/core/InputLabel';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import TextField from '@material-ui/core/TextField';
 
-
+import history from 'customHistory';
 
 
 
 class ChatBox extends PureComponent {
 
+
+    openChatBox=()=>{
+        history.push('./closing-room/chat')
+    }
     render() {
         return (
             <Card className="chat-box">
-                <Typography className="chat-box-header" component="div">
+                {/* <Typography className="chat-box-header" component="div">
                     <span className="chat-box-title">Signer :Tom</span>
                     <span className="icon-action">
                         <RemoveIcon className="mrR10" />
@@ -34,12 +38,16 @@ class ChatBox extends PureComponent {
                 <Typography className="group-chat" component="div">
                     <span className="group-chat-dropdown">Group Chat <KeyboardArrowDownIcon className="mrL10" /></span>
                     <span className="group-chat-user">03 <PersonIcon className="mrL5" /></span>
-                </Typography>
-                <CardContent className="chat-body">
+                </Typography> */}
+                <i className="fa fa-times-circle-o close-chat" aria-hidden="true"></i>
+                <CardContent className="chat-body" onClick={()=>this.openChatBox()}>
                     <Typography className="chat-comment" component="div">
-                        <div className="chat-info">
+                        <div className="chat-info">                            
                             <div className="chat-media">
-                                <PersonIcon className="user-icon" />
+                                {/* <PersonIcon className="user-icon" /> */}
+                                <div className="chat-user-icon">
+                                    <i className="fa fa-question" aria-hidden="true"></i>
+                                </div>
                                 <div className="chat-content">
                                     <div className="chat-user">Kendall Sample</div>
                                     <div className="chat-desc">Test message on chat</div>
@@ -48,7 +56,7 @@ class ChatBox extends PureComponent {
                             <div className="chat-time">Today, 4.30</div>
                         </div>
                     </Typography>
-                    <Typography className="chat-comment" component="div">
+                    {/* <Typography className="chat-comment" component="div">
                         <div className="chat-info">
                             <div className="chat-media">
                                 <PersonIcon className="user-icon" />
@@ -59,9 +67,9 @@ class ChatBox extends PureComponent {
                             </div>
                             <div className="chat-time">Today, 4.29</div>
                         </div>
-                    </Typography>
+                    </Typography> */}
                 </CardContent>
-                <CardActions className="chat-footer">
+                {/* <CardActions className="chat-footer">
                     <TextField
                         id="simple-start-adornment"
                         InputProps={{
@@ -73,7 +81,7 @@ class ChatBox extends PureComponent {
                     <a title="Forward Message" className="forward-icon" href="javascript:void(0)">
                         <ArrowForward/>
                     </a>
-                </CardActions>
+                </CardActions> */}
             </Card>
         )
     }

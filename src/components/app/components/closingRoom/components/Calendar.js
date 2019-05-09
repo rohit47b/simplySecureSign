@@ -6,7 +6,7 @@ class Calendar extends PureComponent {
 
     render() {
         return (
-            <FullCalendar defaultView="dayGridMonth" plugins={[dayGridPlugin]} />
+            <FullCalendar  defaultView="dayGridMonth" plugins={[dayGridPlugin]} />
         )
     }
 }
