@@ -1,12 +1,7 @@
 import React from 'react'
 import { withStyles } from '@material-ui/core/styles'
-import Grid from '@material-ui/core/Grid'
-import Button from '@material-ui/core/Button'
 import PropTypes from 'prop-types';
 import Header from 'global/Header'
-import Sidebar from "global/Sidebar"
-import Loader from 'global/Loader'
-import history from 'customHistory'
 const styles = theme => ({
   root: {
       display: 'flex',

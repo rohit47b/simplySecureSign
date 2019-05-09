@@ -15,7 +15,6 @@ class NotarySignUp extends PureComponent {
     }
 
     render() {
-        const { emailId } = this.state
         return (
             <Grid item xs={12} sm={12} md={6} className="verify-form">
                 <Typography className="mrB20 heading-large" gutterBottom variant="h5" component="h2">

@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 
 import history from 'customHistory'
-
+import '../../style/app.scss';
 
 class EmailVerify extends PureComponent {
     state = {
@@ -49,7 +49,6 @@ class EmailVerify extends PureComponent {
                                     <TextField
                                         id="pin-label"
                                         placeholder="0"
-                                        fullWidth
                                         margin="normal"
                                         className="bootstrap-text-field no-label"
                                         InputLabelProps={{
@@ -104,9 +103,9 @@ class EmailVerify extends PureComponent {
                     </Grid>
                     <Grid container spacing={16} className="mrT10 flex-container">
                         <Grid item xs={12} sm={9}>
-                            <Button title="Next" onClick={() => history.push('/create-new-pin')} variant="contained" color="primary" className="btn btn-primary btn-block">
+                             <Button title="Next" onClick={() => history.push('/create-new-pin')} variant="contained" color="primary" className="btn btn-primary btn-block">
                                 NEXT
-                            </Button>
+                            </Button> 
                         </Grid>
                     </Grid>
                 </form>

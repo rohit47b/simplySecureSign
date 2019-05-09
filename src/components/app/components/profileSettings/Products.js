@@ -81,9 +81,9 @@ class Products extends PureComponent {
                                     name="code8"
                                     type="text"
                                 />
-                                <a title="Add Product Code" href="javascript:void(0)">
+                                <Button title="Add Product Code" >
                                  <AddCircleIcon  className="add-icon" />
-                                </a>
+                                </Button>
                                
                             </div>
                         </Grid>

@@ -1,27 +1,14 @@
-import React, { PureComponent } from 'react'
-import Button from '@material-ui/core/Button'
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
-import Typography from '@material-ui/core/Typography'
-import HelpIcon from '@material-ui/icons/Help'
-import ChatBox from '../ChatBox';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import Avatar from '@material-ui/core/Avatar';
-import CheckCircle from '@material-ui/icons/CheckCircle';
-import RightSideBar from '../../../../../remoteSign/components/RightSideBar';
+import Card from '@material-ui/core/Card';
+import Divider from '@material-ui/core/Divider';
+import Grid from '@material-ui/core/Grid';
+import InputBase from '@material-ui/core/InputBase';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
-import FolderIcon from '@material-ui/icons/Folder';
-import DeleteIcon from '@material-ui/icons/Delete';
-import IconButton from '@material-ui/core/IconButton';
-import InputBase from '@material-ui/core/InputBase';
 import { withStyles } from '@material-ui/core/styles';
-import Divider from '@material-ui/core/Divider';
+import Typography from '@material-ui/core/Typography';
+import React, { PureComponent } from 'react';
 import ChatRoomSideBar from '../../../../../../hoc/ChatRoomSideBar';
 
 const styles = {
@@ -51,6 +38,7 @@ class Chat extends PureComponent {
         open: false,
         dense: false,
         secondary: false,
+        displayChat : false,
     }
 
     handleDialogOpen = () => {
@@ -63,7 +51,6 @@ class Chat extends PureComponent {
 
 
     render() {
-        const { open, dense, secondary } = this.state;
         const { classes } = this.props;
         return (
             <Card className="card">
@@ -82,15 +69,22 @@ class Chat extends PureComponent {
                                 <InputBase className={classes.input} placeholder="Search" />
                             </div>
                         </div>
-                        <ChatRoomSideBar />
+                        <ChatRoomSideBar displayChat = {this.displayChatBox} />
                     </Grid>
                     <Grid item xs={12} sm={8} md={8} lg={9} xl={10} className="right-chat-container pdB0">
-                        <div className="right-inner-chat-container">
+                        <div className="active-chat-box d-flex align-items-center">
+                            <span className="mrR15"><i class="fa fa-arrow-left" aria-hidden="true"></i></span>
+                            <Avatar aria-label="Recipe" className="list-avatar blue-circle mrR15">
+                                <i className="fa fa-file-o" aria-hidden="true"></i>
+                            </Avatar>
+                            <span>AB Document</span>
+                        </div>
+                        <div className="right-inner-chat-container right-chat-container-desktop">
                             <List>
                                 <ListItem>
                                     <Avatar aria-label="Recipe" className="list-avatar blue-circle">
                                         KS
-                                </Avatar>
+                                    </Avatar>
                                     <ListItemText className="chat-item-header-text" primary={
                                         <React.Fragment>
                                             <Typography>

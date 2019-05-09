@@ -1,23 +1,19 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Toolbar from '@material-ui/core/Toolbar';
+import Drawer from '@material-ui/core/Drawer';
+import Icon from '@material-ui/core/Icon';
 import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InsertDriveFile from '@material-ui/icons/InsertDriveFile';
-import HelpOutline from '@material-ui/icons/HelpOutline';
-import PermIdentity from '@material-ui/icons/PermIdentity';
-import Icon from '@material-ui/core/Icon';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import ListItemText from '@material-ui/core/ListItemText';
+import { withStyles } from '@material-ui/core/styles';
+import HelpOutline from '@material-ui/icons/HelpOutline';
+import InsertDriveFile from '@material-ui/icons/InsertDriveFile';
+import PermIdentity from '@material-ui/icons/PermIdentity';
+import history from 'customHistory';
+import PropTypes from 'prop-types';
+import React, { PureComponent } from 'react';
 
-import history from 'customHistory'
 
 const drawerWidth = 240;
 
@@ -52,7 +48,7 @@ class Sidebar extends PureComponent {
     return (
       <div className={isOpen === true ? classes.root + " sidebar open" : classes.root + " sidebar"}>
         <CssBaseline />
-        <Drawer
+        <Drawer 
           className={classes.drawer + " sidebar-drawer"}
           variant="permanent"
           classes={{
@@ -70,7 +66,6 @@ class Sidebar extends PureComponent {
               <ListItemIcon className="menu-icon"> <Icon>settings</Icon></ListItemIcon>
               <ListItemText className="menu-title" primary={"Options"} />
             </ListItem>
-            <hr className="mr0" />
             <ListItem onClick={() => history.push('/app/notary/profile-settings')} button className="menu-item">
               <ListItemIcon className="menu-icon"><PermIdentity /></ListItemIcon>
               <ListItemText className="menu-title" primary={"Profile Settings"} />

@@ -32,8 +32,7 @@ class DocumentTab extends PureComponent {
         this.setState({ value });
     }
     render() {
-        const { classes } = this.props
-        const { value,city,state,country } = this.state
+        const { city,state,country } = this.state
         return (
             <Typography component="div" className="tab-content pd0">
                 <form>

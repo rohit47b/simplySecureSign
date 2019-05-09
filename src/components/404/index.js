@@ -14,8 +14,8 @@ const Error404 = () => (
     <Button  onClick={() => history.push('/login')} type="button" variant="contained" className="btn btn-success">Go Home</Button>
     </div>
     <div className="err-footer">
-        <span>For more information</span> <a title="Contact Us" href="javascript:void(0)">Contact Us</a>
-    </div>
+        <span>For more information Contact Us </span>
+    </div> 
   </div>
 );
 

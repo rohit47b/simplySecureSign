@@ -53,7 +53,6 @@ class Welcome extends PureComponent {
     };
 
     render() {
-        const { classes } = this.props
         const { value } = this.state
         return (
             <div>
@@ -74,7 +73,7 @@ class Welcome extends PureComponent {
                     </Grid>
                 </Grid>
                 <Grid container justify="center" className="card-container">
-                    <Grid item xs={12} sm={12} lg={8}>
+                    <Grid item xs={12} sm={8}>
                         <Card className="card-white mrB20">
                             <CardContent className="card-content">
                                 <Stepper className="stepper mrB20" alternativeLabel>
