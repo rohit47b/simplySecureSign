@@ -1,27 +1,13 @@
-import React, { PureComponent } from 'react'
-import Card from '@material-ui/core/Card'
-import CardActions from '@material-ui/core/CardActions'
-import CardContent from '@material-ui/core/CardContent'
-import RemoveIcon from '@material-ui/icons/Remove'
-import HighlightOff from '@material-ui/icons/HighlightOff'
-import Typography from '@material-ui/core/Typography'
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown'
-import PersonIcon from '@material-ui/icons/Person'
-import InsertEmoticon from '@material-ui/icons/InsertEmoticon'
-import ArrowForward from '@material-ui/icons/ArrowForward'
-
-import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import TextField from '@material-ui/core/TextField';
-
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
 import history from 'customHistory';
+import React, { PureComponent } from 'react';
+
 
 
 
 class ChatBox extends PureComponent {
-
-
     openChatBox=()=>{
         history.push('./closing-room/chat')
     }

@@ -4,14 +4,10 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Step from '@material-ui/core/Step';
-import StepLabel from '@material-ui/core/StepLabel';
-import Stepper from '@material-ui/core/Stepper';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import CheckCircle from '@material-ui/icons/CheckCircle';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
-import history from 'customHistory';
 import React, { PureComponent } from 'react';
 import RightSideBar from './RightSideBar';
 
@@ -83,35 +79,35 @@ class SigningRoom extends PureComponent {
                                             <div className="pdf-doc">
                                                 <ul>
                                                     <li>
-                                                        <a title="thumbnail1" className="active" href="javascript:void(0)">
+                                                        <Button title="thumbnail1" className="active" >
                                                             <span className="num-count active">01</span>
                                                             <img alt="thumbnail" src="/assets/images/th1.png" />
                                                             <CheckCircle className="check-icon" />
-                                                        </a>
+                                                        </Button>
                                                     </li>
                                                     <li>
-                                                        <a title="thumbnail2" href="javascript:void(0)">
+                                                        <Button title="thumbnail2" >
                                                             <span className="num-count">02</span>
                                                             <img alt="thumbnail" src="/assets/images/th2.png" />
-                                                        </a>
+                                                        </Button>
                                                     </li>
                                                     <li>
-                                                        <a title="thumbnail3" href="javascript:void(0)">
+                                                        <Button title="thumbnail3" >
                                                             <span className="num-count">03</span>
                                                             <img alt="thumbnail" src="/assets/images/th3.png" />
-                                                        </a>
+                                                        </Button>
                                                     </li>
                                                     <li>
-                                                        <a title="thumbnail4" href="javascript:void(0)">
+                                                        <Button title="thumbnail4">
                                                             <span className="num-count">04</span>
                                                             <img alt="thumbnail" src="/assets/images/th1.png" />
-                                                        </a>
+                                                        </Button>
                                                     </li>
                                                     <li>
-                                                        <a title="thumbnail5" href="javascript:void(0)">
+                                                        <Button title="thumbnail5">
                                                             <span className="num-count">05</span>
                                                             <img alt="thumbnail" src="/assets/images/th3.png" />
-                                                        </a>
+                                                        </Button>
                                                     </li>
                                                 </ul>
                                             </div>

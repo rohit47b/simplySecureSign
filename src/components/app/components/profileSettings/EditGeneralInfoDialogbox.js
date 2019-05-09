@@ -9,12 +9,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import HighlightOff from '@material-ui/icons/HighlightOff';
-import InputAdornment from '@material-ui/core/InputAdornment';
 import React, { PureComponent } from 'react';
-import Visibility from '@material-ui/icons/Visibility';
-import VisibilityOff from '@material-ui/icons/VisibilityOff';
-import Input from '@material-ui/core/Input';
-import IconButton from '@material-ui/core/IconButton';
 import TextField from '@material-ui/core/TextField'
 
 class EditGeneralInfoDialogbox extends PureComponent {

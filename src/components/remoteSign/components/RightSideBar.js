@@ -1,7 +1,6 @@
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
 import Chip from '@material-ui/core/Chip';
 import Dialog from '@material-ui/core/Dialog';
@@ -17,11 +16,11 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Paper from '@material-ui/core/Paper';
 import Popover from '@material-ui/core/Popover';
 import { withStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import history from 'customHistory';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
+import AddIcon from '@material-ui/icons/AddCircle';
 
 const styles = theme => ({
     media: {
@@ -42,15 +41,23 @@ const styles = theme => ({
     typography: {
         margin: theme.spacing.unit * 2,
     },
+    chip: {
+        borderColor: "#0073cf !important",
+    },
+    addGroup : {
+        minHeight: "320px",
+        position: "relative",
+    },
+    cancelIcon: {
+        display: "block",
+        marginLeft: "auto",
+        marginRight: "14px",
+        marginTop: "10px",
+        color: "#9e9d9d",
+        fontSize: "20px",
+    }
 });
 
-function generate(element) {
-    return [0, 1, 2].map(value =>
-        React.cloneElement(element, {
-            key: value,
-        }),
-    );
-}
 
 class RightSideBar extends PureComponent {
     state = {
@@ -129,7 +136,7 @@ class RightSideBar extends PureComponent {
                     <CardHeader
                         action={
                             <span className="horiz-more-btn">
-                                <i class="fa fa-ellipsis-h" onClick={this.handleClick} aria-owns={this.open ? 'simple-popper' : undefined}
+                                <i className="fa fa-ellipsis-h" onClick={this.handleClick} aria-owns={this.open ? 'simple-popper' : undefined}
                                     aria-haspopup="true" aria-hidden="true"></i>
                             </span>
                         }
@@ -151,7 +158,7 @@ class RightSideBar extends PureComponent {
                         }}
                         className="add-viewer-popup popover_class"
                     >
-                        <Typography onClick={this.openAddViewerDialog} className={classes.typography + " fnt-12"}><i class="fa fa-user-plus mrR7 fnt-13" aria-hidden="true"></i>Add Viewer</Typography>
+                        <Typography onClick={this.openAddViewerDialog} className={classes.typography + " fnt-12"}><i className="fa fa-user-plus mrR7 fnt-13" aria-hidden="true"></i>Add Viewer</Typography>
                     </Popover>
                     <Dialog
                         open={openDialog}
@@ -162,7 +169,7 @@ class RightSideBar extends PureComponent {
                     >
                         <DialogTitle id="simple-dialog-title" className="viewer-dialog-header pdT12 pdB12">
                             <span className="flex-grow-1 fnt-14"><strong>Add Viewer</strong></span>
-                            <i onClick={this.handleClose} class="fa fa-times-circle-o fnt-18" aria-hidden="true"></i>
+                            <i onClick={this.handleClose} className="fa fa-times-circle-o fnt-18" aria-hidden="true"></i>
                         </DialogTitle>
                         <DialogContent className="pd20">
                             <DialogContentText className="viewer-dialog-content">
@@ -188,7 +195,7 @@ class RightSideBar extends PureComponent {
                     >
                         <DialogTitle id="re-simple-dialog-title" className="viewer-dialog-header pdT12 pdB12">
                             <span className="flex-grow-1 fnt-14"><strong>Add Viewer</strong></span>
-                            <i onClick={this.handleClose} class="fa fa-times-circle-o fnt-18" aria-hidden="true"></i>
+                            <i onClick={this.handleClose} className="fa fa-times-circle-o fnt-18" aria-hidden="true"></i>
                         </DialogTitle>
                         <DialogContent className="pd20">
                             <DialogContentText className="viewer-dialog-content">
@@ -212,7 +219,7 @@ class RightSideBar extends PureComponent {
                         </div>
                         <div className="client-row d-flex">
                             <div className="client-box1">
-                                <img src="/assets/images/Image 19.png" alt="Image 19" />
+                                <img src="/assets/images/Image 19.png" alt="text" />
                                 <Chip label="John Smith" className={classes.chip + " chip1"} />
                                 <div className="client-action-btn">
                                     <span className="microphone"><i className="fa fa-microphone-slash" aria-hidden="true"></i></span>
@@ -220,7 +227,7 @@ class RightSideBar extends PureComponent {
                                 </div>
                             </div>
                             <div className="client-box2">
-                                <img src="/assets/images/Image 21.png" alt="Image 21" />
+                                <img src="/assets/images/Image 21.png" alt="text" />
                                 <Chip label="Kendall Sample" className={classes.chip + " chip2"} />
                                 <div className="client-action-btn">
                                     <span className="microphone"><i className="fa fa-microphone-slash" aria-hidden="true"></i></span>
@@ -240,9 +247,15 @@ class RightSideBar extends PureComponent {
                         title="Document Name"
                         className="card-header card-padding "
                     />
-                    <Typography className="card-padding client-chat">
-                        John smith, Kendall Sample, Notary
-                        </Typography>
+                    <Typography className="card-padding client-chat" style={{ display: "flex", alignItems: "center"}}>
+                        <Chip
+                            label="Group"
+                            className={classes.chip}
+                            color="primary"
+                            variant="outlined"
+                        />
+                        <AddIcon style={{color: "#0073cf", marginLeft: "5px", cursor: "pointer"}} fontSize="large"/>
+                    </Typography>
                     <List className="chat-container">
                         <ListItem>
                             <Avatar aria-label="Recipe" className="list-avatar blue-circle">
@@ -311,9 +324,20 @@ class RightSideBar extends PureComponent {
                         </ListItem>
                         <Divider className="chat-container-bottom-divider" />
                     </List>
+                    {/* <div className={classes.addGroup}>
+                        <CancelIcon className={classes.cancelIcon}/>
+                        <div className="bottom-text">
+                        <Typography component="p">
+                           Start one to one chat by entering person's name with @ sign below.
+                        </Typography>
+                        <Typography component="h5">
+                           Example: @john type your message
+                        </Typography>
+                        </div>
+                    </div> */}
                     <Paper className="msg-container d-flex align-items-center" elevation={1}>
                         <InputBase className={classes.input + " flex-grow-1 fnt-14"} placeholder="Type your message" />
-                        <i className="fa fa-arrow-right" aria-hidden="true"></i>
+                        <i className="fa fa-arrow-right" color="disabled" aria-hidden="true"></i>
                     </Paper>
                 </Card>
             </div>
