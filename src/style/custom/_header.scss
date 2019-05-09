@@ -1,0 +1,10 @@
+.header{
+    background-color: $text_danger !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    .logo{
+        img{
+            max-width: 280px;
+        }
+    }
+}
