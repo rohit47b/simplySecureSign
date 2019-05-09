@@ -20,6 +20,8 @@ import Typography from '@material-ui/core/Typography';
 import history from 'customHistory';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
+import AddIcon from '@material-ui/icons/AddCircle';
+import CancelIcon from '@material-ui/icons/Cancel';
 
 const styles = theme => ({
     media: {
@@ -40,6 +42,21 @@ const styles = theme => ({
     typography: {
         margin: theme.spacing.unit * 2,
     },
+    chip: {
+        borderColor: "#0073cf !important",
+    },
+    addGroup : {
+        minHeight: "320px",
+        position: "relative",
+    },
+    cancelIcon: {
+        display: "block",
+        marginLeft: "auto",
+        marginRight: "14px",
+        marginTop: "10px",
+        color: "#9e9d9d",
+        fontSize: "20px",
+    }
 });
 
 
@@ -231,9 +248,15 @@ class RightSideBar extends PureComponent {
                         title="Document Name"
                         className="card-header card-padding "
                     />
-                    <Typography className="card-padding client-chat">
-                        John smith, Kendall Sample, Notary
-                        </Typography>
+                    <Typography className="card-padding client-chat" style={{ display: "flex", alignItems: "center"}}>
+                        <Chip
+                            label="Group"
+                            className={classes.chip}
+                            color="primary"
+                            variant="outlined"
+                        />
+                        <AddIcon style={{color: "#0073cf", marginLeft: "5px", cursor: "pointer"}} fontSize="large"/>
+                    </Typography>
                     <List className="chat-container">
                         <ListItem>
                             <Avatar aria-label="Recipe" className="list-avatar blue-circle">
@@ -302,9 +325,20 @@ class RightSideBar extends PureComponent {
                         </ListItem>
                         <Divider className="chat-container-bottom-divider" />
                     </List>
+                    {/* <div className={classes.addGroup}>
+                        <CancelIcon className={classes.cancelIcon}/>
+                        <div className="bottom-text">
+                        <Typography component="p">
+                           Start one to one chat by entering person's name with @ sign below.
+                        </Typography>
+                        <Typography component="h5">
+                           Example: @john type your message
+                        </Typography>
+                        </div>
+                    </div> */}
                     <Paper className="msg-container d-flex align-items-center" elevation={1}>
                         <InputBase className={classes.input + " flex-grow-1 fnt-14"} placeholder="Type your message" />
-                        <i className="fa fa-arrow-right" aria-hidden="true"></i>
+                        <i className="fa fa-arrow-right" color="disabled" aria-hidden="true"></i>
                     </Paper>
                 </Card>
             </div>

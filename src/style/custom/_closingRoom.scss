@@ -329,7 +329,7 @@
             -webkit-box-flex: 1;
                 -ms-flex-positive: 1;
                     flex-grow: 1;
-            font-size: 14px;
+            font-size: 14px !important;
         }
         p {
             color: #9D9D9D;
@@ -712,6 +712,16 @@
     background-color: #929292 !important;
     min-width: 80px !important;
     color: #fff !important;
+}
+.bottom-text {
+    position: absolute;
+    bottom: 0;
+    padding: 10px 15px 10px 20px !important;
+    h5 {
+        font-size: 16px;
+        margin-top: 12px;
+        margin-bottom: 10px;
+    }
 }
 @media (max-width: 768px) {
     .viewer-dialog-input {

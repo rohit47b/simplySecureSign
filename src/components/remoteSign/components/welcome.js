@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 import React, { PureComponent } from 'react';
 import RightSideBar from './RightSideBar';
+import ChatRoomMobileAction from './ChatRoomMobileAction';
 
 const styles = theme => ({
     media: {
@@ -31,6 +32,7 @@ class RemoteSignWelcome extends PureComponent {
                         <div className={classes.mSignClosingInnerContainer + " sign-closing-inner-container"}>
                             <Card className={classes.card}>
                                 <CardContent>
+                                    {/* <ChatRoomMobileAction/> */}
                                 <h1 className={classes.heading}>Welcome to Remote Sign Closing Wizard</h1>
                                 </CardContent>
                             </Card>
