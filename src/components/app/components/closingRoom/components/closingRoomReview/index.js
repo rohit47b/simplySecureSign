@@ -1,7 +1,6 @@
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import Checkbox from '@material-ui/core/Checkbox';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import HelpIcon from '@material-ui/icons/Help';
@@ -49,7 +48,7 @@ class ClosingRoomReview extends PureComponent {
                 </Typography>
                 <CardContent className="card-body">
                     <Grid container spacing={16}>
-                        <Grid item item xs={12} sm={12} md={10}>
+                        <Grid item xs={12} sm={12} md={10}>
                             <Stepper className="stepper mrB20" alternativeLabel>
                                 <Step className="step-item completed">
                                     <StepLabel className="step-label">Signers & Notary Info</StepLabel>

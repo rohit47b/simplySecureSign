@@ -1,7 +1,6 @@
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
 import Chip from '@material-ui/core/Chip';
 import Dialog from '@material-ui/core/Dialog';
@@ -17,7 +16,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Paper from '@material-ui/core/Paper';
 import Popover from '@material-ui/core/Popover';
 import { withStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import history from 'customHistory';
 import PropTypes from 'prop-types';
@@ -44,13 +42,6 @@ const styles = theme => ({
     },
 });
 
-function generate(element) {
-    return [0, 1, 2].map(value =>
-        React.cloneElement(element, {
-            key: value,
-        }),
-    );
-}
 
 class RightSideBar extends PureComponent {
     state = {
@@ -129,7 +120,7 @@ class RightSideBar extends PureComponent {
                     <CardHeader
                         action={
                             <span className="horiz-more-btn">
-                                <i class="fa fa-ellipsis-h" onClick={this.handleClick} aria-owns={this.open ? 'simple-popper' : undefined}
+                                <i className="fa fa-ellipsis-h" onClick={this.handleClick} aria-owns={this.open ? 'simple-popper' : undefined}
                                     aria-haspopup="true" aria-hidden="true"></i>
                             </span>
                         }
@@ -151,7 +142,7 @@ class RightSideBar extends PureComponent {
                         }}
                         className="add-viewer-popup popover_class"
                     >
-                        <Typography onClick={this.openAddViewerDialog} className={classes.typography + " fnt-12"}><i class="fa fa-user-plus mrR7 fnt-13" aria-hidden="true"></i>Add Viewer</Typography>
+                        <Typography onClick={this.openAddViewerDialog} className={classes.typography + " fnt-12"}><i className="fa fa-user-plus mrR7 fnt-13" aria-hidden="true"></i>Add Viewer</Typography>
                     </Popover>
                     <Dialog
                         open={openDialog}
@@ -162,7 +153,7 @@ class RightSideBar extends PureComponent {
                     >
                         <DialogTitle id="simple-dialog-title" className="viewer-dialog-header pdT12 pdB12">
                             <span className="flex-grow-1 fnt-14"><strong>Add Viewer</strong></span>
-                            <i onClick={this.handleClose} class="fa fa-times-circle-o fnt-18" aria-hidden="true"></i>
+                            <i onClick={this.handleClose} className="fa fa-times-circle-o fnt-18" aria-hidden="true"></i>
                         </DialogTitle>
                         <DialogContent className="pd20">
                             <DialogContentText className="viewer-dialog-content">
@@ -188,7 +179,7 @@ class RightSideBar extends PureComponent {
                     >
                         <DialogTitle id="re-simple-dialog-title" className="viewer-dialog-header pdT12 pdB12">
                             <span className="flex-grow-1 fnt-14"><strong>Add Viewer</strong></span>
-                            <i onClick={this.handleClose} class="fa fa-times-circle-o fnt-18" aria-hidden="true"></i>
+                            <i onClick={this.handleClose} className="fa fa-times-circle-o fnt-18" aria-hidden="true"></i>
                         </DialogTitle>
                         <DialogContent className="pd20">
                             <DialogContentText className="viewer-dialog-content">
@@ -212,7 +203,7 @@ class RightSideBar extends PureComponent {
                         </div>
                         <div className="client-row d-flex">
                             <div className="client-box1">
-                                <img src="/assets/images/Image 19.png" alt="Image 19" />
+                                <img src="/assets/images/Image 19.png" alt="text" />
                                 <Chip label="John Smith" className={classes.chip + " chip1"} />
                                 <div className="client-action-btn">
                                     <span className="microphone"><i className="fa fa-microphone-slash" aria-hidden="true"></i></span>
@@ -220,7 +211,7 @@ class RightSideBar extends PureComponent {
                                 </div>
                             </div>
                             <div className="client-box2">
-                                <img src="/assets/images/Image 21.png" alt="Image 21" />
+                                <img src="/assets/images/Image 21.png" alt="text" />
                                 <Chip label="Kendall Sample" className={classes.chip + " chip2"} />
                                 <div className="client-action-btn">
                                     <span className="microphone"><i className="fa fa-microphone-slash" aria-hidden="true"></i></span>

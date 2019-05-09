@@ -1,6 +1,4 @@
 import React, { PureComponent } from 'react'
-import { Link } from 'react-router-dom'
-
 import Grid from '@material-ui/core/Grid'
 import TextField from '@material-ui/core/TextField'
 import Typography from '@material-ui/core/Typography'
@@ -14,7 +12,6 @@ class CreateNewPIN extends PureComponent {
     }
 
     render() {
-        const { emailId } = this.state
         return (
             <Grid item xs={12} sm={12} md={6} className="verify-form">
                 <Typography className="mrB20 heading-large" gutterBottom variant="h5" component="h2">

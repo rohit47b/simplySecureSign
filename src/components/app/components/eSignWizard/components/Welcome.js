@@ -53,7 +53,6 @@ class Welcome extends PureComponent {
     };
 
     render() {
-        const { classes } = this.props
         const { value } = this.state
         return (
             <div>

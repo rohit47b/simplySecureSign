@@ -2,7 +2,6 @@ import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 import React, { PureComponent } from 'react'
-import TextField from '@material-ui/core/TextField'
 import EditIcon from '@material-ui/icons/Edit';
 
 import EditGeneralInfoDialogbox from './EditGeneralInfoDialogbox'
@@ -51,7 +50,7 @@ class Profile extends PureComponent {
                             <Typography className="heading-small mrB15" component="div">
                                 General Information
                                 <div className="icon-box">
-                                    <a title="Edit" href="javascript:void(0)"><EditIcon className="edit-circle-icon"  onClick={this.handleDialogOpen} /></a>
+                                   <EditIcon className="edit-circle-icon"  onClick={this.handleDialogOpen} />
                                 </div>
                             </Typography>
                             <div className="list-charges">
@@ -109,7 +108,7 @@ class Profile extends PureComponent {
                             <Typography className="heading-small mrB15" component="div">
                                 Password Info
                                 <div className="icon-box">
-                                    <a title="Edit" href="javascript:void(0)"><EditIcon className="edit-circle-icon"  onClick={this.handleDialogOpen} /></a>
+                                   <EditIcon className="edit-circle-icon"  onClick={this.handleDialogOpen} />
                                 </div>
                             </Typography>
                             <div className="password-info">

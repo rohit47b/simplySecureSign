@@ -1,3 +1,20 @@
+import 'core-js/es6/symbol';
+import 'core-js/es6/object';
+import 'core-js/es6/function';
+
+
+import 'core-js/es6/number';
+import 'core-js/es6/math';
+import 'core-js/es6/string';
+import 'core-js/es6/array';
+import 'core-js/es6/regexp';
+import 'core-js/es6/map';
+import 'core-js/es6/weak-map';
+import 'core-js/es6/set';
+
+import 'core-js/fn/object/assign';
+import 'core-js/fn/promise';
+
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router'
 
@@ -32,10 +49,10 @@ import { RemoteSignRoute } from 'components/remoteSign/RemoteSignRoute';
 import { ClosingRoomWizardRoute } from 'components/app/components/closingRoom/ClosingRoomWizardRoute'
 
 
-import 'style/app.scss'
+import './style/app.scss'
 
 
-const Main = ({ }) => {
+const Main = () => {
     return <Switch>
         <Redirect from="/" exact to="/email-verification" />
         <Route path='/email-verification'

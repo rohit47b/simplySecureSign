@@ -4,7 +4,6 @@ import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 import React, { PureComponent } from 'react';
 import RightSideBar from './RightSideBar';
-import Header from 'global/Header'
 
 const styles = theme => ({
     media: {
