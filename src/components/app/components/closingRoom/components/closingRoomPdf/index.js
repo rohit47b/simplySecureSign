@@ -52,12 +52,12 @@ class ClosingRoomPdf extends PureComponent {
                         <Grid item xs={12} sm={12}>
                             <Paper className="pdf-box" elevation={1}>
                                 <Grid container className="mrB10 pdf-top-title bg-gray align-items-center">
-                                    <Grid item xs={12} sm={3}>
+                                    <Grid item xs={12} sm={12} md={3}>
                                         <Typography className="mr0 heading-small" variant="h5" component="h4">
                                             Kendall Sample
                                         </Typography>
                                     </Grid>
-                                    <Grid item xs={12} sm={9} className="text-right">
+                                    <Grid item xs={12} sm={12} md={9} className="text-right">
                                         <span className="fnt-12 mrR5 note-title">Documents to submits with :</span>
                                         <Button className="btn btn-chip mrR5" variant="outlined" color="default">
                                             <span className="flex-grow-1 text-left ">Sign</span>  <Avatar className="avatar-count mrL5">00</Avatar>
@@ -68,8 +68,8 @@ class ClosingRoomPdf extends PureComponent {
                                     </Grid>
                                 </Grid>
                                 <Grid container className="pdf-sec">
-                                    <Grid item xs={12} sm={3} className="col-left">
-                                        <div className="left-panel">
+                                    <Grid item xs={12} sm={12} md={3} className="col-left">
+                                        <div className="left-panel left-remote-sign">
                                             <div className="mrB15">
                                                 <Button className="btn btn-rounded btn-rounded-gray mrR5" variant="outlined" color="default">
                                                     Prev
@@ -115,7 +115,7 @@ class ClosingRoomPdf extends PureComponent {
                                             </div>
                                         </div>
                                     </Grid>
-                                    <Grid item xs={12} sm={9} className="col-right right-panel">
+                                    <Grid item xs={12} sm={12} md={9} className="col-right right-panel">
                                         <Grid container justify="center">
                                             <Grid item xs={12} sm={8}>
                                                 <div className="pdf-img">
