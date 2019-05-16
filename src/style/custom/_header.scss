@@ -30,19 +30,16 @@
             //font-size: 30px !important;
         }
     }
-    .app-sidebar {
-        .side-nav{
-            .nav-link{
-                  .fa{
-                    width: 0 !important;
-                }
+    .sidebar-menu{
+        .menu-item{
+            .menu-icon{
+                margin-right: 0px !important;
             }
         }
-        .submenu {
-            .submenu-item .fa{
-                width: 0 !important;
+        .submenu-list{
+            .menu-item{
+                padding-left: 55px !important;
             }
         }
-       
     }
 }
