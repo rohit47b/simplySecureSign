@@ -4,7 +4,6 @@ import Icon from '@material-ui/core/Icon';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import ListItemText from '@material-ui/core/ListItemText';
 import { withStyles } from '@material-ui/core/styles';
 import HelpOutline from '@material-ui/icons/HelpOutline';
@@ -13,10 +12,7 @@ import PermIdentity from '@material-ui/icons/PermIdentity';
 import history from 'customHistory';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
 import React, { PureComponent } from 'react';
 import Collapse from '@material-ui/core/Collapse';
 import StarBorder from '@material-ui/icons/StarBorder';
@@ -96,7 +92,7 @@ class Sidebar extends PureComponent {
     this.setState(state => ({ open: !state.open }));
   };
   render() {
-    const { classes, isOpen, toggleDrawerClose, theme } = this.props;
+    const { classes, isOpen} = this.props;
     const {open} =this.state
     return (
       <div className="sidebar">

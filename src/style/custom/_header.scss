@@ -22,3 +22,24 @@
    
 }
 
+.drawer-responsive{
+    .toolbar-icon{
+        display: flex !important;
+        svg{
+            fill: $color_white !important;
+            //font-size: 30px !important;
+        }
+    }
+    .sidebar-menu{
+        .menu-item{
+            .menu-icon{
+                margin-right: 0px !important;
+            }
+        }
+        .submenu-list{
+            .menu-item{
+                padding-left: 55px !important;
+            }
+        }
+    }
+}

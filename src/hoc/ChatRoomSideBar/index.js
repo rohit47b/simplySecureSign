@@ -10,8 +10,6 @@ import React, { PureComponent } from 'react';
 import ExpansionPanel from '@material-ui/core/ExpansionPanel';
 import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import history from 'customHistory'
 
 const styles = {
@@ -71,9 +69,8 @@ class ChatRoomSideBar extends PureComponent {
                                     primary="AB Document"
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
-                                <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
+                                 <ListItemSecondaryAction>
+                                    <div className="count">2</div>
                                 </ListItemSecondaryAction>
                             </ListItem>
 
@@ -91,9 +88,9 @@ class ChatRoomSideBar extends PureComponent {
                                     primary="Kendall Sample"
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
-                                <ListItemSecondaryAction>
-                                    <div className="count">2</div>
+                                 <ListItemSecondaryAction>
                                 </ListItemSecondaryAction>
+                              
                             </ListItem>
                             <ListItem className="list-item">
                                 <ListItemAvatar className="list-avatar">
@@ -107,8 +104,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             <ListItem className="list-item">
@@ -123,8 +118,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             <ListItem className="list-item">
@@ -139,8 +132,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             <ListItem className="list-item">
@@ -155,8 +146,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
 
@@ -175,9 +164,8 @@ class ChatRoomSideBar extends PureComponent {
                                     primary="Document Name"
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
-                                <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
+                                 <ListItemSecondaryAction>
+                                    <div className="count">2</div>
                                 </ListItemSecondaryAction>
                             </ListItem>
 
@@ -211,8 +199,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             <ListItem className="list-item">
@@ -227,8 +213,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             <ListItem className="list-item">
@@ -243,8 +227,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             <ListItem className="list-item">
@@ -259,8 +241,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
 
@@ -280,8 +260,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
 
@@ -300,7 +278,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <div className="count">2</div>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             <ListItem className="list-item">
@@ -315,8 +292,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             <ListItem className="list-item">
@@ -331,8 +306,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             <ListItem className="list-item">
@@ -347,8 +320,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             <ListItem className="list-item">
@@ -363,8 +334,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
 
@@ -387,8 +356,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
 
@@ -421,8 +388,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             <ListItem className="list-item">
@@ -437,8 +402,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             <ListItem className="list-item">
@@ -453,8 +416,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             <ListItem className="list-item">
@@ -469,8 +430,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
 
@@ -490,8 +449,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
 
@@ -525,8 +482,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             <ListItem className="list-item">
@@ -541,8 +496,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             <ListItem className="list-item">
@@ -557,8 +510,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             <ListItem className="list-item">
@@ -573,8 +524,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
 
@@ -594,8 +543,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
 
@@ -613,8 +560,7 @@ class ChatRoomSideBar extends PureComponent {
                                     primary="Kendall Sample"
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
-                                <ListItemSecondaryAction>
-                                    <div className="count">2</div>
+                               <ListItemSecondaryAction>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             <ListItem className="list-item">
@@ -629,8 +575,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             <ListItem className="list-item">
@@ -645,8 +589,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             <ListItem className="list-item">
@@ -661,8 +603,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
                             <ListItem className="list-item">
@@ -677,8 +617,6 @@ class ChatRoomSideBar extends PureComponent {
                                     secondary={secondary ? 'Secondary text' : null}
                                 />
                                 <ListItemSecondaryAction>
-                                    <span>
-                                    </span>
                                 </ListItemSecondaryAction>
                             </ListItem>
 
