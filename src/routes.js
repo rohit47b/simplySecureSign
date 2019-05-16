@@ -12,8 +12,8 @@ import 'core-js/es/map';
 import 'core-js/es/weak-map';
 import 'core-js/es/set';
 
-import 'core-js/fn/object/assign';
-import 'core-js/fn/promise';
+import 'core-js/es/object/assign';
+import 'core-js/es/promise';
 
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router'
