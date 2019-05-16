@@ -23,7 +23,6 @@ class SigningRoomDetails extends PureComponent {
         this.setState({ [name]: event.target.checked });
     }
     render() {
-        const { checked } = this.state
         return (
             <div>
                 <Grid container justify="center" className="top-gray-bg">
@@ -46,7 +45,7 @@ class SigningRoomDetails extends PureComponent {
                     </Grid>
                 </Grid>
                 <Grid container justify="center" className="card-container">
-                    <Grid item xs={12} sm={12} lg={8}>
+                    <Grid item xs={12} sm={8}>
                         <Card className="card-white mrB20">
                             <CardContent className="card-content">
                                 <Stepper className="stepper mrB20" alternativeLabel>
@@ -62,7 +61,7 @@ class SigningRoomDetails extends PureComponent {
                                 </Stepper>
                                 <Paper className="pdf-box" elevation={1}>
                                     <Grid container className="mrB10 bg-gray align-items-center">
-                                        <Grid item xs={12} sm={3}>
+                                        <Grid item xs={12} sm={12} md={3}>
                                             <Typography className="mr0 heading-small" variant="h5" component="h4">
                                                 Kendall Sample
                                         </Typography>
@@ -78,7 +77,7 @@ class SigningRoomDetails extends PureComponent {
                                         </Grid>
                                     </Grid>
                                     <Grid container className="pdf-sec">
-                                        <Grid item xs={12} sm={3}>
+                                        <Grid item xs={12} sm={12} md={3}>
                                             <div className="left-panel">
                                                 <div className="mrB15">
                                                     <Button className="btn btn-rounded btn-rounded-gray mrR5" variant="outlined" color="default">
@@ -91,41 +90,41 @@ class SigningRoomDetails extends PureComponent {
                                                 <div className="pdf-doc">
                                                     <ul>
                                                         <li>
-                                                            <a title="thumbnail1" className="active" href="javascript:void(0)">
+                                                            <Button title="thumbnail1" className="active">
                                                                 <span className="num-count active">01</span>
                                                                 <img alt="thumbnail" src="/assets/images/th1.png" />
                                                                 <CheckCircle className="check-icon" />
-                                                            </a>
+                                                            </Button>
                                                         </li>
                                                         <li>
-                                                            <a title="thumbnail2" href="javascript:void(0)">
+                                                            <Button title="thumbnail2" >
                                                                 <span className="num-count">02</span>
                                                                 <img alt="thumbnail" src="/assets/images/th2.png" />
-                                                            </a>
+                                                            </Button>
                                                         </li>
                                                         <li>
-                                                            <a title="thumbnail3" href="javascript:void(0)">
+                                                            <Button title="thumbnail3">
                                                                 <span className="num-count">03</span>
                                                                 <img alt="thumbnail" src="/assets/images/th3.png" />
-                                                            </a>
+                                                            </Button>
                                                         </li>
                                                         <li>
-                                                            <a title="thumbnail4" href="javascript:void(0)">
+                                                            <Button title="thumbnail4" >
                                                                 <span className="num-count">04</span>
                                                                 <img alt="thumbnail" src="/assets/images/th1.png" />
-                                                            </a>
+                                                            </Button>
                                                         </li>
                                                         <li>
-                                                            <a title="thumbnail5" href="javascript:void(0)">
+                                                            <Button title="thumbnail5" >
                                                                 <span className="num-count">05</span>
                                                                 <img alt="thumbnail" src="/assets/images/th3.png" />
-                                                            </a>
+                                                            </Button>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </Grid>
-                                        <Grid item xs={12} sm={9} className="right-panel">
+                                        <Grid item xs={12} md={9} className="right-panel">
                                             <Grid container justify="center">
                                                 <Grid item xs={12} sm={8}>
                                                     <div className="pdf-img">

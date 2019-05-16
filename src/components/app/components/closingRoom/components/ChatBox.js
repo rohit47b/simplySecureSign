@@ -1,30 +1,15 @@
-import React, { PureComponent } from 'react'
-import Card from '@material-ui/core/Card'
-import CardActions from '@material-ui/core/CardActions'
-import CardContent from '@material-ui/core/CardContent'
-import RemoveIcon from '@material-ui/icons/Remove'
-import HighlightOff from '@material-ui/icons/HighlightOff'
-import Typography from '@material-ui/core/Typography'
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown'
-import PersonIcon from '@material-ui/icons/Person'
-import InsertEmoticon from '@material-ui/icons/InsertEmoticon'
-import ArrowForward from '@material-ui/icons/ArrowForward'
-
-import Input from '@material-ui/core/Input';
-import InputLabel from '@material-ui/core/InputLabel';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import TextField from '@material-ui/core/TextField';
-
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
 import history from 'customHistory';
-
-
+import React, { PureComponent } from 'react';
 
 class ChatBox extends PureComponent {
-
 
     openChatBox=()=>{
         history.push('./closing-room/chat')
     }
+
     render() {
         return (
             <Card className="chat-box">
@@ -39,7 +24,11 @@ class ChatBox extends PureComponent {
                     <span className="group-chat-dropdown">Group Chat <KeyboardArrowDownIcon className="mrL10" /></span>
                     <span className="group-chat-user">03 <PersonIcon className="mrL5" /></span>
                 </Typography> */}
-                <i className="fa fa-times-circle-o close-chat" aria-hidden="true"></i>
+
+                <span onClick={this.handleCloseChat}>
+                    <i className="fa fa-times-circle-o close-chat" aria-hidden="true"></i>
+                </span>
+                
                 <CardContent className="chat-body" onClick={()=>this.openChatBox()}>
                     <Typography className="chat-comment" component="div">
                         <div className="chat-info">                            

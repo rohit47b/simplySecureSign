@@ -290,6 +290,9 @@ table{
     display: -ms-inline-flexbox !important;
     display: inline-flex !important;
 }
+.hidden{
+    display: none;
+}
 
 .align-items-center{
     -webkit-box-align: center;
@@ -360,6 +363,9 @@ table{
 }
 .img-responsive{
     max-width: 100%;
+}
+.flex-grow-1{
+    flex-grow: 1;
 }
 
 // created by akshay

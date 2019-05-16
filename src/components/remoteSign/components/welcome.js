@@ -4,13 +4,9 @@ import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 import React, { PureComponent } from 'react';
 import RightSideBar from './RightSideBar';
-import Header from 'global/Header'
+
 
 const styles = theme => ({
-    media: {
-        height: 0,
-        paddingTop: '56.25%', // 16:9
-    },
     [theme.breakpoints.down('sm')]: {
         mSignClosingInnerContainer: {
             padding: '40px 20px 0 20px',
@@ -27,11 +23,12 @@ class RemoteSignWelcome extends PureComponent {
         const { classes } = this.props;
         return (            
             <Grid container>                
-                <Grid item xs={12} sm={12} md={7} lg={8} xl={9} className="pdB0">
+                <Grid item xs={12} sm={12} md={7} lg={8} xl={9} className="pdB0 sign-closing-left-container">
                     <div className="sign-closing-wizard">
                         <div className={classes.mSignClosingInnerContainer + " sign-closing-inner-container"}>
                             <Card className={classes.card}>
                                 <CardContent>
+                                    {/* <ChatRoomMobileAction/> */}
                                 <h1 className={classes.heading}>Welcome to Remote Sign Closing Wizard</h1>
                                 </CardContent>
                             </Card>

@@ -57,7 +57,7 @@
                 padding: 0px;
                 margin: 0px;
                 li {
-                    a{
+                    a, button {
                         -webkit-box-shadow: 0 0 10px 0 #ddd;
                                 box-shadow: 0 0 10px 0 #ddd;
                         min-height: 140px;
@@ -86,7 +86,7 @@
                             top: 45%;
                         }
                     }
-                    a.active{
+                    a.active, button.active{
                         border: 1px solid $text_primary;
                         svg{
                             position: absolute;

@@ -1,37 +1,85 @@
 import React from 'react'
 import AppBar from '@material-ui/core/AppBar'
 import IconButton from '@material-ui/core/IconButton'
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
+import ChevronRightIcon from '@material-ui/icons/ChevronRight'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
 import { withStyles } from '@material-ui/core/styles'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
-import AccountCircle from '@material-ui/icons/AccountCircle'
 import PropTypes from 'prop-types'
 import Icon from '@material-ui/core/Icon';
 import MenuIcon from '@material-ui/icons/Menu';
+import classNames from 'classnames';
 
 
 import APPCONFIG from 'constants/Config'
 
+const drawerWidth = 240;
+
 const styles = theme => ({
   root: {
-    flexGrow: 1,
+    display: 'flex',
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
+    transition: theme.transitions.create(['width', 'margin'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
   },
-  grow: {
-    flexGrow: 1,
+  appBarShift: {
+    marginLeft: drawerWidth,
+    //width: `calc(100% - ${drawerWidth}px)`,
+    transition: theme.transitions.create(['width', 'margin'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
   },
   menuButton: {
-    marginLeft: -12,
-    marginRight: 20,
+    marginLeft: 12,
   },
-  minHeight:{
-    minHeight:"55px"
-  }
-})
+  hide: {
+    display: 'none',
+  },
+  drawer: {
+    width: drawerWidth,
+    flexShrink: 0,
+    whiteSpace: 'nowrap',
+  },
+  drawerOpen: {
+    width: drawerWidth,
+    transition: theme.transitions.create('width', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  },
+  drawerClose: {
+    transition: theme.transitions.create('width', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    overflowX: 'hidden',
+    width: theme.spacing.unit * 7 + 1,
+    [theme.breakpoints.up('sm')]: {
+      width: theme.spacing.unit * 9 + 1,
+    },
+  },
+  toolbar: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    padding: '0 8px',
+    marginLeft: '12px',
+    ...theme.mixins.toolbar,
+  },
+  content: {
+    flexGrow: 1,
+    padding: theme.spacing.unit * 3,
+  },
+});
+
 
 class Header extends React.Component {
   state = {
@@ -59,23 +107,32 @@ class Header extends React.Component {
   };
 
   render() {
-    const { classes,toggleDrawerOpen} = this.props;
+    const { classes,toggleDrawerOpen,toggleDrawerClose,isOpen,theme} = this.props;
     const { auth, anchorEl } = this.state;
     const open = Boolean(anchorEl);
 
     return (
       <div className={classes.root}>
-        <AppBar position="fixed" className={classes.appBar + " header"}>
-          <Toolbar className={classes.minHeight}>
+        <AppBar position="fixed" className={classNames(classes.appBar + " header", {
+            [classes.appBarShift]: isOpen,
+          })}>
+          <Toolbar disableGutters={!isOpen} className={classes.minHeight + " header-toolbar"}>
           <IconButton
               color="inherit"
               aria-label="Open drawer"
               onClick={toggleDrawerOpen}
-              className="navbar-collapse"
               style={{cursor:"pointer"}}
+              className={classNames(classes.menuButton, {
+                [classes.hide]: isOpen,
+              })}
             >
               <MenuIcon />
             </IconButton>
+            <div className={classes.toolbar + ' toolbar-icon ' + classes.hide}>
+            <IconButton onClick={toggleDrawerClose}>
+              {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+            </IconButton>
+          </div>
          
             <Typography component="div" className={classes.grow + " logo"}>
                 <img alt="logo" src={APPCONFIG.company_logo_path}/>
@@ -121,4 +178,4 @@ Header.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Header);
+export default withStyles(styles , { withTheme: true })(Header);

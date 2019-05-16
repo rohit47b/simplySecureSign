@@ -1,13 +1,13 @@
-import React, { PureComponent } from 'react'
-import Button from '@material-ui/core/Button'
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
-import Typography from '@material-ui/core/Typography'
-import HelpIcon from '@material-ui/icons/Help'
+import Button from '@material-ui/core/Button';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
+import HelpIcon from '@material-ui/icons/Help';
+import React, { PureComponent } from 'react';
+import Calendar from "./Calendar";
+import ChatBox from './ChatBox';
+import NewClosingPackageDialog from './NewClosingPackageDialog';
 
-import Calendar from "./Calendar"
-import NewClosingPackageDialog from './NewClosingPackageDialog'
-import ChatBox from './ChatBox'
 
 class ClosingRoom extends PureComponent {
     state={
@@ -35,7 +35,8 @@ class ClosingRoom extends PureComponent {
                     <Button title="Add closing Package" onClick={this.handleDialogOpen} variant="contained" className="btn btn-primary">
                         Add closing Package
                      </Button>
-                </Typography>               
+                </Typography>
+               
                 <CardContent className="card-body">
                 <ChatBox/>
                     <Typography className="heading-small mrB15" gutterBottom>

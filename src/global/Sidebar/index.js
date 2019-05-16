@@ -1,23 +1,26 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Toolbar from '@material-ui/core/Toolbar';
+import Drawer from '@material-ui/core/Drawer';
+import Icon from '@material-ui/core/Icon';
 import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InsertDriveFile from '@material-ui/icons/InsertDriveFile';
-import HelpOutline from '@material-ui/icons/HelpOutline';
-import PermIdentity from '@material-ui/icons/PermIdentity';
-import Icon from '@material-ui/core/Icon';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+import ListItemText from '@material-ui/core/ListItemText';
+import { withStyles } from '@material-ui/core/styles';
+import HelpOutline from '@material-ui/icons/HelpOutline';
+import InsertDriveFile from '@material-ui/icons/InsertDriveFile';
+import PermIdentity from '@material-ui/icons/PermIdentity';
+import history from 'customHistory';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import Divider from '@material-ui/core/Divider';
+import IconButton from '@material-ui/core/IconButton';
+import React, { PureComponent } from 'react';
+import Collapse from '@material-ui/core/Collapse';
+import StarBorder from '@material-ui/icons/StarBorder';
 
-import history from 'customHistory'
 
 const drawerWidth = 240;
 
@@ -27,60 +30,140 @@ const styles = theme => ({
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
+    transition: theme.transitions.create(['width', 'margin'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+  },
+  appBarShift: {
+    marginLeft: drawerWidth,
+    width: `calc(100% - ${drawerWidth}px)`,
+    transition: theme.transitions.create(['width', 'margin'], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  },
+  menuButton: {
+    marginLeft: 12,
+    marginRight: 36,
+  },
+  hide: {
+    display: 'none',
   },
   drawer: {
     width: drawerWidth,
     flexShrink: 0,
+    whiteSpace: 'nowrap',
   },
-  drawerPaper: {
+  drawerOpen: {
     width: drawerWidth,
-    backgroundColor: "#F5F5F5",
-    borderRight: "none"
+    transition: theme.transitions.create('width', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  },
+  drawerClose: {
+    transition: theme.transitions.create('width', {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+    }),
+    overflowX: 'hidden',
+    width: theme.spacing.unit * 7 + 1,
+    [theme.breakpoints.up('sm')]: {
+      width: theme.spacing.unit * 9 + 1,
+    },
+  },
+  toolbar: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    padding: '0 8px',
+    ...theme.mixins.toolbar,
   },
   content: {
     flexGrow: 1,
     padding: theme.spacing.unit * 3,
   },
-  toolbar: {
-    minHeight: "55px"
-  }
+  
 });
 
 class Sidebar extends PureComponent {
+  state = {
+    open: true,
+  };
+
+  handleClick = () => {
+    this.setState(state => ({ open: !state.open }));
+  };
   render() {
-    const { classes, isOpen, onCloseToggleDrawer } = this.props;
+    const { classes, isOpen, toggleDrawerClose, theme } = this.props;
+    const {open} =this.state
     return (
-      <div className={isOpen === true ? classes.root + " sidebar open" : classes.root + " sidebar"}>
+      <div className="sidebar">
         <CssBaseline />
         <Drawer
-          className={classes.drawer + " sidebar-drawer"}
+          className={classNames(classes.drawer + " sidebar-drawer", {
+            [classes.drawerOpen]: isOpen,
+            [classes.drawerClose]: !isOpen,
+          })}
           variant="permanent"
           classes={{
-            paper: classes.drawerPaper,
+            paper: classNames({
+              [classes.drawerOpen]: isOpen,
+              [classes.drawerClose]: !isOpen,
+            }),
           }}
-          open={isOpen} onClose={onCloseToggleDrawer}
+          open={isOpen}
+          PaperProps={{
+            style: {
+              top: '50px'
+            }
+          }}
+          style={{ paddingBottom: '50px' }}
         >
-          <div className={classes.toolbar} />
+
+          <Divider />
           <List className="sidebar-menu">
-            <ListItem onClick={() => history.push('/app/notary/closing-room')} button className="menu-item active">
+
+            <ListItem onClick={this.handleClick} button className="menu-item active">
               <ListItemIcon className="menu-icon"><InsertDriveFile /></ListItemIcon>
               <ListItemText className="menu-title" primary={"Closing Room"} />
             </ListItem>
+            <Collapse in={open} timeout="auto" unmountOnExit>
+              <List component="div" disablePadding className="submenu-list">
+                <ListItem button className="submenu menu-item" onClick={() => history.push('/app/notary/closing-room')}>
+                  <ListItemIcon  className="menu-icon">
+                    <StarBorder />
+                  </ListItemIcon>
+                  <ListItemText className="menu-title" inset primary="Closing Room1" />
+                </ListItem>
+                <ListItem button className="submenu menu-item">
+                  <ListItemIcon  className="menu-icon">
+                    <StarBorder />
+                  </ListItemIcon>
+                  <ListItemText className="menu-title" inset primary="Closing Room2" />
+                </ListItem>
+                <ListItem button className="submenu menu-item">
+                  <ListItemIcon  className="menu-icon">
+                    <StarBorder />
+                  </ListItemIcon>
+                  <ListItemText className="menu-title" inset primary="Closing Room3" />
+                </ListItem>
+              </List>
+            </Collapse>
             <ListItem onClick={() => history.push('/app/notary/options')} button className="menu-item">
               <ListItemIcon className="menu-icon"> <Icon>settings</Icon></ListItemIcon>
               <ListItemText className="menu-title" primary={"Options"} />
             </ListItem>
-            <hr className="mr0" />
             <ListItem onClick={() => history.push('/app/notary/profile-settings')} button className="menu-item">
               <ListItemIcon className="menu-icon"><PermIdentity /></ListItemIcon>
               <ListItemText className="menu-title" primary={"Profile Settings"} />
             </ListItem>
             <ListItem onClick={() => history.push('/app/notary/closing-room/chat')} button className="menu-item">
-              <ListItemIcon className="menu-icon"><i class="fa fa-comment-o" aria-hidden="true"></i></ListItemIcon>
-              <ListItemText className="menu-title" primary={"Chat"} />
-              <ListItemSecondaryAction className="chat-count">
-                <div className="circle">2</div>
-              </ListItemSecondaryAction>
+              <ListItemIcon className="menu-icon"><i className="fa fa-comment-o" aria-hidden="true"></i></ListItemIcon>
+              <ListItemText className="menu-title chat-count" >
+                <span className="flex-grow-1">Chat</span><span className="circle">2</span>
+              </ListItemText>
             </ListItem>
             <ListItem button className="menu-item">
               <ListItemIcon className="menu-icon"><HelpOutline /></ListItemIcon>
@@ -96,6 +179,7 @@ class Sidebar extends PureComponent {
 
 Sidebar.propTypes = {
   classes: PropTypes.object.isRequired,
+  theme: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Sidebar);
+export default withStyles(styles, { withTheme: true })(Sidebar);

@@ -2,23 +2,25 @@
     .sidebar-drawer{
         z-index: 1 !important;
         .sidebar-menu{
-            padding-top: 15px;
+            padding-top: 0px;
             padding-bottom: 15px;
             .menu-item{
                 padding-top: 20px;
                 padding-bottom: 20px;
-                padding-left: 30px;
+                padding-left: 27px;
+                border-bottom: 1px solid #ddd;
                 .menu-icon{
-                    margin-right: 0px !important;
                     svg,span{
                         font-size: 18px;
                     }
                 }
                 .menu-title{
-                    span{
+                    >span{
                         font-size: 15px;
                         color: $color_gray1;
                         font-weight: 600;
+                        display: flex;
+                        align-items: center;
                     }
                 }
                 
@@ -35,6 +37,9 @@
                         color:$color_white;
                     }
                 }
+            }
+            .submenu-list{
+              background-color:$color_gray3; 
             }
         }
     }

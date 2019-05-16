@@ -4,14 +4,10 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Step from '@material-ui/core/Step';
-import StepLabel from '@material-ui/core/StepLabel';
-import Stepper from '@material-ui/core/Stepper';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import CheckCircle from '@material-ui/icons/CheckCircle';
 import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
-import history from 'customHistory';
 import React, { PureComponent } from 'react';
 import RightSideBar from './RightSideBar';
 
@@ -54,12 +50,12 @@ class SigningRoom extends PureComponent {
                         <CardContent className="card-content pdB0 pdT0">
                             <Paper className="pdf-box pdf-box-padding remove-shadow pdB0" elevation={1}>
                                 <Grid container className="mrB10 bg-gray pdR20 pdL20 align-items-center">
-                                    <Grid item xs={12} sm={3}>
+                                    <Grid item xs={12} sm={12} md={3}>
                                         <Typography className="mr0 heading-small" variant="h5" component="h4">
                                             Kendall Sample
                                         </Typography>
                                     </Grid>
-                                    <Grid item xs={12} sm={9} className="text-right">
+                                    <Grid item xs={12} sm={9} className="text-right document-header-mobile">
                                         <span className="fnt-12 mrR5">Documents to submits with :</span>
                                         <Button className={classes.pdR4 + " btn btn-chip mrR5"} variant="outlined" color="default">
                                             <span className="flex-grow-1 text-left ">Sign</span>  <Avatar className="avatar-count mrL5">00</Avatar>
@@ -70,8 +66,8 @@ class SigningRoom extends PureComponent {
                                     </Grid>
                                 </Grid>
                                 <Grid container className="pdf-sec">
-                                    <Grid item xs={12} sm={3}>
-                                        <div className="left-panel">
+                                    <Grid item xs={12} sm={12} md={3}>
+                                        <div className="left-panel left-remote-sign">
                                             <div className="mrB15">
                                                 <Button className="btn btn-rounded btn-rounded-gray mrR5" variant="outlined" color="default">
                                                     Prev
@@ -83,41 +79,41 @@ class SigningRoom extends PureComponent {
                                             <div className="pdf-doc">
                                                 <ul>
                                                     <li>
-                                                        <a title="thumbnail1" className="active" href="javascript:void(0)">
+                                                        <Button title="thumbnail1" className="active" >
                                                             <span className="num-count active">01</span>
                                                             <img alt="thumbnail" src="/assets/images/th1.png" />
                                                             <CheckCircle className="check-icon" />
-                                                        </a>
+                                                        </Button>
                                                     </li>
                                                     <li>
-                                                        <a title="thumbnail2" href="javascript:void(0)">
+                                                        <Button title="thumbnail2" >
                                                             <span className="num-count">02</span>
                                                             <img alt="thumbnail" src="/assets/images/th2.png" />
-                                                        </a>
+                                                        </Button>
                                                     </li>
                                                     <li>
-                                                        <a title="thumbnail3" href="javascript:void(0)">
+                                                        <Button title="thumbnail3" >
                                                             <span className="num-count">03</span>
                                                             <img alt="thumbnail" src="/assets/images/th3.png" />
-                                                        </a>
+                                                        </Button>
                                                     </li>
                                                     <li>
-                                                        <a title="thumbnail4" href="javascript:void(0)">
+                                                        <Button title="thumbnail4">
                                                             <span className="num-count">04</span>
                                                             <img alt="thumbnail" src="/assets/images/th1.png" />
-                                                        </a>
+                                                        </Button>
                                                     </li>
                                                     <li>
-                                                        <a title="thumbnail5" href="javascript:void(0)">
+                                                        <Button title="thumbnail5">
                                                             <span className="num-count">05</span>
                                                             <img alt="thumbnail" src="/assets/images/th3.png" />
-                                                        </a>
+                                                        </Button>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </Grid>
-                                    <Grid item xs={12} sm={9} className="right-panel">
+                                    <Grid item xs={12} sm={12} md={9} className="right-panel">
                                         <Grid container justify="center">
                                             <Grid item xs={12} sm={8}>
                                                 <div className="pdf-img">
