@@ -11,8 +11,10 @@ import Typography from '@material-ui/core/Typography'
 import PropTypes from 'prop-types'
 import Icon from '@material-ui/core/Icon';
 import MenuIcon from '@material-ui/icons/Menu';
-import classNames from 'classnames';
+import ChatIcon from '@material-ui/icons/Chat';
 
+import classNames from 'classnames';
+import history from 'customHistory'
 
 import APPCONFIG from 'constants/Config'
 
@@ -138,7 +140,8 @@ class Header extends React.Component {
                 <img alt="logo" src={APPCONFIG.company_logo_path}/>
             </Typography>
             {auth && (
-              <div>
+              <div className="d-flex align-items-center">
+                <span className="icon-chat" onClick={() => history.push('/app/notary/closing-room/chat')}><i className="fa fa-comment-o" aria-hidden="true"></i></span>
                 <Icon  aria-haspopup="true"  aria-owns={open ? 'menu-appbar' : undefined} className="icon-account" onClick={this.handleMenu}>person_outline</Icon>
                 {/* <IconButton
                   aria-owns={open ? 'menu-appbar' : undefined}
