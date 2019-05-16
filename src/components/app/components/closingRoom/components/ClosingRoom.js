@@ -43,7 +43,7 @@ class ClosingRoom extends PureComponent {
                         Welcome to Closing Room
                     </Typography>
                     <Typography className="card-info mrB15" component="div">
-                        The wizard will guide you through the process of notarizing closing documents. The closing Room Wizard will walk the Notary and signer through the process of signing and notarization the closing documents as well as gathering the way the signer is identified to be entered into the notaries elecronic journal.
+                        The wizard will guide you through the process of notarizing closing documents. The closing Room Wizard will walk the Notary and signer through the process of signing and notarization the closing documents as well as gathering the way the signer is identified to be entered into the notaries electronic journal.
                     </Typography>
                     <div>
                         <Calendar/>
