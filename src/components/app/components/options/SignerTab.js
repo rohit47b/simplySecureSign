@@ -32,7 +32,7 @@ class DocumentTab extends PureComponent {
         this.setState({ value });
     }
     render() {
-        const { city,state,country } = this.state
+        const { city,state,country,value } = this.state
         return (
             <Typography component="div" className="tab-content pd0">
                 <form>
@@ -245,13 +245,13 @@ class DocumentTab extends PureComponent {
                                                         onChange={this.handleChange}
                                                         input={<FilledInput name="country" id="filled-country-simple" />}
                                                         className="select-box"
-                                                        name="select"
+                                                        name="country"
                                                     >
                                                         <MenuItem value="">
                                                             <em>None</em>
                                                         </MenuItem>
-                                                        <MenuItem value={10}>MP</MenuItem>
-                                                        <MenuItem value={20}>UP</MenuItem>
+                                                        <MenuItem value={10}>India</MenuItem>
+                                                        <MenuItem value={20}>UK</MenuItem>
                                                     </Select>
                                                 </FormControl>
                                             </Grid>

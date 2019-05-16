@@ -108,7 +108,7 @@ class Profile extends PureComponent {
                             <Typography className="heading-small mrB15" component="div">
                                 Password Info
                                 <div className="icon-box">
-                                   <EditIcon className="edit-circle-icon"  onClick={this.handleDialogOpen} />
+                                   <EditIcon className="edit-circle-icon"  onClick={this.handleDialogEditInfoOpen} />
                                 </div>
                             </Typography>
                             <div className="password-info">
