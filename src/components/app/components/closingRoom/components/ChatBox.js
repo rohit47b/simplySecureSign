@@ -6,13 +6,24 @@ import React, { PureComponent } from 'react';
 
 class ChatBox extends PureComponent {
 
+    state={
+        isClose:false
+    }
+
     openChatBox=()=>{
         history.push('./closing-room/chat')
     }
 
+    hadleCloseChatBox =()=>{
+        this.setState({
+            isClose:true
+        })
+    }
+
     render() {
+        const {isClose} =this.state
         return (
-            <Card className="chat-box">
+            <Card className={isClose === true ? "chat-box display-none" :"chat-box"}>
                 {/* <Typography className="chat-box-header" component="div">
                     <span className="chat-box-title">Signer :Tom</span>
                     <span className="icon-action">
@@ -25,7 +36,7 @@ class ChatBox extends PureComponent {
                     <span className="group-chat-user">03 <PersonIcon className="mrL5" /></span>
                 </Typography> */}
 
-                <span onClick={this.handleCloseChat}>
+                <span onClick={this.hadleCloseChatBox}>
                     <i className="fa fa-times-circle-o close-chat" aria-hidden="true"></i>
                 </span>
                 
@@ -34,7 +45,7 @@ class ChatBox extends PureComponent {
                         <div className="chat-info">                            
                             <div className="chat-media">
                                 {/* <PersonIcon className="user-icon" /> */}
-                                <div className="chat-user-icon">
+                                <div className="chat-user-icon" >
                                     <i className="fa fa-question" aria-hidden="true"></i>
                                 </div>
                                 <div className="chat-content">
