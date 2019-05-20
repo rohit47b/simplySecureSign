@@ -9,6 +9,8 @@ import { withStyles } from '@material-ui/core/styles';
 import HelpOutline from '@material-ui/icons/HelpOutline';
 import InsertDriveFile from '@material-ui/icons/InsertDriveFile';
 import PermIdentity from '@material-ui/icons/PermIdentity';
+import ChatBubbleOutline from '@material-ui/icons/ChatBubbleOutline';
+
 import history from 'customHistory';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -40,7 +42,7 @@ const styles = theme => ({
     }),
   },
   menuButton: {
-    marginLeft: 12,
+    marginLeft: 0,
     marginRight: 36,
   },
   hide: {
@@ -64,9 +66,9 @@ const styles = theme => ({
       duration: theme.transitions.duration.leavingScreen,
     }),
     overflowX: 'hidden',
-    width: theme.spacing.unit * 7 + 1,
+    width: 48,
     [theme.breakpoints.up('sm')]: {
-      width: theme.spacing.unit * 9 + 1,
+      width: 48,
     },
   },
   toolbar: {
@@ -157,7 +159,7 @@ class Sidebar extends PureComponent {
               <ListItemText className="menu-title" primary={"Profile Settings"} />
             </ListItem>
             <ListItem onClick={() => history.push('/app/notary/closing-room/chat')} button className="menu-item">
-              <ListItemIcon className="menu-icon"><i className="fa fa-comment-o" aria-hidden="true"></i></ListItemIcon>
+              <ListItemIcon className="menu-icon"><ChatBubbleOutline/></ListItemIcon>
               <ListItemText className="menu-title chat-count" >
                 <span className="flex-grow-1">Chat</span><span className="circle">2</span>
               </ListItemText>

@@ -11,7 +11,6 @@ import Typography from '@material-ui/core/Typography'
 import PropTypes from 'prop-types'
 import Icon from '@material-ui/core/Icon';
 import MenuIcon from '@material-ui/icons/Menu';
-import ChatIcon from '@material-ui/icons/Chat';
 
 import classNames from 'classnames';
 import history from 'customHistory'
@@ -40,7 +39,7 @@ const styles = theme => ({
     }),
   },
   menuButton: {
-    marginLeft: 12,
+    marginLeft: 0,
   },
   hide: {
     display: 'none',
@@ -73,7 +72,7 @@ const styles = theme => ({
     alignItems: 'center',
     justifyContent: 'flex-end',
     padding: '0 8px',
-    marginLeft: '12px',
+    marginLeft: '0px',
     ...theme.mixins.toolbar,
   },
   content: {
@@ -165,7 +164,7 @@ class Header extends React.Component {
                   open={open}
                   onClose={this.handleClose}
                 >
-                   <MenuItem  onClick={() => history.push('/app/notary/profile-settings')}>Profile</MenuItem>
+                  <MenuItem  onClick={() => history.push('/app/notary/profile-settings')}>Profile</MenuItem>
                   <MenuItem onClick={this.handleClose}>My account</MenuItem>
                 </Menu>
               </div>
