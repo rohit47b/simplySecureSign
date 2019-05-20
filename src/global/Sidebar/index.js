@@ -1,5 +1,4 @@
 import CssBaseline from '@material-ui/core/CssBaseline';
-import ClickAwayListener from '@material-ui/core/ClickAwayListener';
 import Drawer from '@material-ui/core/Drawer';
 import Icon from '@material-ui/core/Icon';
 import List from '@material-ui/core/List';
@@ -99,7 +98,6 @@ class Sidebar extends PureComponent {
       <div className="sidebar">
         <CssBaseline />
          
-        {/* <ClickAwayListener onClickAway={toggleDrawerClose}> */}
         <Drawer
           className={classNames(classes.drawer + " sidebar-drawer", {
             [classes.drawerOpen]: isOpen,
@@ -170,7 +168,6 @@ class Sidebar extends PureComponent {
             </ListItem>
           </List>
         </Drawer>
-        {/* </ClickAwayListener> */}
       </div>
     )
   }
