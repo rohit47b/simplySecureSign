@@ -1,7 +1,6 @@
 import Avatar from '@material-ui/core/Avatar';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
-import Chip from '@material-ui/core/Chip';
 import Divider from '@material-ui/core/Divider';
 import InputBase from '@material-ui/core/InputBase';
 import List from '@material-ui/core/List';
@@ -10,7 +9,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import AddIcon from '@material-ui/icons/AddCircle';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import AddGroupChat from './AddGroupChat';

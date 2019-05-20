@@ -1,6 +1,4 @@
-import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
-import history from 'customHistory';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import GroupChat from './GroupChat';
@@ -25,7 +23,7 @@ const styles = theme => ({
 class RightSideBar extends PureComponent {
 
     render() {
-        const { classes ,isStart} = this.props;
+        const { classes } = this.props;
        
         return (
             <div className={classes.rightSidebarContainer + " right-sidebar-container pdT0"}>

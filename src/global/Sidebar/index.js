@@ -99,7 +99,7 @@ class Sidebar extends PureComponent {
       <div className="sidebar">
         <CssBaseline />
          
-        <ClickAwayListener onClickAway={toggleDrawerClose}>
+        {/* <ClickAwayListener onClickAway={toggleDrawerClose}> */}
         <Drawer
           className={classNames(classes.drawer + " sidebar-drawer", {
             [classes.drawerOpen]: isOpen,
@@ -122,7 +122,7 @@ class Sidebar extends PureComponent {
         >
 
           <Divider />
-          <List className="sidebar-menu">
+          <List className="sidebar-menu" onClick={toggleDrawerClose}>
 
             <ListItem onClick={this.handleClick} button className="menu-item active">
               <ListItemIcon className="menu-icon"><InsertDriveFile /></ListItemIcon>
@@ -170,7 +170,7 @@ class Sidebar extends PureComponent {
             </ListItem>
           </List>
         </Drawer>
-        </ClickAwayListener>
+        {/* </ClickAwayListener> */}
       </div>
     )
   }
