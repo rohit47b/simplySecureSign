@@ -20,7 +20,7 @@ import Collapse from '@material-ui/core/Collapse';
 import StarBorder from '@material-ui/icons/StarBorder';
 
 
-const drawerWidth = 240;
+const drawerWidth = 260;
 
 const styles = theme => ({
   root: {
@@ -88,14 +88,19 @@ const styles = theme => ({
 class Sidebar extends PureComponent {
   state = {
     open: true,
+    openSubmenu:false
   };
 
   handleClick = () => {
     this.setState(state => ({ open: !state.open }));
   };
+
+  handleSubMenuClick= ()=>{
+    this.setState(state => ({ openSubmenu: !state.openSubmenu }));
+  }
   render() {
     const { classes, isOpen,toggleDrawerClose} = this.props;
-    const {open} =this.state
+    const {open,openSubmenu} =this.state
     return (
       <div className="sidebar">
         <CssBaseline />
@@ -136,18 +141,22 @@ class Sidebar extends PureComponent {
                   </ListItemIcon>
                   <ListItemText className="menu-title" inset primary="Closing Room1" />
                 </ListItem>
-                <ListItem button className="submenu menu-item">
+                <ListItem onClick={this.handleSubMenuClick} button className="submenu menu-item">
                   <ListItemIcon  className="menu-icon">
                     <StarBorder />
                   </ListItemIcon>
                   <ListItemText className="menu-title" inset primary="Closing Room2" />
                 </ListItem>
-                <ListItem button className="submenu menu-item">
-                  <ListItemIcon  className="menu-icon">
-                    <StarBorder />
-                  </ListItemIcon>
-                  <ListItemText className="menu-title" inset primary="Closing Room3" />
-                </ListItem>
+                  <Collapse in={openSubmenu} timeout="auto" unmountOnExit>
+                    <List component="div" disablePadding className="submenu-list-level-2">
+                    <ListItem button className="submenu menu-item">
+                      <ListItemIcon  className="menu-icon">
+                        <StarBorder />
+                      </ListItemIcon>
+                      <ListItemText className="menu-title" inset primary="Closing Room3" />
+                    </ListItem>
+                    </List>
+                  </Collapse>
               </List>
             </Collapse>
             <ListItem onClick={() => history.push('/app/notary/options')} button className="menu-item">
