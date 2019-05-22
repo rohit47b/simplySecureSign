@@ -98,6 +98,13 @@ class Sidebar extends PureComponent {
   handleSubMenuClick= ()=>{
     this.setState(state => ({ openSubmenu: !state.openSubmenu }));
   }
+
+  goTo = (path) => {
+    const { toggleDrawerClose } = this.props
+    toggleDrawerClose()
+    history.push("/app/notary"+path)
+  }
+
   render() {
     const { classes, isOpen,toggleDrawerClose} = this.props;
     const {open,openSubmenu} =this.state
@@ -127,7 +134,7 @@ class Sidebar extends PureComponent {
         >
 
           <Divider />
-          <List className="sidebar-menu" onClick={toggleDrawerClose}>
+          <List className="sidebar-menu">
 
             <ListItem onClick={this.handleClick} button className="menu-item active">
               <ListItemIcon className="menu-icon"><InsertDriveFile /></ListItemIcon>
@@ -135,7 +142,10 @@ class Sidebar extends PureComponent {
             </ListItem>
             <Collapse in={open} timeout="auto" unmountOnExit>
               <List component="div" disablePadding className="submenu-list">
-                <ListItem button className="submenu menu-item" onClick={() => history.push('/app/notary/closing-room')}>
+                <ListItem button className="submenu menu-item" 
+                // onClick={() => history.push('/app/notary/closing-room')}
+                onClick={() => this.goTo('/closing-room')}
+                >
                   <ListItemIcon  className="menu-icon">
                     <StarBorder />
                   </ListItemIcon>
@@ -153,21 +163,30 @@ class Sidebar extends PureComponent {
                       <ListItemIcon  className="menu-icon">
                         <StarBorder />
                       </ListItemIcon>
-                      <ListItemText className="menu-title" inset primary="Closing Room3" />
+                      <ListItemText className="menu-title" inset primary="Closing Room3" onClick={toggleDrawerClose}/>
                     </ListItem>
                     </List>
                   </Collapse>
               </List>
             </Collapse>
-            <ListItem onClick={() => history.push('/app/notary/options')} button className="menu-item">
+            <ListItem 
+              // onClick={() => history.push('/app/notary/options')} 
+              onClick={() => this.goTo('/options')}
+              button className="menu-item">
               <ListItemIcon className="menu-icon"> <Icon>settings</Icon></ListItemIcon>
               <ListItemText className="menu-title" primary={"Options"} />
             </ListItem>
-            <ListItem onClick={() => history.push('/app/notary/profile-settings')} button className="menu-item">
+            <ListItem 
+              // onClick={() => history.push('/app/notary/profile-settings')} 
+              onClick={() => this.goTo('/profile-settings')}
+              button className="menu-item">
               <ListItemIcon className="menu-icon"><PermIdentity /></ListItemIcon>
               <ListItemText className="menu-title" primary={"Profile Settings"} />
             </ListItem>
-            <ListItem onClick={() => history.push('/app/notary/closing-room/chat')} button className="menu-item">
+            <ListItem 
+              // onClick={() => history.push('/app/notary/closing-room/chat')} 
+              onClick={() => this.goTo('/closing-room/chat')}
+              button className="menu-item">
               <ListItemIcon className="menu-icon"><ChatBubbleOutline/></ListItemIcon>
               <ListItemText className="menu-title chat-count" >
                 <span className="flex-grow-1">Chat</span><span className="circle">2</span>
