@@ -132,7 +132,7 @@ class DocumentTab extends PureComponent {
                                                     name="mname"
                                                     type="text"
                                                 />
-                                                {/* <div className="validation-error">Please enter a valid middle name</div> */}
+                                                <div className="validation-error text-right">Please enter a valid middle name</div>
                                             </Grid>
                                             <Grid item xs={12} sm={3}>
                                                 <TextField
