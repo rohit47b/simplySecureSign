@@ -22,8 +22,9 @@ class ChatBox extends PureComponent {
 
     render() {
         const {isClose} =this.state
+        console.log("isClose ==> ",isClose)
         return (
-            <Card className={isClose === true ? "chat-box display-none" :"chat-box"}>
+            <Card  className={isClose === true ? "chat-box display-none" :"chat-box"}>
                 {/* <Typography className="chat-box-header" component="div">
                     <span className="chat-box-title">Signer :Tom</span>
                     <span className="icon-action">
@@ -45,7 +46,7 @@ class ChatBox extends PureComponent {
                         <div className="chat-info">                            
                             <div className="chat-media">
                                 {/* <PersonIcon className="user-icon" /> */}
-                                <div className="chat-user-icon" >
+                                <div className="chat-user-icon">
                                     <i className="fa fa-question" aria-hidden="true"></i>
                                 </div>
                                 <div className="chat-content">

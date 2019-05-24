@@ -153,6 +153,7 @@
 .navbar{
     display: none;
     ul{
+        display: none;
         list-style: none;
         padding: 0px;
         margin: 0;
@@ -323,6 +324,9 @@
     }
     .navbar{
         display: block;
+        ul{
+            display: flex !important; 
+        }
     }
 }
 @media (min-width: 600px) {

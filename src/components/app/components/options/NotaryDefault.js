@@ -35,7 +35,7 @@ class NotaryDefault extends PureComponent {
     }
 
     render() {
-        const { checkedB, county, value } = this.state
+        const { checkedB, county, value ,checkedA} = this.state
         return (
             <Typography className="tab-container" component="div">
                 <Grid container spacing={16} className="mrB20">
@@ -63,7 +63,7 @@ class NotaryDefault extends PureComponent {
                     <Grid item xs={12} sm={9} >
                         <div className="checkbox-info d-flex align-items-center">
                             <Checkbox
-                                checked={checkedB}
+                                checked={checkedA}
                                 onChange={this.handleSwitchChange('checkedB')}
                                 value="checkedB"
                                 color="primary"

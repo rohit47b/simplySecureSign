@@ -209,7 +209,9 @@ color: #CCC;
 /*********************************/
 
 /**************TEXT COLOR***************/
-
+.text-danger{
+    color: $text_danger;
+}
 
 .text-center{text-align: center  !important;}
 .text-left{text-align: left  !important;}

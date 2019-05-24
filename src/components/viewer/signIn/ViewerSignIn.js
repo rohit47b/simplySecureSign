@@ -10,8 +10,29 @@ import history from 'customHistory'
 
 
 class ViewerSignIn extends PureComponent {
+    state = {
+        errors: {}
+    }
+
+    handleValidation = (e) => {
+        let errors = {}
+        let name = e.target.name
+        if (name === 'email' && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(e.target.value)) {
+            errors.email = 'Invalid email address'
+        } else {
+            delete errors.email
+        }
+        if (name === 'propertyAddress' && e.target.value.trim().length === 0) {
+            errors.propertyAddress = 'Property Address is required!'
+        }
+
+        this.setState({
+            errors
+        })
+    }
 
     render() {
+        const { errors } = this.state
         return (
             <Grid item xs={12} sm={12} md={6} className="verify-form">
                 <Typography className="mrB20 heading-large" gutterBottom variant="h5" component="h2">
@@ -26,17 +47,19 @@ class ViewerSignIn extends PureComponent {
                         <Grid item xs={12} sm={9}>
                         <TextField
                                 id="standard-full-width"
-                                label="Email Id"
+                                label={<span>Email Id <b>*</b></span>}
                                 placeholder="Enter email id"
                                 fullWidth
                                 margin="normal"
-                                className="bootstrap-text-field"
+                                className={errors.email ? "bootstrap-text-field bootstart-text-error-border" : 'bootstrap-text-field'}
                                 InputLabelProps={{
                                     shrink: true,
                                 }}
                                 type="text"
                                 name="email"
+                                onChange={this.handleValidation}
                             />
+                            {errors.email && <div className="validation-error text-right"> Please enter a valid email id </div>}
                         </Grid>
                     </Grid>
                     <Grid container spacing={16} className="flex-container">
