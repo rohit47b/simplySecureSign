@@ -49,6 +49,72 @@ class EditPasswordDialogbox extends PureComponent {
         this.setState(state => ({ showPassword: !state.showPassword }));
     }
 
+    validatePassword =(password) =>{
+        const pattern =  /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$&+,:;=?@#|'"`<>.^*()%!-~/])[A-Za-z\d$&+,:;=?@#|'"`<>.^*()%!-~/]{8,}$/
+        const result1 = pattern.test(password);
+        if (result1 === true) {
+            this.setState({
+                passwordError: false,
+                password: password,
+               
+            })
+        } else {
+            this.setState({
+                passwordError: true,
+            })
+        }
+
+    }
+
+    validateCurrentPassword =(currentPassword) =>{
+        const pattern =  /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$&+,:;=?@#|'"`<>.^*()%!-~/])[A-Za-z\d$&+,:;=?@#|'"`<>.^*()%!-~/]{8,}$/
+        const result = pattern.test(currentPassword);
+
+        if (result === true) {
+            this.setState({
+                currentPasswordError:false,
+                currentPassword:currentPassword
+            })
+        } else {
+            this.setState({
+                currentPasswordError: true
+            })
+        }
+    }
+
+    validateNewPassword =(newPassword) =>{
+        const pattern =  /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$&+,:;=?@#|'"`<>.^*()%!-~/])[A-Za-z\d$&+,:;=?@#|'"`<>.^*()%!-~/]{8,}$/
+        const result = pattern.test(newPassword);
+        
+        if (result === true) {
+            this.setState({
+                newPasswordError:false,
+                newPassword:newPassword
+            })
+        } else {
+            this.setState({
+                newPasswordError: true
+            })
+        }
+    }
+
+    validateConfirmPassword =(confirmPassword) =>{
+        const pattern =  /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$&+,:;=?@#|'"`<>.^*()%!-~/])[A-Za-z\d$&+,:;=?@#|'"`<>.^*()%!-~/]{8,}$/
+        const result = pattern.test(confirmPassword);
+
+        if (result === true) {
+            this.setState({
+                confirmPasswordError:false,
+                confirmPassword:confirmPassword
+            })
+        } else {
+            this.setState({
+                confirmPasswordError: true
+            })
+        }
+    }
+
+
        /** custom validation code  */
 
     handleValidation = (e) => {
@@ -70,55 +136,19 @@ class EditPasswordDialogbox extends PureComponent {
             }
         }
     
-        if (name === 'password') {
-            if (value === '' || value === null) {
-                this.setState({
-                    passwordError: true
-                })
-            } else {
-                this.setState({
-                    passwordError: false,
-                    [name]: value
-                })
-            }
-        }
-        if (name === 'currentPassword') {
-            if (value === '' || value === null) {
-                this.setState({
-                    currentPasswordError: true
-                })
-            } else {
-                this.setState({
-                    currentPasswordError: false,
-                    [name]: value
-                })
-            }
-        }
-        if (name === 'newPassword') {
-            if (value === '' || value === null) {
-                this.setState({
-                    newPasswordError: true
-                })
-            } else {
-                this.setState({
-                    newPasswordError: false,
-                    [name]: value
-                })
-            }
-        }
-        if (name === 'confirmPassword') {
-            if (value === '' || value === null) {
-                this.setState({
-                    confirmPasswordError: true
-                })
-            } else {
-                this.setState({
-                    confirmPasswordError: false,
-                    [name]: value
-                })
-            }
+        if (e.target.name === 'password') {
+            this.validatePassword(e.target.value);
         }
         
+        if (e.target.name === 'currentPassword') {
+            this.validateCurrentPassword(e.target.value);
+        }
+        if (e.target.name === 'newPassword') {
+            this.validateNewPassword(e.target.value);
+        }
+        if (e.target.name === 'confirmPassword') {
+            this.validateConfirmPassword(e.target.value);
+        }
     }
     
     /** custom validation code end */

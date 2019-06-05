@@ -36,6 +36,21 @@ class NotarySignUp extends PureComponent {
             })
         }
     }
+
+    validatePassword =(password) =>{
+        const pattern =  /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$&+,:;=?@#|'"`<>.^*()%!-~/])[A-Za-z\d$&+,:;=?@#|'"`<>.^*()%!-~/]{8,}$/
+        const result = pattern.test(password);
+        if (result === true) {
+            this.setState({
+                passwordError: false,
+                password: password
+            })
+        } else {
+            this.setState({
+                passwordError: true
+            })
+        }
+    }
     
     handleValidation = (e) => {
         const { name, value } = e.target;
@@ -59,19 +74,22 @@ class NotarySignUp extends PureComponent {
         if (e.target.name === 'email') {
             this.validateEmail(e.target.value);
         }
-    
-        if (name === 'password') {
-            if (value === '' || value === null) {
-                this.setState({
-                    passwordError: true
-                })
-            } else {
-                this.setState({
-                    passwordError: false,
-                    [name]: value
-                })
-            }
+        if (e.target.name === 'password') {
+            this.validatePassword(e.target.value);
         }
+    
+        // if (name === 'password') {
+        //     if (value === '' || value === null) {
+        //         this.setState({
+        //             passwordError: true
+        //         })
+        //     } else {
+        //         this.setState({
+        //             passwordError: false,
+        //             [name]: value
+        //         })
+        //     }
+        // }
         
     }
     

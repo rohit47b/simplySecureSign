@@ -21,7 +21,7 @@ class NotarySignIn extends PureComponent {
 
     /** custom validation code  */
 
-    validateEmail(email) {
+    validateEmail =(email)=> {
         const pattern = /[a-zA-Z0-9]+[\.]?([a-zA-Z0-9]+)?[\@][a-z]{3,9}[\.][a-z]{2,5}/g;
         const result = pattern.test(email);
         if (result === true) {
@@ -32,6 +32,21 @@ class NotarySignIn extends PureComponent {
         } else {
             this.setState({
                 emailError: true
+            })
+        }
+    }
+
+    validatePassword =(password) =>{
+        const pattern =  /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$&+,:;=?@#|'"`<>.^*()%!-~/])[A-Za-z\d$&+,:;=?@#|'"`<>.^*()%!-~/]{8,}$/
+        const result = pattern.test(password);
+        if (result === true) {
+            this.setState({
+                passwordError: false,
+                password: password
+            })
+        } else {
+            this.setState({
+                passwordError: true
             })
         }
     }
@@ -46,17 +61,8 @@ class NotarySignIn extends PureComponent {
             this.validateEmail(e.target.value);
         }
     
-        if (name === 'password') {
-            if (value === '' || value === null) {
-                this.setState({
-                    passwordError: true
-                })
-            } else {
-                this.setState({
-                    passwordError: false,
-                    [name]: value
-                })
-            }
+        if (e.target.name === 'password') {
+            this.validatePassword(e.target.value);
         }
     }
     
